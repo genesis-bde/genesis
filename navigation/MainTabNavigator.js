@@ -1,60 +1,105 @@
 import React from 'react';
-import { Platform } from 'react-native';
-import { createStackNavigator, createBottomTabNavigator } from 'react-navigation';
+import {Image, Button, Platform} from 'react-native';
+import {createStackNavigator, createMaterialTopTabNavigator} from 'react-navigation';
 
 import TabBarIcon from '../components/TabBarIcon';
 import HomeScreen from '../screens/HomeScreen';
-import LinksScreen from '../screens/LinksScreen';
-import SettingsScreen from '../screens/SettingsScreen';
+import TeamScreen from "../screens/TeamScreen";
+import SponsorsScreen from "../screens/SponsorsScreen";
+import EventsScreen from "../screens/EventsScreen";
+import SocialNetworksScreen from "../screens/SocialNetworksScreen";
+
 
 const HomeStack = createStackNavigator({
-  Home: HomeScreen,
+    Home: HomeScreen,
 });
 
 HomeStack.navigationOptions = {
-  tabBarLabel: 'Home',
-  tabBarIcon: ({ focused }) => (
-    <TabBarIcon
-      focused={focused}
-      name={
-        Platform.OS === 'ios'
-          ? `ios-information-circle${focused ? '' : '-outline'}`
-          : 'md-information-circle'
-      }
-    />
-  ),
+    tabBarLabel: 'Home',
+    tabBarIcon: ({focused}) => (
+        <TabBarIcon
+            focused={focused}
+            name="home"
+        />
+    ),
 };
 
-const LinksStack = createStackNavigator({
-  Links: LinksScreen,
+const TeamStack = createStackNavigator({
+    Links: TeamScreen,
 });
 
-LinksStack.navigationOptions = {
-  tabBarLabel: 'Links',
-  tabBarIcon: ({ focused }) => (
-    <TabBarIcon
-      focused={focused}
-      name={Platform.OS === 'ios' ? 'ios-link' : 'md-link'}
-    />
-  ),
+TeamStack.navigationOptions = {
+    tabBarLabel: 'Team',
+    tabBarIcon: ({focused}) => (
+        <TabBarIcon
+            focused={focused}
+            name="group"
+        />
+    ),
 };
 
-const SettingsStack = createStackNavigator({
-  Settings: SettingsScreen,
+const SponsorsStack = createStackNavigator({
+    Settings: SponsorsScreen,
 });
 
-SettingsStack.navigationOptions = {
-  tabBarLabel: 'Settings',
-  tabBarIcon: ({ focused }) => (
-    <TabBarIcon
-      focused={focused}
-      name={Platform.OS === 'ios' ? 'ios-options' : 'md-options'}
-    />
-  ),
+SponsorsStack.navigationOptions = {
+    tabBarLabel: 'Sponsors',
+    tabBarIcon: ({focused}) => (
+        <TabBarIcon
+            focused={focused}
+            name="dollar"
+        />
+    ),
 };
 
-export default createBottomTabNavigator({
-  HomeStack,
-  LinksStack,
-  SettingsStack,
+const EventsStack = createStackNavigator({
+    Settings: EventsScreen,
 });
+
+EventsStack.navigationOptions = {
+    tabBarLabel: 'Sponsors',
+    tabBarIcon: ({focused}) => (
+        <TabBarIcon
+            focused={focused}
+            name="calendar-o"
+        />
+    ),
+};
+
+const SocialNetworksStack = createStackNavigator({
+    Settings: SocialNetworksScreen,
+});
+
+SocialNetworksStack.navigationOptions = {
+    tabBarLabel: 'Réseau Sociaux',
+    tabBarIcon: ({focused}) => (
+        <TabBarIcon
+            focused={focused}
+            name="feed"
+        />
+    ),
+};
+
+const TabNavigator = createMaterialTopTabNavigator({
+    HomeStack,
+    TeamStack,
+    EventsStack,
+    SponsorsStack,
+    SocialNetworksStack
+}, {
+    navigationOptions: ({navigation}) => {
+        const {routeName} = navigation.state.routes[navigation.state.index];
+        return {
+            headerTitle: routeName,
+            headerLeft: routeName === 'Home' ? null :
+                <TabBarIcon
+                    focused={false}
+                    name={Platform.OS === 'ios' ? 'chevron-left' : 'arrow-left'}
+                />
+        };
+    }
+});
+
+export default createStackNavigator({
+    TabNavigator: TabNavigator
+})
