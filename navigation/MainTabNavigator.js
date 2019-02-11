@@ -8,94 +8,107 @@ import TeamScreen from "../screens/TeamScreen";
 import SponsorsScreen from "../screens/SponsorsScreen";
 import EventsScreen from "../screens/EventsScreen";
 import SocialNetworksScreen from "../screens/SocialNetworksScreen";
+import Colors from "../constants/Colors";
 
-
-const HomeStack = createStackNavigator({
-    Home: HomeScreen,
-});
-
-HomeStack.navigationOptions = {
-    tabBarLabel: 'Home',
-    tabBarIcon: ({focused}) => (
-        <TabBarIcon
-            focused={focused}
-            name="home"
-        />
-    ),
-};
-
-const TeamStack = createStackNavigator({
-    Links: TeamScreen,
-});
-
-TeamStack.navigationOptions = {
-    tabBarLabel: 'Team',
-    tabBarIcon: ({focused}) => (
-        <TabBarIcon
-            focused={focused}
-            name="group"
-        />
-    ),
-};
-
-const SponsorsStack = createStackNavigator({
-    Settings: SponsorsScreen,
-});
-
-SponsorsStack.navigationOptions = {
-    tabBarLabel: 'Sponsors',
-    tabBarIcon: ({focused}) => (
-        <TabBarIcon
-            focused={focused}
-            name="dollar"
-        />
-    ),
-};
-
-const EventsStack = createStackNavigator({
-    Settings: EventsScreen,
-});
-
-EventsStack.navigationOptions = {
-    tabBarLabel: 'Sponsors',
-    tabBarIcon: ({focused}) => (
-        <TabBarIcon
-            focused={focused}
-            name="calendar-o"
-        />
-    ),
-};
-
-const SocialNetworksStack = createStackNavigator({
-    Settings: SocialNetworksScreen,
-});
-
-SocialNetworksStack.navigationOptions = {
-    tabBarLabel: 'Réseau Sociaux',
-    tabBarIcon: ({focused}) => (
-        <TabBarIcon
-            focused={focused}
-            name="feed"
-        />
-    ),
+const names = {
+    Home: 'Accueil',
+    Team: 'l\'Equipe',
+    Events: 'Evènements',
+    Sponsors: 'Sponsor',
+    SocialNetworks: 'Réseaux Sociaux'
 };
 
 const TabNavigator = createMaterialTopTabNavigator({
-    HomeStack,
-    TeamStack,
-    EventsStack,
-    SponsorsStack,
-    SocialNetworksStack
+    Home: {
+        screen: HomeScreen,
+        navigationOptions: {
+            tabBarIcon: ({focused}) => (
+                <TabBarIcon
+                    focused={focused}
+                    name="home"
+                />
+            )
+        }
+    },
+    Team: {
+        screen: TeamScreen,
+        navigationOptions: {
+            tabBarIcon: ({focused}) => (
+                <TabBarIcon
+                    focused={focused}
+                    name="group"
+                />
+            )
+        }
+    },
+    Events: {
+        screen: EventsScreen,
+        navigationOptions: {
+            tabBarIcon: ({focused}) => (
+                <TabBarIcon
+                    focused={focused}
+                    name="calendar-o"
+                />
+            )
+        }
+    },
+    Sponsors: {
+        screen: SponsorsScreen,
+        navigationOptions: {
+            tabBarIcon: ({focused}) => (
+                <TabBarIcon
+                    focused={focused}
+                    name="dollar"
+                />
+            )
+        }
+    },
+    SocialNetworks: {
+        screen: SocialNetworksScreen,
+        navigationOptions: {
+            tabBarIcon: ({focused}) => (
+                <TabBarIcon
+                    focused={focused}
+                    name="feed"
+                />
+            )
+        }
+    }
 }, {
+    tabBarOptions: {
+        showIcon: true,
+        showLabel: false,
+        activeTintColor: Colors.tabIconSelected,
+        inactiveTintColor: Colors.tabIconDefault,
+        indicatorStyle: {
+            backgroundColor: Colors.second
+        },
+        style: {
+            backgroundColor: Colors.main
+        }
+    },
+    defaultNavigationOptions: {
+        headerStyle: {
+            backgroundColor: Colors.main,
+            color: Colors.tintColor
+        }
+    },
     navigationOptions: ({navigation}) => {
         const {routeName} = navigation.state.routes[navigation.state.index];
         return {
-            headerTitle: routeName,
+            headerStyle: {
+                backgroundColor: Colors.main,
+            },
+            headerTitle: names[routeName],
             headerLeft: routeName === 'Home' ? null :
                 <TabBarIcon
                     focused={false}
                     name={Platform.OS === 'ios' ? 'chevron-left' : 'arrow-left'}
-                />
+                />,
+            headerRight: <Image
+                source={require('../assets/images/logo.png')}
+                style={{width: 30, height: 30}}
+            />
         };
     }
 });

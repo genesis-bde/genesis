@@ -3,9 +3,6 @@ import { ScrollView, StyleSheet, Text } from 'react-native';
 
 
 export default class SponsorsScreen extends React.Component {
-    static navigationOptions = {
-        title: 'Sponsors',
-    };
 
     render() {
         return (

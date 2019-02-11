@@ -3,14 +3,11 @@ import { ScrollView, StyleSheet, Text } from 'react-native';
 
 
 export default class EventsScreen extends React.Component {
-    static navigationOptions = {
-        title: 'Evenements',
-    };
 
     render() {
         return (
             <ScrollView style={styles.container}>
-                <Text>Bienvenue sur la page des evenements</Text>
+                <Text>Bienvenue sur la page des évènements</Text>
             </ScrollView>
         );
     }

@@ -3,9 +3,6 @@ import { ScrollView, StyleSheet, Text } from 'react-native';
 
 
 export default class TeamScreen extends React.Component {
-    static navigationOptions = {
-        title: 'Notre équipe',
-    };
 
     render() {
         return (
