@@ -147,7 +147,7 @@ const TabNavigator = createMaterialTopTabNavigator({
             headerTintColor: Colors.tintColor,
             headerTitle: names[routeName],
             headerLeft: routeName === 'Home' ? null :
-                <HeaderBack/>,
+                <HeaderBack navigation={navigation} />,
             headerRight: <Image
                 source={ require('../assets/images/logo.png')}
                 style={{width: 30, height: 30}}
