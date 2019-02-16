@@ -9,14 +9,54 @@ import SponsorsScreen from "../screens/SponsorsScreen";
 import EventsScreen from "../screens/EventsScreen";
 import SocialNetworksScreen from "../screens/SocialNetworksScreen";
 import Colors from "../constants/Colors";
+import ProjectsScreen from "../screens/ProjectsScreen";
 
 const names = {
     Home: 'Accueil',
-    Team: 'l\'Equipe',
+    Team: 'Notre liste',
     Events: 'Evènements',
     Sponsors: 'Sponsor',
     SocialNetworks: 'Réseaux Sociaux'
 };
+
+
+const UsTab = createMaterialTopTabNavigator({
+    Team: {
+        screen: TeamScreen,
+        navigationOptions: {
+            title: "l'équipe"
+        }
+    },
+    Projects: {
+        screen: ProjectsScreen,
+        navigationOptions: {
+            title: 'nos projets'
+        }
+    }
+}, {
+    navigationOptions: {
+        header: {
+            style: {
+                shadowOpacity: 0,
+                shadowOffset: {
+                    height: 0,
+                },
+                shadowRadius: 0,
+            }
+        }
+    },
+    tabBarOptions: {
+        activeTintColor: Colors.tabIconSelected,
+        inactiveTintColor: Colors.tabIconSelected,
+        indicatorStyle: {
+            backgroundColor: Colors.second
+        },
+        style: {
+            backgroundColor: Colors.main
+        }
+    },
+});
+
 
 const TabNavigator = createMaterialTopTabNavigator({
     Home: {
@@ -30,17 +70,7 @@ const TabNavigator = createMaterialTopTabNavigator({
             )
         }
     },
-    Team: {
-        screen: TeamScreen,
-        navigationOptions: {
-            tabBarIcon: ({focused}) => (
-                <TabBarIcon
-                    focused={focused}
-                    name="group"
-                />
-            )
-        }
-    },
+    Team: UsTab,
     Events: {
         screen: EventsScreen,
         navigationOptions: {
