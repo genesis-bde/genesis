@@ -1,5 +1,5 @@
 import React from 'react';
-import { ScrollView, StyleSheet, Text } from 'react-native';
+import { ScrollView, StyleSheet, View } from 'react-native';
 
 
 export default class TeamScreen extends React.Component {
@@ -7,13 +7,21 @@ export default class TeamScreen extends React.Component {
     render() {
         return (
             <ScrollView style={styles.container}>
-                <Text>Bienvenue sur la page de l'équipe</Text>
+                <View style={styles.memberViewer}>
+
+                </View>
             </ScrollView>
         );
     }
 }
 
 const styles = StyleSheet.create({
+    memberViewer: {
+        flex: 1,
+        flexDirection: 'row',
+        flexWrap: 'wrap',
+        alignContent:'center'
+    },
     container: {
         flex: 1,
         paddingTop: 15,
