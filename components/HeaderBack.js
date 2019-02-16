@@ -1,5 +1,5 @@
 import React from 'react';
-import {Platform, TouchableHighlight, Platform} from 'react-native';
+import {Platform, TouchableHighlight} from 'react-native';
 import { NavigationActions } from 'react-navigation';
 import TabBarIcon from '../components/TabBarIcon'
 
