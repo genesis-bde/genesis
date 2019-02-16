@@ -24,7 +24,7 @@ export default class TabBarIcon extends Component {
     };
 
     render() {
-        const {name, position, description, src = '../assets/images/members/default.jpg'} = this.props;
+        const {name, position, description, src = '../assets/images/members/default.jpg'} = this.props.memberInfo;
 
         return (
             <View>

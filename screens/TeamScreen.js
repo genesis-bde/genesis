@@ -16,7 +16,7 @@ export default class TeamScreen extends React.Component {
             <ScrollView style={styles.container}>
                 <View style={styles.memberViewer}>
                     { this.members.map(member => (
-                        <Member name={member.name} position={member.position} description={member.description}/>
+                        <Member memberInfo={member}/>
                     ))}
                 </View>
             </ScrollView>
