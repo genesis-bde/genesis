@@ -11,11 +11,11 @@ export default class TeamScreen extends React.Component {
     }
 
     render() {
-        const members = this.members;
+
         return (
             <ScrollView style={styles.container}>
                 <View style={styles.memberViewer}>
-                    { members.map(member => (
+                    { this.members.map(member => (
                         <Member name={member.name} position={member.position} description={member.description}/>
                     ))}
                 </View>

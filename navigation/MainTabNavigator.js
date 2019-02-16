@@ -146,11 +146,11 @@ const TabNavigator = createMaterialTopTabNavigator({
             },
             headerTintColor: Colors.tintColor,
             headerTitle: names[routeName],
-            headerBackImage: routeName === 'Home' ? null :
+            headerLeft: routeName === 'Home' ? null :
                 <HeaderBack/>,
             headerRight: <Image
                 source={ require('../assets/images/logo.png')}
-                style={{width: 30, height: 30, marginRight:'20px'}}
+                style={{width: 30, height: 30}}
             />
         };
     }
