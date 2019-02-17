@@ -1,9 +1,9 @@
 import React from 'react';
-import { View, StyleSheet, TouchableOpacity } from 'react-native';
-import { Icon } from 'expo';
+import { View, StyleSheet } from 'react-native';
 import Layout from '../constants/Layout';
-import SocialNetworks from '../constants/Layout';
+import SocialNetworks from '../constants/SocialNetworks';
 import SocialNetwork from '../components/SocialNetwork'
+import Colors from "../constants/Colors";
 
 
 export default class SocialNetworksScreen extends React.Component {
@@ -14,7 +14,12 @@ export default class SocialNetworksScreen extends React.Component {
         return (
             <View style={styles.container}>
                 { SocialNetworks.map(network => (
-                    <SocialNetwork name={network.iconName} url={network.url} size={size} />
+                    <SocialNetwork
+                        name={network.iconName}
+                        url={network.url}
+                        style={styles.icon}
+                        size={size}
+                    />
                 ))}
             </View>
         );
@@ -29,5 +34,8 @@ const styles = StyleSheet.create({
         flexDirection: 'column',
         justifyContent: 'space-around',
         backgroundColor: '#FFF',
+    },
+    icon: {
+        color: Colors.second
     }
 });

@@ -1,15 +1,15 @@
 export default [
     {
         iconName: 'facebook-square',
-        url: ''
+        url: 'fb://profile/'
     },
     {
         iconName: 'snapchat-square',
-        url: ''
+        url: 'snapchat://add/'
     }
     ,
     {
         iconName: 'instagram',
-        url: ''
+        url: 'instagram://user?username=battistelli_architectes'
     }
 ]
