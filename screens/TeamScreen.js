@@ -1,7 +1,7 @@
 import React from 'react';
 import {ScrollView, StyleSheet, View} from 'react-native';
 import Member from '../components/Member';
-import Members from "../constants/Members";
+import Members from "../data/Members";
 
 
 export default class TeamScreen extends React.Component {

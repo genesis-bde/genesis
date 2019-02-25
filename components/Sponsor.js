@@ -9,10 +9,10 @@ import Layout from '../constants/Layout';
 import Modal from "./Modal";
 
 
-export default class Member extends Component {
+export default class Sponsor extends Component {
 
     render() {
-        const {name, position, description, src = '../assets/images/members/default.jpg'} = this.props.memberInfo;
+        const {name, position, description, src = '../assets/images/members/default.jpg'} = this.props.Sponsor;
 
         return (
             <View>
@@ -23,7 +23,6 @@ export default class Member extends Component {
                         resizeMode="contain"
                     />
                     <Text style={styles.name}>{name}</Text>
-                    <Text style={styles.position}>{position.toUpperCase()}</Text>
 
                     <Text style={styles.description}>{description}</Text>
                 </Modal>
@@ -42,8 +41,8 @@ export default class Member extends Component {
 
 const styles = StyleSheet.create({
     imagePreview: {
-        width: (Layout.window.width) / 3,
-        height: (Layout.window.width) / 3
+        width: (Layout.window.width) / 4,
+        height: (Layout.window.width) / 4
     },
     image: {
         marginTop: 10,
@@ -55,12 +54,6 @@ const styles = StyleSheet.create({
         marginTop: -20,
         textAlign: 'center',
         fontWeight: 'bold'
-    },
-    position: {
-        marginTop: 0,
-        textAlign: 'center',
-        fontWeight: '300',
-        fontFamily: Platform.OS === 'android' ? 'sans-serif-light' : undefined
     },
     description: {
         marginTop: 50

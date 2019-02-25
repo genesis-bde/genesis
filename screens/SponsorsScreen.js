@@ -1,5 +1,8 @@
 import React from 'react';
 import { ScrollView, StyleSheet, Text } from 'react-native';
+import Sponsors from '../data/Sponsors'
+import Sponsor from "../components/Sponsor";
+
 
 
 export default class SponsorsScreen extends React.Component {
@@ -7,7 +10,9 @@ export default class SponsorsScreen extends React.Component {
     render() {
         return (
             <ScrollView style={styles.container}>
-                <Text>Bienvenue sur la page des sponsors</Text>
+                { Sponsors.map((sponsor) => (
+                    <Sponsor sponsorInfo={sponsor} />
+                ) )}
             </ScrollView>
         );
     }

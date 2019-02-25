@@ -1,5 +1,46 @@
 export default [
     {
+        group: 'Bureau',
+        members: [
+            {
+                name: 'Delmarre Adrien',
+                position: 'Président',
+                description: ''
+            }, {
+                name: 'Scarpellini Robin',
+                position: 'Vice-Président',
+                description: ''
+            }, {
+                name: 'Gerardin Marceau',
+                position: 'Vice-Président',
+                description: ''
+            }, {
+                name: 'Brochet Arthur',
+                position: 'Secrétaire Général',
+                description: ''
+            }, {
+                name: 'Le Bris Agathe',
+                position: 'Trésorière',
+                description: ''
+            }, {
+                name: 'Gabilly Elise',
+                position: 'Responsable Académique',
+                description: ''
+            },
+        ]
+    },
+    {
+        group: 'Pôle Com\'',
+        members: [
+            {
+                name: 'Lefebvre Thibault',
+                position: 'Respo Com\'',
+                description: ''
+            },
+        ]
+    },
+
+    {
         name: 'Canon Etienne',
         position: 'tdb',
         description: ''
@@ -45,11 +86,6 @@ export default [
         description: ''
     },
     {
-        name: 'Gerardin Marceau',
-        position: 'tdb',
-        description: ''
-    },
-    {
         name: 'Blais laure',
         position: 'tdb',
         description: ''
@@ -73,12 +109,7 @@ export default [
         name: 'Chevillote Hortense',
         position: 'tdb',
         description: ''
-    },
-    {
-        name: 'Lefebvre Thibault',
-        position: 'tdb',
-        description: ''
-    },
+    }
     {
         name: 'Pestel Josephine',
         position: 'tdb',
@@ -91,11 +122,6 @@ export default [
     },
     {
         name: 'Vénard Paul',
-        position: 'tdb',
-        description: ''
-    },
-    {
-        name: 'Delmarre Adrien',
         position: 'tdb',
         description: ''
     },
@@ -113,11 +139,11 @@ export default [
         name: 'Defaye Olivier',
         position: 'tdb',
         description: ''
-    },{
+    }, {
         name: 'Le Bris Agathe',
         position: 'tdb',
         description: ''
-    },{
+    }, {
         name: 'Olivier Raphael',
         position: 'tdb',
         description: ''
@@ -141,28 +167,13 @@ export default [
         name: 'Le Nilias Alice',
         position: 'tdb',
         description: ''
-    },{
+    }, {
         name: 'Bens Amine',
         position: 'tdb',
         description: ''
     },
     {
         name: 'Jeannnin Guillaume',
-        position: 'tdb',
-        description: ''
-    },
-    {
-        name: 'Scarpellini Robin',
-        position: 'tdb',
-        description: ''
-    },
-    {
-        name: 'Gabilly Elise',
-        position: 'tdb',
-        description: ''
-    },
-    {
-        name: 'Brochet Arthur',
         position: 'tdb',
         description: ''
     },

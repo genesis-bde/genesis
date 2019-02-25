@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, StyleSheet } from 'react-native';
 import Layout from '../constants/Layout';
-import SocialNetworks from '../constants/SocialNetworks';
+import SocialNetworks from '../data/SocialNetworks';
 import SocialNetwork from '../components/SocialNetwork'
 import Colors from "../constants/Colors";
 
