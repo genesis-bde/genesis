@@ -1,10 +1,10 @@
 import React from 'react';
-import {TouchableOpacity, Linking} from 'react-native';
+import {TouchableOpacity, Linking,  Alert} from 'react-native';
 import {Icon} from 'expo';
 
 export default class SocialNetwork extends React.Component {
 
-    startApp = (url) => {
+    startApp = (url) => () => {
         Linking.canOpenURL(url)
             .then(supported => {
                 if (!supported) {

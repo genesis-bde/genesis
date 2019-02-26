@@ -1,6 +1,7 @@
 import React from 'react';
 import {
     Modal as ReactModal,
+    StyleSheet,
     TouchableOpacity,
     View,
     TouchableWithoutFeedback,
@@ -8,28 +9,14 @@ import {
 
 export default class Modal extends React.Component {
 
-    constructor(props) {
-        super(props);
-        this.state = {
-            modalVisible: false
-        }
-    }
-
-    toggleModal = () => {
-        this.setState({
-            modalVisible: !this.state.modalVisible
-        })
-    };
-
-
     render() {
         return (
             <ReactModal
                 animationType="fade"
                 transparent={true}
-                visible={this.state.modalVisible}
+                visible={this.props.modalVisible}
             >
-                <TouchableOpacity style={styles.hidden} onPressOut={this.toggleModal}>
+                <TouchableOpacity style={styles.hidden} onPressOut={this.props.onToggle}>
                     <View style={styles.modal}>
                         <TouchableWithoutFeedback style={{flex: 1}}>
                             <View style={{flex: 1}}>

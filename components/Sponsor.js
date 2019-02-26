@@ -3,25 +3,36 @@ import {
     Image, StyleSheet,
     View, Text,
     TouchableHighlight,
-    Platform
 } from 'react-native';
 import Layout from '../constants/Layout';
 import Modal from "./Modal";
 
 
 export default class Sponsor extends Component {
+    constructor(props){
+        super(props);
+        this.state = {
+            modalVisible: false
+        }
+    }
+
+    toggleModal = () =>{
+        this.setState({
+            modalVisible: !this.state.modalVisible
+        })
+    }
 
     render() {
-        const {name, position, description, src = '../assets/images/members/default.jpg'} = this.props.Sponsor;
+        const {name, description, src} = this.props.sponsorInfo;
 
         return (
             <View>
-                <Modal>
+                <Modal modalVisible={this.state.modalVisible} onToggle={this.toggleModal}>
                     <Image
                         style={styles.image}
-                        source={require(src)}
+                        source={require('../assets/images/sponsors/nike.png')}
                         resizeMode="contain"
-                    />
+                    />  
                     <Text style={styles.name}>{name}</Text>
 
                     <Text style={styles.description}>{description}</Text>
@@ -30,7 +41,7 @@ export default class Sponsor extends Component {
                 <TouchableHighlight onPress={this.toggleModal}>
                     <Image
                         style={styles.imagePreview}
-                        source={require('../assets/images/members/default.jpg')}
+                        source={require('../assets/images/sponsors/nike.png')}
                     />
                 </TouchableHighlight>
             </View>

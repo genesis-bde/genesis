@@ -11,15 +11,28 @@ import Modal from "./Modal";
 
 export default class Member extends Component {
 
+    constructor(props){
+        super(props);
+        this.state = {
+            modalVisible: false
+        }
+    }
+
+    toggleModal = () => {
+        this.setState({
+            modalVisible: !this.state.modalVisible
+        })
+    }
+
     render() {
-        const {name, position, description, src = '../assets/images/members/default.jpg'} = this.props.memberInfo;
+        const {name, position, description, src = '../assets/images/members/default.jpg'} =                            this.props.memberInfo;
 
         return (
             <View>
-                <Modal>
+                <Modal modalVisible={this.state.modalVisible} onToggle={this.toggleModal}>
                     <Image
                         style={styles.image}
-                        source={require(src)}
+                        source={require('../assets/images/members/default.jpg')}
                         resizeMode="contain"
                     />
                     <Text style={styles.name}>{name}</Text>
@@ -59,6 +72,7 @@ const styles = StyleSheet.create({
     position: {
         marginTop: 0,
         textAlign: 'center',
+        textTransform: 'uppercase',
         fontWeight: '300',
         fontFamily: Platform.OS === 'android' ? 'sans-serif-light' : undefined
     },
