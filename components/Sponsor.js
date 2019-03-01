@@ -32,7 +32,7 @@ export default class Sponsor extends Component {
                         style={styles.image}
                         source={require('../assets/images/sponsors/nike.png')}
                         resizeMode="contain"
-                    />  
+                    />
                     <Text style={styles.name}>{name}</Text>
 
                     <Text style={styles.description}>{description}</Text>
