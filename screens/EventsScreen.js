@@ -1,7 +1,8 @@
 import React from 'react';
 import {ScrollView, StyleSheet, Text, View} from 'react-native';
 import axios from 'axios';
-import {Font} from 'expo';
+import Event from '../components/Event';
+
 
 export default class EventsScreen extends React.Component {
     constructor(props) {
@@ -67,7 +68,7 @@ export default class EventsScreen extends React.Component {
                         </View>
                         <View style={styles.event}>
                             {dayEvents.events.map(event => (
-                                <Text>sss</Text>
+                                <Event eventInfo={event}/>
                             ))}
                         </View>
                     </View>
@@ -102,9 +103,7 @@ const styles = StyleSheet.create({
     },
     event: {
         flex: 8,
-        flexDirection: 'row',
-        justifyContent: 'center',
-        alignItem: 'center',
+        flexDirection: 'column',
     },
     dateHeader: {
         flex: 4,
