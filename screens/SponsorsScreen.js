@@ -1,18 +1,23 @@
 import React from 'react';
-import { ScrollView, StyleSheet, Text } from 'react-native';
+import {ScrollView, StyleSheet, View} from 'react-native';
 import Sponsors from '../data/Sponsors'
 import Sponsor from "../components/Sponsor";
-
 
 
 export default class SponsorsScreen extends React.Component {
 
     render() {
         return (
-            <ScrollView style={styles.container}>
-                { Sponsors.map((sponsor) => (
-                    <Sponsor sponsorInfo={sponsor} />
-                ) )}
+            <ScrollView>
+                <View style={styles.container}>
+                    {Sponsors.map((sponsor, index) => {
+                        const style = (index + 1) === 1 || (index + 1) % 3 ?
+                            {alignItems: 'center'} :
+                            {alignItems: 'center', flexBasis: '100%'};
+
+                        return <Sponsor style={style} sponsorInfo={sponsor}/>
+                    })}
+                </View>
             </ScrollView>
         );
     }
@@ -21,6 +26,9 @@ export default class SponsorsScreen extends React.Component {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
+        flexDirection: 'row',
+        justifyContent: 'space-around',
+        flexWrap: 'wrap',
         paddingTop: 15,
         backgroundColor: '#fff',
     },

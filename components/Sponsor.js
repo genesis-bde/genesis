@@ -9,14 +9,14 @@ import Modal from "./Modal";
 
 
 export default class Sponsor extends Component {
-    constructor(props){
+    constructor(props) {
         super(props);
         this.state = {
             modalVisible: false
         }
     }
 
-    toggleModal = () =>{
+    toggleModal = () => {
         this.setState({
             modalVisible: !this.state.modalVisible
         })
@@ -26,7 +26,7 @@ export default class Sponsor extends Component {
         const {name, description, src} = this.props.sponsorInfo;
 
         return (
-            <View>
+            <View style={this.props.style}>
                 <Modal modalVisible={this.state.modalVisible} onToggle={this.toggleModal}>
                     <Image
                         style={styles.image}
@@ -52,8 +52,9 @@ export default class Sponsor extends Component {
 
 const styles = StyleSheet.create({
     imagePreview: {
-        width: (Layout.window.width) / 4,
-        height: (Layout.window.width) / 4
+        resizeMode: 'contain',
+        width: (Layout.window.width) / (2.5),
+        height: 150
     },
     image: {
         marginTop: 10,
