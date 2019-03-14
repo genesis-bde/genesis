@@ -157,7 +157,7 @@ export default [
     },
     {
         title: "Académie",
-        project: [
+        projects: [
             {
                 title: "Amélioration du CII",
                 content: `Afin d’améliorer la formation du Cycle Intégré International, nous souhaitons augmenter le

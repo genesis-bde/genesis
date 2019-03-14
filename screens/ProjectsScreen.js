@@ -1,7 +1,7 @@
 import React from 'react';
-import {ScrollView, StyleSheet, Text} from 'react-native';
-import Projects from '../data/Projects';
-import Sections from "../components/Project";
+import {ScrollView, StyleSheet} from 'react-native';
+import Sections from '../data/Projects';
+import Project from "../components/Project";
 
 export default class ProjectsScreen extends React.Component {
     render() {
