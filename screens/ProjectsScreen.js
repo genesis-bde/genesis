@@ -1,13 +1,15 @@
 import React from 'react';
-import { ScrollView, StyleSheet, Text } from 'react-native';
-
+import {ScrollView, StyleSheet, Text} from 'react-native';
+import Projects from '../data/Projects';
+import Sections from "../components/Project";
 
 export default class ProjectsScreen extends React.Component {
-
     render() {
         return (
             <ScrollView style={styles.container}>
-                <Text>Bienvenue sur la page des projets</Text>
+                { Sections.map(section => (
+                    <Project sectionInfo={section}/>
+                ))}
             </ScrollView>
         );
     }
@@ -18,5 +20,5 @@ const styles = StyleSheet.create({
         flex: 1,
         paddingTop: 15,
         backgroundColor: '#fff',
-    },
+    }
 });
