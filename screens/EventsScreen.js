@@ -1,6 +1,7 @@
 import React from 'react';
 import {ScrollView, StyleSheet, Text, View} from 'react-native';
 import axios from 'axios';
+import { Font } from 'expo';
 import Event from '../components/Event';
 
 
@@ -114,7 +115,7 @@ const styles = StyleSheet.create({
         color: "#444",
         fontWeight: 'bold',
         textAlign: 'center',
-        fontFamily: 'dinot',
+        
     },
     dayNumber: {
         lineHeight: 87,
@@ -122,13 +123,13 @@ const styles = StyleSheet.create({
         fontWeight: 'bold',
         color: "#c6c6c6",
         textAlign: 'center',
-        fontFamily: 'dinot',
+  
     },
     dayMonth: {
         marginTop: -25,
         fontSize: 25,
         textAlign: 'center',
         color: "#c6c6c6",
-        fontFamily: 'dinot',
+        
     }
 });

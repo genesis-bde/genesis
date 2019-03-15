@@ -60,12 +60,12 @@ const styles = StyleSheet.create({
         backgroundColor: '#fff',
     },
     location: {
-        size: 12,
+        fontSize: 12,
         color: "#c6c6c6",
         textAlign: 'left',
     },
     time: {
-        size: 12,
+        fontSize: 12,
         color: "#c6c6c6",
         textAlign: 'right',
     },
