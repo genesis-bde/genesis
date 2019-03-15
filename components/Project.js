@@ -12,22 +12,17 @@ export default class Project extends Component {
     }
 
     _renderSectionTitle = project => {
-        return (
-            <View style={styles.content}>
-                <View>{project.content}</View>
-
-            </View>
-        );
+        return;
     };
 
-    _renderHeader = project => {
+    _renderHeader = (project, index) => {
         return (
             <View style={styles.header}>
-                <View><Text style={styles.headerText}>{project.title}</Text></View>
+                <View><Text style={styles.headerText}>{project.title.toUpperCase()}</Text></View>
                 <View>
-                    {this.state.activeProjects === project ?
-                        <Entypo name="chevron-thin-up" size={12} color="#c6c6c6"/> :
-                        <Entypo name="chevron-thin-down" size={12} color="#c6c6c6"/>
+                    {this.state.activeProjects[0] === index ?
+                        <Entypo name="chevron-thin-up" size={16} color="#c6c6c6"/> :
+                        <Entypo name="chevron-thin-down" size={16} color="#c6c6c6"/>
                     }
                 </View>
             </View>
@@ -59,6 +54,7 @@ export default class Project extends Component {
                     renderHeader={this._renderHeader}
                     renderContent={this._renderContent}
                     onChange={this._updateSections}
+                    containerStyle={styles.accordion}
                 />
             </View>
         );
@@ -67,18 +63,25 @@ export default class Project extends Component {
 
 
 const styles = StyleSheet.create({
-    section: {
-        marginVertical: 20,
-        marginHorizontal: 3
+    accordion: {
+        paddingBottom: 30,
     },
     header: {
         flexDirection: 'row',
-        justifyContent: 'space-between'
+        justifyContent: 'space-between',
+        paddingVertical: 12,
+
+    },
+    headerText: {
+        textTransform: 'uppercase',
+        fontWeight: '100',
+        fontSize: 16,
     },
     title : {
         textAlign: 'center',
-        fontSize: 30,
+        fontSize: 19,
         fontWeight: 'bold',
-        textTransform: 'uppercase'
+        textTransform: 'uppercase',
+        color: '#c6c6c6',
     }
 });
