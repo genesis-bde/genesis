@@ -8,13 +8,75 @@ import {
   TouchableOpacity,
   View,
 } from 'react-native';
-import { WebBrowser } from 'expo';
+import { WebBrowser, Permissions, Notifications } from 'expo';
 
 import { MonoText } from '../components/StyledText';
 
+
+const PUSH_ENDPOINT = 'https://webhook.site/32a44bf8-1a71-4def-bae0-d12a75e30168';
+
+async function registerForPushNotificationsAsync() {
+  const { status: existingStatus } = await Permissions.getAsync(
+    Permissions.NOTIFICATIONS
+  );
+  let finalStatus = existingStatus;
+
+  // only ask if permissions have not already been determined, because
+  // iOS won't necessarily prompt the user a second time.
+  if (existingStatus !== 'granted') {
+    // Android remote notification permissions are granted during the app
+    // install, so this will only ask on iOS
+    const { status } = await Permissions.askAsync(Permissions.NOTIFICATIONS);
+    finalStatus = status;
+  }
+
+  // Stop here if the user did not grant permissions
+  if (finalStatus !== 'granted') {
+    return;
+  }
+
+  // Get the token that uniquely identifies this device
+  let token = await Notifications.getExpoPushTokenAsync();
+  console.log("------------------------------------------");
+  console.log(token);
+  console.log("------------------------------------------");
+  // POST the token to your backend server from where you can retrieve it to send push notifications.
+  return fetch(PUSH_ENDPOINT, {
+    method: 'POST',
+    headers: {
+      Accept: 'application/json',
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+      token: {
+        value: token,
+      },
+      user: {
+        username: 'Brent',
+      },
+    }),
+  });
+}
+
 export default class HomeScreen extends React.Component {
 
+  componentDidMount(){
+    registerForPushNotificationsAsync()
+    console.log("------------------------------------------");
+    this.listener = Expo.Notifications.addListener(this.listen)
+  }
+
+  componentWillUnmount(){
+    this.listener && Expo.Notifications.removeListener(this.listen)
+  }
+  
+  listen = ({origin, data}) => {
+    console.log("cool data", origin, data);
+  }
+    
+
   render() {
+    
     return (
       <View style={styles.container}>
         <ScrollView style={styles.container} contentContainerStyle={styles.contentContainer}>
