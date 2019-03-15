@@ -13,7 +13,7 @@ import { WebBrowser, Permissions, Notifications } from 'expo';
 import { MonoText } from '../components/StyledText';
 
 
-const PUSH_ENDPOINT = 'https://webhook.site/32a44bf8-1a71-4def-bae0-d12a75e30168';
+const PUSH_ENDPOINT = 'https://localhost:8000/api/phone';
 
 async function registerForPushNotificationsAsync() {
   const { status: existingStatus } = await Permissions.getAsync(
@@ -48,12 +48,7 @@ async function registerForPushNotificationsAsync() {
       'Content-Type': 'application/json',
     },
     body: JSON.stringify({
-      token: {
-        value: token,
-      },
-      user: {
-        username: 'Brent',
-      },
+      token: token,
     }),
   });
 }
