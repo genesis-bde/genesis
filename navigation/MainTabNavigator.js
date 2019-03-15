@@ -150,7 +150,7 @@ const TabNavigator = createMaterialTopTabNavigator({
                 <HeaderBack navigation={navigation} />,
             headerRight: <Image
                 source={ require('../assets/images/logo.png')}
-                style={{width: 30, height: 30}}
+                style={{width: 30, height: 30, marginRight:15}}
             />
         };
     }
