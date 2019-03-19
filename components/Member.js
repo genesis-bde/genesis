@@ -11,7 +11,7 @@ import Modal from "./Modal";
 
 export default class Member extends Component {
 
-    constructor(props){
+    constructor(props) {
         super(props);
         this.state = {
             modalVisible: false
@@ -25,7 +25,7 @@ export default class Member extends Component {
     }
 
     render() {
-        const {name, position, description, src = '../assets/images/members/default.jpg'} =                            this.props.memberInfo;
+        const {name, position, description, src = '../assets/images/members/default.jpg'} = this.props.memberInfo;
 
         return (
             <View>

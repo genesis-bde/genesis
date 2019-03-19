@@ -22,6 +22,11 @@ export default [
                 name: 'Le Bris Agathe',
                 position: 'Trésorière',
                 description: ''
+            },
+            {
+                name: 'Chevillote Hortense',
+                position: 'Vice-Trésorière',
+                description: ''
             }, {
                 name: 'Gabilly Elise',
                 position: 'Responsable Académique',
@@ -34,161 +39,209 @@ export default [
         members: [
             {
                 name: 'Lefebvre Thibault',
-                position: 'Respo Com\'',
+                position: 'Respo Com\' - I2',
+                description: ''
+            },
+            {
+                name: 'Miribel Ambroise',
+                position: 'Pôle Com\' - P1',
+                description: ''
+            },
+            {
+                name: 'Petit Léonie',
+                position: 'Pôle Com\' - I1',
+                description: ''
+            },
+            {
+                name: 'Edou Tristan',
+                position: 'Pôle Com\' - I2',
+                description: ''
+            }
+        ]
+    },
+    {
+        name: 'Pôle Soirée',
+        members: [
+            {
+                name: 'Defaye Olivier',
+                position: 'Respo Soirée - A1',
+                description: ''
+            },
+            {
+                name: 'Benarosh Cyril',
+                position: 'Pôle Soirée - P1',
+                description: ''
+            },
+            {
+                name: 'Tonneau Alexis',
+                position: 'Pôle Soirée - I2',
+                description: ''
+            },
+            {
+                name: 'Mascha Sebastien',
+                position: 'Pôle Soirée - A1',
                 description: ''
             },
         ]
     },
     {
-        name: 'Leftovers',
+        name: 'Pôle Déco',
         members: [
             {
-                name: 'Canon Etienne',
-                position: 'tdb',
+                name: 'Taravel Hanna',
+                position: 'Respo Déco - A1',
                 description: ''
             },
             {
-                name: 'Benarosh Cyril',
-                position: 'tdb',
-                description: ''
-            },
-            {
-                name: 'Eang Alex Pida',
-                position: 'tdb',
-                description: ''
-            },
-            {
-                name: 'Petit Léonie',
-                position: 'tdb',
-                description: ''
-            },
-            {
-                name: 'Pridal Mélodie',
-                position: 'tdb',
-                description: ''
-            },
-            {
-                name: 'Bonnel Timothé',
-                position: 'tdb',
-                description: ''
-            },
-            {
-                name: 'Carrière Linda',
-                position: 'tdb',
-                description: ''
-            },
-            {
-                name: 'Delamadeleine Tom',
-                position: 'tdb',
-                description: ''
-            },
-            {
-                name: 'Gheorghin Thomas',
-                position: 'tdb',
+                name: 'Cajon Etienne',
+                position: 'Pôle Déco - P1',
                 description: ''
             },
             {
                 name: 'Blais laure',
-                position: 'tdb',
-                description: ''
-            },
-            {
-                name: 'Rolland Nathan',
-                position: 'tdb',
-                description: ''
-            },
-            {
-                name: 'Cotterot Gaspard',
-                position: 'tdb',
-                description: ''
-            },
-            {
-                name: 'Tonneau Alexis',
-                position: 'tdb',
-                description: ''
-            },
-            {
-                name: 'Chevillote Hortense',
-                position: 'tdb',
+                position: 'Pôle Déco - P2',
                 description: ''
             },
             {
                 name: 'Pestel Josephine',
-                position: 'tdb',
+                position: 'Pôle Déco - I2',
                 description: ''
             },
             {
-                name: 'Edou Tristan',
-                position: 'tdb',
+                name: 'Xian Xinyi',
+                position: 'Pôle Déco - I1',
+                description: ''
+            }
+        ]
+    },
+    {
+        name: 'Pôle Créa',
+        members: [
+            {
+                name: 'Jeannnin Guillaume',
+                position: 'Respo Créa - A1',
                 description: ''
             },
             {
-                name: 'Vénard Paul',
-                position: 'tdb',
+                name: 'Eang Alex Pida',
+                position: 'Pôle Créa - I1',
                 description: ''
             },
             {
-                name: 'Mascha Sebastien',
-                position: 'tdb',
+                name: 'Pridal Mélodie',
+                position: 'Pôle Créa - I1',
                 description: ''
             },
             {
-                name: 'Taravel Hanna',
-                position: 'tdb',
+                name: 'Cotterot Gaspard',
+                position: 'Pôle Créa - P2',
                 description: ''
             },
             {
-                name: 'Defaye Olivier',
-                position: 'tdb',
+                name: 'Bado Lucas',
+                position: 'Pôle Créa - A3',
                 description: ''
-            }, {
-                name: 'Le Bris Agathe',
-                position: 'tdb',
-                description: ''
-            }, {
-                name: 'Olivier Raphael',
-                position: 'tdb',
+            },
+        ]
+    },
+    {
+        name: 'Pôle Sponsor',
+        members: [
+            {
+                name: 'Lefeuvre Augustin',
+                position: 'Respo Sponsor - A1',
                 description: ''
             },
             {
-                name: 'Rojat Gaëlle',
-                position: 'tdb',
+                name: 'Gheorghin Thomas',
+                position: 'Pôle Sponsor - I1',
                 description: ''
             },
             {
                 name: 'Grana Pablo',
-                position: 'tdb',
+                position: 'Pôle Sponsor - A1',
                 description: ''
             },
             {
-                name: 'Lefeuvre Augustin',
-                position: 'tdb',
-                description: ''
-            },
-            {
-                name: 'Le Nilias Alice',
-                position: 'tdb',
-                description: ''
-            }, {
                 name: 'Bens Amine',
-                position: 'tdb',
-                description: ''
-            },
-            {
-                name: 'Jeannnin Guillaume',
-                position: 'tdb',
+                position: 'Pôle Sponsor - A1',
                 description: ''
             },
             {
                 name: 'Berda Jeremy',
-                position: 'tdb',
+                position: 'Pôle Sponsor - A2',
                 description: ''
             },
             {
                 name: 'Azria Eytan',
-                position: 'tdb',
+                position: 'Pôle Sponsor - A2',
                 description: ''
             }
+        ]
+    },
+    {
+        name: 'Pôle Ecologie',
+        members: [
+            {
+                name: 'Olivier Raphael',
+                position: 'Respo Ecologie - A1',
+                description: ''
+            },
+            {
+                name: 'Royer Louise',
+                position: 'Pôle Ecologie - I1',
+                description: ''
+            },
+            {
+                name: 'Le Nilias Alice',
+                position: 'Pôle Ecologie - A1',
+                description: ''
+            },
+        ]
+    },
+    {
+        name: 'Pôle Activité',
+        members: [
+            {
+                name: 'Rojat Gaëlle',
+                position: 'Respo Activité - A1',
+                description: ''
+            },
+            {
+                name: 'Carrière Linda',
+                position: 'Pôle Activité - I1',
+                description: ''
+            },
+
+            {
+                name: 'Bonnel Timothé',
+                position: 'Pôle Activité - I1',
+                description: ''
+            },
+            {
+                name: 'Delamadeleine Tom',
+                position: 'Pôle Activité - I1',
+                description: ''
+            },
+        ]
+    },
+    {
+        name: 'Pôle Food',
+        members: [
+            {
+                name: 'Rolland Nathan',
+                position: 'Respo Food - P2',
+                description: ''
+            },
+        ]
+    }, {
+        name: 'Pôle Appli',
+        members: [
+            {
+                name: 'Vénard Paul',
+                position: 'Respo Appli - I2',
+                description: ''
+            },
         ]
     }
 ]
