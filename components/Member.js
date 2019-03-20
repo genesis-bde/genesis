@@ -25,14 +25,19 @@ export default class Member extends Component {
     }
 
     render() {
-        const {name, position, description, src = '../assets/images/members/default.jpg'} = this.props.memberInfo;
+        const {
+            name, position, description, images = {
+                preview: require('../assets/images/members/preview/default.jpg'),
+                complete: require('../assets/images/members/complete/default.jpg')
+            }
+        } = this.props.memberInfo;
 
         return (
             <View>
                 <Modal modalVisible={this.state.modalVisible} onToggle={this.toggleModal}>
                     <Image
                         style={styles.image}
-                        source={require('../assets/images/members/Adrienrb.jpg')}
+                        source={images.complete}
                     />
                     <Text style={styles.name}>{name}</Text>
                     <Text style={styles.position}>{position.toUpperCase()}</Text>
@@ -43,7 +48,7 @@ export default class Member extends Component {
                 <TouchableHighlight onPress={this.toggleModal}>
                     <Image
                         style={styles.imagePreview}
-                        source={require('../assets/images/members/default.jpg')}
+                        source={images.preview}
                     />
                 </TouchableHighlight>
             </View>
