@@ -4,7 +4,7 @@ export default [
         members: [
             {
                 name: 'Delmarre Adrien',
-                position: 'Président',
+                position: 'Président - A1',
                 description: '',
                 images: {
                     preview: require('../assets/images/members/preview/default.jpg'),
@@ -12,7 +12,7 @@ export default [
                 }
             }, {
                 name: 'Scarpellini Robin',
-                position: 'Vice-Président',
+                position: 'Vice-Président - A1',
                 description: '',
                 images: {
                     preview: require('../assets/images/members/preview/default.jpg'),
@@ -20,7 +20,7 @@ export default [
                 }
             }, {
                 name: 'Gerardin Marceau',
-                position: 'Vice-Président',
+                position: 'Vice-Président - P2',
                 description: '',
                 images: {
                     preview: require('../assets/images/members/preview/default.jpg'),
@@ -28,7 +28,7 @@ export default [
                 }
             }, {
                 name: 'Brochet Arthur',
-                position: 'Secrétaire Général',
+                position: 'Secrétaire Général - A1',
                 description: '',
                 images: {
                     preview: require('../assets/images/members/preview/default.jpg'),
@@ -36,7 +36,7 @@ export default [
                 }
             }, {
                 name: 'Le Bris Agathe',
-                position: 'Trésorière',
+                position: 'Trésorière -I1',
                 description: '',
                 images: {
                     preview: require('../assets/images/members/preview/default.jpg'),
@@ -45,11 +45,11 @@ export default [
             },
             {
                 name: 'Chevillote Hortense',
-                position: 'Vice-Trésorière',
+                position: 'Vice-Trésorière - I2',
                 description: ''
             }, {
                 name: 'Gabilly Elise',
-                position: 'Responsable Académique',
+                position: 'Respo Académique - A1',
                 description: '',
                 images: {
                     preview: require('../assets/images/members/preview/default.jpg'),
