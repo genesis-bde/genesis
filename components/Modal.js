@@ -42,8 +42,9 @@ const styles = StyleSheet.create({
         backgroundColor: '#fff',
         borderRadius: 10,
         width: '80%',
-        height: '80%',
+        minHeight: 350,
         flexDirection: 'column',
         alignItems: 'center',
+        marginTop: 70
     },
 });
