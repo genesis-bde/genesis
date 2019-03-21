@@ -379,7 +379,7 @@ export default [
             },
         ]
     }, {
-        name: 'Paul Appli',
+        name: 'Paul Appli & Chatbot',
         members: [
             {
                 name: 'Vénard Paul',
@@ -391,7 +391,7 @@ export default [
                 }
             },
             {
-                name: 'Mascha Sebastien',
+                name: 'Mascha Seb',
                 position: 'Respo Technique - A1',
                 description: "Jeune lyonnais en quète de sensations fortes, toujours là pour prêter mains fortes.😇\nMaschallah, j'aime parler aux gens et parfois un peu trop...\nServez-lui une Caïpirinha pour en découvrir plus !🍹",
                 images: {
