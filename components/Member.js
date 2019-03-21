@@ -25,15 +25,19 @@ export default class Member extends Component {
     }
 
     render() {
-        const {name, position, description, src = '../assets/images/members/default.jpg'} = this.props.memberInfo;
+        const {
+            name, position, description, images = {
+                preview: require('../assets/images/members/preview/default.jpg'),
+                complete: require('../assets/images/members/complete/default.jpg')
+            }
+        } = this.props.memberInfo;
 
         return (
             <View>
                 <Modal modalVisible={this.state.modalVisible} onToggle={this.toggleModal}>
                     <Image
                         style={styles.image}
-                        source={require('../assets/images/members/default.jpg')}
-                        resizeMode="contain"
+                        source={images.complete}
                     />
                     <Text style={styles.name}>{name}</Text>
                     <Text style={styles.position}>{position.toUpperCase()}</Text>
@@ -44,7 +48,7 @@ export default class Member extends Component {
                 <TouchableHighlight onPress={this.toggleModal}>
                     <Image
                         style={styles.imagePreview}
-                        source={require('../assets/images/members/default.jpg')}
+                        source={images.preview}
                     />
                 </TouchableHighlight>
             </View>
@@ -59,22 +63,27 @@ const styles = StyleSheet.create({
         height: (Layout.window.width) / 3
     },
     image: {
-        marginTop: 10,
-        flex: 0.5,
-        height: undefined,
-        width: undefined
+        marginTop: -85,
+        width: (Layout.window.width) / 2,
+        height: (Layout.window.width) / 2,
+        borderRadius: (Layout.window.width),
+        borderWidth: 4,
+        borderColor: '#fff',
+        overflow: 'hidden'
     },
     name: {
-        marginTop: -20,
+        marginTop: 15,
         textAlign: 'center',
-        fontWeight: 'bold'
+        fontWeight: 'bold',
+        fontSize: 20,
     },
     position: {
         marginTop: 0,
         textAlign: 'center',
         textTransform: 'uppercase',
         fontWeight: '300',
-        fontFamily: Platform.OS === 'android' ? 'sans-serif-light' : undefined
+        fontFamily: Platform.OS === 'android' ? 'sans-serif-light' : undefined,
+        fontSize: 18,
     },
     description: {
         marginTop: 50
