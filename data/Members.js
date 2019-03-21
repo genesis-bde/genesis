@@ -130,15 +130,6 @@ export default [
                     complete: require('../assets/images/members/complete/default.jpg')
                 }
             },
-            {
-                name: 'Mascha Sebastien',
-                position: 'Pôle Soirée - A1',
-                description: '',
-                images: {
-                    preview: require('../assets/images/members/preview/default.jpg'),
-                    complete: require('../assets/images/members/complete/default.jpg')
-                }
-            },
         ]
     },
     {
@@ -394,6 +385,15 @@ export default [
                 name: 'Vénard Paul',
                 position: 'Respo Appli - I2',
                 description: '',
+                images: {
+                    preview: require('../assets/images/members/preview/default.jpg'),
+                    complete: require('../assets/images/members/complete/default.jpg')
+                }
+            },
+            {
+                name: 'Mascha Sebastien',
+                position: 'Respo Technique - A1',
+                description: "Jeune lyonnais en quète de sensations fortes, toujours là pour prêter mains fortes.😇\nMaschallah, j'aime parler aux gens et parfois un peu trop...\nServez-lui une Caïpirinha pour en découvrir plus !🍹",
                 images: {
                     preview: require('../assets/images/members/preview/default.jpg'),
                     complete: require('../assets/images/members/complete/default.jpg')

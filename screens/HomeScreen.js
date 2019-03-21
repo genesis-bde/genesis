@@ -65,14 +65,14 @@ export default class HomeScreen extends React.Component {
       articles: [
         {
           "source": {
-            "id": "techcrunch",
-            "name": "TechCrunch"
+            "id": "345678",
+            "name": "Responsables Activités - Genesis"
           },
           "author": "Frederic Lardinois",
-          "title": "Windows Virtual Desktop is now in public preview - TechCrunch",
-          "description": "Last year, Microsoft announced the launch of its Windows Virtual Desktop service. At the time, this was a private preview, but starting today, any enterprise user who wants to try out what using a virtual Windows 10 desktop that’s hosted in the Azure cloud l, but starting today, any enterprise user who wants to try out what using a virtual Windows 10 desktop that’s hosted in the Azure cloud l, but starting today, any enterprise user who wants to try out what using a virtual Windows 10 desktop that’s hosted in the Azure cloud l, but starting today, any enterprise user who wants to try out what using a virtual Windows 10 desktop that’s hosted in the Azure cloud l, but starting today, any enterprise user who wants to try out what using a virtual Windows 10 desktop that’s hosted in the Azure cloud l, but starting today, any enterprise user who wants to try out what using a virtual Windows 10 desktop that’s hosted in the Azure cloud lo…",
+          "title": "🎮 GFIFA NIGHT 🎮",
+          "description": "On se retrouve Vendredi soir à partir de 18h à NDL pour la première édition de la Gfifa night organisée par ISEP Gaming Club et ISEPLive😍\nAu programme : 🍔\nUn buffet gratuit 🎮 \n10 PS4 à gagner \nAucune excuse valable pour ne pas y assister ! \n https://www.facebook.com/events/777013859340072/",
           "url": "https://techcrunch.com/2019/03/21/windows-virtual-desktop-is-now-in-public-preview/",
-          "urlToImage": "https://techcrunch.com/wp-content/uploads/2018/01/img_20180110_180644.jpg?w=533",
+          "urlToImage": "https://scontent-cdt1-1.xx.fbcdn.net/v/t1.0-9/48403585_2205890563016300_3442042054358597632_o.jpg?_nc_cat=103&_nc_ht=scontent-cdt1-1.xx&oh=0fd5b5195eaf2a95277e7883aa0deca7&oe=5D1F26A9",
           "publishedAt": "2019-03-21T10:02:12Z",
         }
       ], refreshing: true
@@ -126,6 +126,7 @@ export default class HomeScreen extends React.Component {
               }
               style={styles.welcomeImage}
             />
+            <Text style={{fontWeight:'bold', fontStyle:'italic'}}>Genesis - Liste BDE 2019</Text>          
           </View>
 
           <View style={styles.container}>

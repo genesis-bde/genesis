@@ -1,7 +1,7 @@
 export default [
     {
         iconName: 'facebook-square',
-        url: 'fb://profile/'
+        url: 'https://www.facebook.com'
     },
     {
         iconName: 'snapchat-square',
