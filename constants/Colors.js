@@ -1,8 +1,8 @@
 export default {
-  main: "#FF6F61",
+  main: "#cc0066",
   second: "#FFCA00",
   tintColor: "#FFF",
-  tabIconDefault: '#FF9554',
+  tabIconDefault: '#DB88B3',
   tabIconSelected: "#FFF",
   tabBar: this.main,
   errorBackground: 'red',

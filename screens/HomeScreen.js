@@ -4,16 +4,19 @@ import {
   Platform,
   ScrollView,
   StyleSheet,
+  FlatList,
   Text,
   TouchableOpacity,
   View,
 } from 'react-native';
 import { WebBrowser, Permissions, Notifications } from 'expo';
+import { StackNavigator } from 'react-navigation';
 
 import { MonoText } from '../components/StyledText';
+import { getNews } from '../data/News';
+import Article from '../components/Articles';
 
-
-const PUSH_ENDPOINT = 'https://localhost:8000/api/phone';
+const PUSH_ENDPOINT = 'https://www.genesis-bde.fr/api/phone';
 
 async function registerForPushNotificationsAsync() {
   const { status: existingStatus } = await Permissions.getAsync(
@@ -55,23 +58,62 @@ async function registerForPushNotificationsAsync() {
 
 export default class HomeScreen extends React.Component {
 
-  componentDidMount(){
-    registerForPushNotificationsAsync()
-    console.log("------------------------------------------");
-    this.listener = Expo.Notifications.addListener(this.listen)
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      articles: [
+        {
+          "source": {
+            "id": "techcrunch",
+            "name": "TechCrunch"
+          },
+          "author": "Frederic Lardinois",
+          "title": "Windows Virtual Desktop is now in public preview - TechCrunch",
+          "description": "Last year, Microsoft announced the launch of its Windows Virtual Desktop service. At the time, this was a private preview, but starting today, any enterprise user who wants to try out what using a virtual Windows 10 desktop that’s hosted in the Azure cloud l, but starting today, any enterprise user who wants to try out what using a virtual Windows 10 desktop that’s hosted in the Azure cloud l, but starting today, any enterprise user who wants to try out what using a virtual Windows 10 desktop that’s hosted in the Azure cloud l, but starting today, any enterprise user who wants to try out what using a virtual Windows 10 desktop that’s hosted in the Azure cloud l, but starting today, any enterprise user who wants to try out what using a virtual Windows 10 desktop that’s hosted in the Azure cloud l, but starting today, any enterprise user who wants to try out what using a virtual Windows 10 desktop that’s hosted in the Azure cloud lo…",
+          "url": "https://techcrunch.com/2019/03/21/windows-virtual-desktop-is-now-in-public-preview/",
+          "urlToImage": "https://techcrunch.com/wp-content/uploads/2018/01/img_20180110_180644.jpg?w=533",
+          "publishedAt": "2019-03-21T10:02:12Z",
+        }
+      ], refreshing: true
+    };
+
+    this.fetchNews = this.fetchNews.bind(this);
   }
 
-  componentWillUnmount(){
+  fetchNews() {
+    getNews()
+      .then(articles => this.setState({ articles, refreshing: false }))
+      .catch(() => this.setState({ refreshing: false }));
+
+  }
+
+  handleRefresh() {
+    this.setState(
+      {
+        refreshing: true
+      },
+      () => this.fetchNews()
+    );
+  }
+
+  componentDidMount() {
+    registerForPushNotificationsAsync()
+    this.listener = Expo.Notifications.addListener(this.listen)
+    this.fetchNews();
+  }
+
+  componentWillUnmount() {
     this.listener && Expo.Notifications.removeListener(this.listen)
   }
-  
-  listen = ({origin, data}) => {
+
+  listen = ({ origin, data }) => {
     console.log("cool data", origin, data);
   }
-    
+
 
   render() {
-    
+
     return (
       <View style={styles.container}>
         <ScrollView style={styles.container} contentContainerStyle={styles.contentContainer}>
@@ -79,69 +121,28 @@ export default class HomeScreen extends React.Component {
             <Image
               source={
                 __DEV__
-                  ? require('../assets/images/robot-dev.png')
+                  ? require('../assets/images/couverture.jpg')
                   : require('../assets/images/robot-prod.png')
               }
               style={styles.welcomeImage}
             />
           </View>
 
-          <View style={styles.getStartedContainer}>
-            {this._maybeRenderDevelopmentModeWarning()}
-
-            <Text style={styles.getStartedText}>Get started by opening</Text>
-
-            <View style={[styles.codeHighlightContainer, styles.homeScreenFilename]}>
-              <MonoText style={styles.codeHighlightText}>screens/HomeScreen.js</MonoText>
-            </View>
-
-            <Text style={styles.getStartedText}>
-              Page d'accueil
-            </Text>
+          <View style={styles.container}>
+            <FlatList
+              data={this.state.articles}
+              renderItem={({ item }) => <Article article={item} />}
+              keyExtractor={item => item.url}
+              refreshing={this.state.refreshing}
+              onRefresh={this.handleRefresh.bind(this)}
+            />
           </View>
 
-          <View style={styles.helpContainer}>
-            <TouchableOpacity onPress={this._handleHelpPress} style={styles.helpLink}>
-              <Text style={styles.helpLinkText}>Help, it didn’t automatically reload!</Text>
-            </TouchableOpacity>
-          </View>
+
         </ScrollView>
       </View>
     );
   }
-
-  _maybeRenderDevelopmentModeWarning() {
-    if (__DEV__) {
-      const learnMoreButton = (
-        <Text onPress={this._handleLearnMorePress} style={styles.helpLinkText}>
-          Learn more
-        </Text>
-      );
-
-      return (
-        <Text style={styles.developmentModeText}>
-          Development mode is enabled, your app will be slower but you can use useful development
-          tools. {learnMoreButton}
-        </Text>
-      );
-    } else {
-      return (
-        <Text style={styles.developmentModeText}>
-          You are not in development mode, your app will run at full speed.
-        </Text>
-      );
-    }
-  }
-
-  _handleLearnMorePress = () => {
-    WebBrowser.openBrowserAsync('https://docs.expo.io/versions/latest/guides/development-mode');
-  };
-
-  _handleHelpPress = () => {
-    WebBrowser.openBrowserAsync(
-      'https://docs.expo.io/versions/latest/guides/up-and-running.html#can-t-see-your-changes'
-    );
-  };
 }
 
 const styles = StyleSheet.create({
@@ -157,18 +158,18 @@ const styles = StyleSheet.create({
     textAlign: 'center',
   },
   contentContainer: {
-    paddingTop: 30,
+    paddingTop: 15,
   },
   welcomeContainer: {
     alignItems: 'center',
     marginTop: 10,
-    marginBottom: 20,
+    marginBottom: 10,
   },
   welcomeImage: {
-    width: 100,
-    height: 80,
-    resizeMode: 'contain',
-    marginTop: 3,
+    width: 200,
+    height: 150,
+    resizeMode: 'cover',
+    marginTop: 0,
     marginLeft: -10,
   },
   getStartedContainer: {

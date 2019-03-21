@@ -13,9 +13,10 @@ import SponsorsScreen from "../screens/SponsorsScreen";
 import EventsScreen from "../screens/EventsScreen";
 import SocialNetworksScreen from "../screens/SocialNetworksScreen";
 import ProjectsScreen from "../screens/ProjectsScreen";
+import { StackNavigator } from 'react-navigation';
 
 const names = {
-    Home: 'Accueil',
+    Home: 'GENESIS',
     Team: 'Notre liste',
     Events: 'Evènements',
     Sponsors: 'Sponsor',
