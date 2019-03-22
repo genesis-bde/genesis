@@ -1,16 +1,17 @@
 import React from 'react';
-import { View, Text, StyleSheet, Platform, ImageBackground } from 'react-native';
+import { View, Text, StyleSheet, ImageBackground } from 'react-native';
 import { MaterialIcons } from '@expo/vector-icons';
+import API from '../constants/API';
 
 
 export default class Event extends React.Component {
 
     render() {
-        const {startTime,endTime,location, title} = this.props.eventInfo;
+        const {startsAt,endsAt,location, title, media} = this.props.eventInfo;
 
         return (
             <View style={styles.member}>
-                <ImageBackground source={require('../assets/images/bg.jpg')} style={styles.upperPart}>
+                <ImageBackground source={{uri: API.media+media}} style={styles.upperPart}>
                     <Text style={styles.title}>{ title.toUpperCase() }</Text>
                 </ImageBackground>
                 <View style={styles.lowerPart}>
@@ -20,7 +21,7 @@ export default class Event extends React.Component {
                     </Text>
                     <Text style={styles.time}>
                         <MaterialIcons name="access-time" size={12} color="#c6c6c6"/>
-                        { endTime ? startTime+' - '+endTime: startTime }
+                        { endsAt ? startsAt+' - '+endsAt: startsAt }
                     </Text>
                 </View>
             </View>

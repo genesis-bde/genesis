@@ -1,8 +1,8 @@
 import React from 'react';
 import {ScrollView, StyleSheet, Text, View} from 'react-native';
 import axios from 'axios';
-import { Font } from 'expo';
 import Event from '../components/Event';
+import API from '../constants/API';
 
 
 export default class EventsScreen extends React.Component {
@@ -23,10 +23,15 @@ export default class EventsScreen extends React.Component {
         this.setState({
             isLoading: true,
         });
-        axios.get(`https://api.sheety.co/d5f09aea-be51-44b3-9e41-a9a4d7d2f2ed`)
+        axios.get(API.endpoints.events)
             .then(res => {
                 const events = res.data.reduce((events, event) => {
-                    const date = Date.parse(event.date);
+                    event.startsAt = new Date(event.startsAt).getHours()+":"+new Date(event.startsAt).getMinutes();
+                    event.endsAt = event.endsAt ?
+                        new Date(event.endsAt).getHours()+":"+new Date(event.endsAt).getMinutes():
+                        null;
+
+                    const date = new Date(event.date).getTime();
                     if (!events[date]) {
                         events[date] = [];
                     }
@@ -115,7 +120,7 @@ const styles = StyleSheet.create({
         color: "#444",
         fontWeight: 'bold',
         textAlign: 'center',
-        
+
     },
     dayNumber: {
         lineHeight: 87,
@@ -123,13 +128,13 @@ const styles = StyleSheet.create({
         fontWeight: 'bold',
         color: "#c6c6c6",
         textAlign: 'center',
-  
+
     },
     dayMonth: {
         marginTop: -25,
         fontSize: 25,
         textAlign: 'center',
         color: "#c6c6c6",
-        
+
     }
 });

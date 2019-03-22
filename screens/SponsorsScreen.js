@@ -2,9 +2,45 @@ import React from 'react';
 import {ScrollView, StyleSheet, View} from 'react-native';
 import Sponsors from '../data/Sponsors'
 import Sponsor from "../components/Sponsor";
+import axios from "axios";
 
 
 export default class SponsorsScreen extends React.Component {
+
+    constructor(props) {
+        super(props);
+        this.state = {
+            error :'n',
+            sponsors: [],
+            isLoading: false
+        }
+    }
+
+    componentDidMount() {
+        this.getSponsors();
+    }
+
+    getSponsors() {
+        this.setState({
+            isLoading: true,
+        });
+        axios.get(`https://www.genesis-bde.fr/api/sponsor`)
+            .then(res => {
+                const sponsors = res.data;
+
+                this.setState({
+                    sponsors,
+                    isLoading: false,
+                });
+            })
+            .catch(e => {
+                console.log(e);
+                this.setState({
+                    error: e.message,
+                    isLoading: false,
+                })
+            });
+    }
 
     render() {
         return (
