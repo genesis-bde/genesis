@@ -7,6 +7,8 @@ import {
 import Layout from '../constants/Layout';
 import Modal from "./Modal";
 
+import API from '../constants/API';
+
 
 export default class Sponsor extends Component {
     constructor(props) {
@@ -23,25 +25,30 @@ export default class Sponsor extends Component {
     }
 
     render() {
-        const {name, description, src} = this.props.sponsorInfo;
+        const {name, description, reduction, media} = this.props.sponsorInfo;
 
         return (
             <View style={this.props.style}>
                 <Modal modalVisible={this.state.modalVisible} onToggle={this.toggleModal}>
                     <Image
                         style={styles.image}
-                        source={require('../assets/images/sponsors/nike.png')}
+                        source={{uri: API.media+media}}
                         resizeMode="contain"
                     />
                     <Text style={styles.name}>{name}</Text>
 
                     <Text style={styles.description}>{description}</Text>
+
+                    { reduction &&
+                        <Text style={styles.reduction}>CODE REDUCTION: {reduction}</Text>
+                    }
+
                 </Modal>
 
                 <TouchableHighlight onPress={this.toggleModal}>
                     <Image
                         style={styles.imagePreview}
-                        source={require('../assets/images/sponsors/nike.png')}
+                        source={{uri: API.media+media}}
                     />
                 </TouchableHighlight>
             </View>
@@ -69,5 +76,8 @@ const styles = StyleSheet.create({
     },
     description: {
         marginTop: 50
+    },
+    reduction: {
+
     }
 });

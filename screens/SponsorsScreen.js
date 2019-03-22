@@ -3,6 +3,7 @@ import {ScrollView, StyleSheet, View} from 'react-native';
 import Sponsors from '../data/Sponsors'
 import Sponsor from "../components/Sponsor";
 import axios from "axios";
+import API from '../constants/API';
 
 
 export default class SponsorsScreen extends React.Component {
@@ -24,7 +25,7 @@ export default class SponsorsScreen extends React.Component {
         this.setState({
             isLoading: true,
         });
-        axios.get(`https://www.genesis-bde.fr/api/sponsor`)
+        axios.get(API.endpoints.sponsors)
             .then(res => {
                 const sponsors = res.data;
 
