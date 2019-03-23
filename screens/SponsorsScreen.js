@@ -1,6 +1,5 @@
 import React from 'react';
 import {ScrollView, StyleSheet, View} from 'react-native';
-import Sponsors from '../data/Sponsors'
 import Sponsor from "../components/Sponsor";
 import axios from "axios";
 import API from '../constants/API';
@@ -44,10 +43,11 @@ export default class SponsorsScreen extends React.Component {
     }
 
     render() {
+        let sponsors = this.state.sponsors;
         return (
             <ScrollView>
                 <View style={styles.container}>
-                    {Sponsors.map((sponsor, index) => {
+                    {sponsors.map((sponsor, index) => {
                         const style = (index + 1) === 1 || (index + 1) % 3 ?
                             {alignItems: 'center'} :
                             {alignItems: 'center', flexBasis: '100%'};

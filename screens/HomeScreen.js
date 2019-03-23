@@ -15,8 +15,10 @@ import { StackNavigator } from 'react-navigation';
 import { MonoText } from '../components/StyledText';
 import { getNews } from '../data/News';
 import Article from '../components/Articles';
+import axios from 'axios';
 
 const PUSH_ENDPOINT = 'https://www.genesis-bde.fr/api/phone';
+import API from '../constants/API';
 
 async function registerForPushNotificationsAsync() {
   const { status: existingStatus } = await Permissions.getAsync(
@@ -64,16 +66,15 @@ export default class HomeScreen extends React.Component {
     this.state = {
       articles: [
         {
-          "source": {
-            "id": "345678",
-            "name": "Responsables Activités - Genesis"
-          },
-          "author": "Frederic Lardinois",
-          "title": "🎮 GFIFA NIGHT 🎮",
-          "description": "On se retrouve Vendredi soir à partir de 18h à NDL pour la première édition de la Gfifa night organisée par ISEP Gaming Club et ISEPLive😍\nAu programme : 🍔\nUn buffet gratuit 🎮 \n10 PS4 à gagner \nAucune excuse valable pour ne pas y assister ! \n https://www.facebook.com/events/777013859340072/",
-          "url": "https://techcrunch.com/2019/03/21/windows-virtual-desktop-is-now-in-public-preview/",
-          "urlToImage": "https://scontent-cdt1-1.xx.fbcdn.net/v/t1.0-9/48403585_2205890563016300_3442042054358597632_o.jpg?_nc_cat=103&_nc_ht=scontent-cdt1-1.xx&oh=0fd5b5195eaf2a95277e7883aa0deca7&oe=5D1F26A9",
-          "publishedAt": "2019-03-21T10:02:12Z",
+          "id": 1,
+          "title": "Bonjour",
+          "description": "Salut tout le monde",
+          "location": "NDL",
+          "date": "2021-01-01T00:00:00+01:00",
+          "startsAt": "1970-01-01T14:00:00+01:00",
+          "endsAt": null,
+          "media": "events\/4cce4338f9d008e8f118566b472675fd78a47243.jpeg",
+          "uploadedFile": null
         }
       ], refreshing: true
     };
@@ -82,10 +83,24 @@ export default class HomeScreen extends React.Component {
   }
 
   fetchNews() {
-    getNews()
-      .then(articles => this.setState({ articles, refreshing: false }))
-      .catch(() => this.setState({ refreshing: false }));
+    this.setState({
+      refreshing: true,
+    });
+    axios.get(API.endpoints.sponsors)
+      .then(res => {
+        const articles = res.data;
 
+        this.setState({
+          articles,
+          refreshing: false,
+        });
+      })
+      .catch(e => {
+        console.log(e);
+        this.setState({
+          refreshing: false,
+        })
+      });
   }
 
   handleRefresh() {
@@ -117,26 +132,18 @@ export default class HomeScreen extends React.Component {
     return (
       <View style={styles.container}>
         <ScrollView style={styles.container} contentContainerStyle={styles.contentContainer}>
-          <View style={styles.welcomeContainer}>
-            <Image
-              source={
-                __DEV__
-                  ? require('../assets/images/couverture.jpg')
-                  : require('../assets/images/robot-prod.png')
-              }
-              style={styles.welcomeImage}
-            />
-            <Text style={{fontWeight:'bold', fontStyle:'italic'}}>Genesis - Liste BDE 2019</Text>          
-          </View>
 
           <View style={styles.container}>
-            <FlatList
+            {/* <FlatList
               data={this.state.articles}
               renderItem={({ item }) => <Article article={item} />}
               keyExtractor={item => item.url}
               refreshing={this.state.refreshing}
               onRefresh={this.handleRefresh.bind(this)}
-            />
+            /> */}
+            {/* {articles.map((article, index) => {
+              return <Articles articleInfo={article} />
+            })} */}
           </View>
 
 

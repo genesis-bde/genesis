@@ -6,15 +6,16 @@ import moment from 'moment';
 export default class Article extends React.Component {
     render() {
         const {
+            
             title,
             description,
-            publishedAt,
+            date,
             source,
-            urlToImage,
-            url
+            media,
+            location,
         } = this.props.article;
         const { noteStyle, featuredTitleStyle } = styles;
-        const time = moment(publishedAt || moment.now()).fromNow();
+        const time = moment(date || moment.now()).fromNow();
         const defaultImg =
             'https://wallpaper.wiki/wp-content/uploads/2017/04/wallpaper.wiki-Images-HD-Diamond-Pattern-PIC-WPB009691.jpg';
 
@@ -24,7 +25,7 @@ export default class Article extends React.Component {
                     featuredTitle={title}
                     featuredTitleStyle={featuredTitleStyle}
                     image={{
-                        uri: urlToImage || defaultImg
+                        uri: media || defaultImg
                     }}
                 >
                     <Text style={{ marginBottom: 10 }}>
@@ -34,7 +35,7 @@ export default class Article extends React.Component {
                     <View
                         style={{ flexDirection: 'row', justifyContent: 'space-between' }}
                     >
-                        <Text style={noteStyle}>{source.name.toUpperCase()}</Text>
+                        <Text style={noteStyle}>{location}</Text>
                         <Text style={noteStyle}>{time}</Text>
                     </View>
                 </Card>
