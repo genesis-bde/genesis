@@ -29,7 +29,7 @@ export default class SponsorsScreen extends React.Component {
                 const sponsors = res.data;
 
                 this.setState({
-                    sponsors,
+                    sponsors: sponsors || [],
                     isLoading: false,
                 });
             })
@@ -43,11 +43,10 @@ export default class SponsorsScreen extends React.Component {
     }
 
     render() {
-        let sponsors = this.state.sponsors;
         return (
             <ScrollView>
                 <View style={styles.container}>
-                    {sponsors.map((sponsor, index) => {
+                    {this.state.sponsors.map((sponsor, index) => {
                         const style = (index + 1) === 1 || (index + 1) % 3 ?
                             {alignItems: 'center'} :
                             {alignItems: 'center', flexBasis: '100%'};

@@ -26,9 +26,9 @@ export default class EventsScreen extends React.Component {
         axios.get(API.endpoints.events)
             .then(res => {
                 const events = res.data.reduce((events, event) => {
-                    event.startsAt = new Date(event.startsAt).getHours()+":"+new Date(event.startsAt).getMinutes();
+                    event.startsAt = ('0'+new Date(event.startsAt).getHours()).slice(-2)+":"+('0'+new Date(event.startsAt).getMinutes()).slice(-2);
                     event.endsAt = event.endsAt ?
-                        new Date(event.endsAt).getHours()+":"+new Date(event.endsAt).getMinutes():
+                        ('0'+new Date(event.endsAt).getHours()).slice(-2)+":"+('0'+new Date(event.endsAt).getMinutes()).slice(-2):
                         null;
 
                     const date = new Date(event.date).getTime();
