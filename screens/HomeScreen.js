@@ -114,12 +114,12 @@ export default class HomeScreen extends React.Component {
 
   componentDidMount() {
     registerForPushNotificationsAsync()
-    this.listener = Expo.Notifications.addListener(this.listen)
+    this.listener = Notifications.addListener(this.listen);
     this.fetchNews();
   }
 
   componentWillUnmount() {
-    this.listener && Expo.Notifications.removeListener(this.listen)
+    this.listener && Notifications.removeListener(this.listen)
   }
 
   listen = ({ origin, data }) => {

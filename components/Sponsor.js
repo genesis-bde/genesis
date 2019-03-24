@@ -40,7 +40,10 @@ export default class Sponsor extends Component {
                     <Text style={styles.description}>{description}</Text>
 
                     { reduction &&
-                        <Text style={styles.reduction}>CODE REDUCTION: {reduction}</Text>
+                    <Text style={styles.reduction}>
+                        <Text style={{fontWeight:'bold'}}>CODE REDUCTION: </Text>
+                        {reduction}
+                    </Text>
                     }
 
                 </Modal>
@@ -78,6 +81,7 @@ const styles = StyleSheet.create({
         marginTop: 50
     },
     reduction: {
-
+        position: 'absolute',
+        bottom: 20
     }
 });
