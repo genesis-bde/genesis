@@ -233,11 +233,11 @@ export default [
         ]
     },
     {
-        name: 'Pôle Sponsor',
+        name: 'Pôle Sponsors',
         members: [
             {
                 name: 'Lefeuvre Augustin',
-                position: 'Respo Sponsor - A1',
+                position: 'Respo Sponsors - A1',
                 description: "Sous ses airs sainte nitouche, quand il est bourré il louche! Il saura vous surprendre avec des moves venus de l'espace tout comme les sponsors badass",
                 images: {
                     preview: require('../assets/images/members/preview/default.jpg'),
@@ -255,7 +255,7 @@ export default [
             },
             {
                 name: 'Grana Pablo',
-                position: 'Pôle Sponsor - A1',
+                position: 'Pôle Sponsors - A1',
                 description: "Ses résolutions en 2019 : arrêter de penser à la thune et à la bouffe. Ça été les 20 minutes les plus dures de sa vie",
                 images: {
                     preview: require('../assets/images/members/preview/default.jpg'),
@@ -264,7 +264,7 @@ export default [
             },
             {
                 name: 'Bens Amine',
-                position: 'Pôle Sponsor - A1',
+                position: 'Pôle Sponsors - A1',
                 description: "Toujours bien sapé il est là pour nous faire bosser. Disponible à toutes heures de la journée il répond même aux appels masqués. Ceux qui le cotoient sont surpris par sa ponctualité, ce bg arrive toujours à point nommé.",
                 images: {
                     preview: require('../assets/images/members/preview/default.jpg'),
