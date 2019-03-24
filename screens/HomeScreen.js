@@ -64,19 +64,7 @@ export default class HomeScreen extends React.Component {
     super(props);
 
     this.state = {
-      articles: [
-        {
-          "id": 1,
-          "title": "Bonjour",
-          "description": "Salut tout le monde",
-          "location": "NDL",
-          "date": "2021-01-01T00:00:00+01:00",
-          "startsAt": "1970-01-01T14:00:00+01:00",
-          "endsAt": null,
-          "media": "events\/4cce4338f9d008e8f118566b472675fd78a47243.jpeg",
-          "uploadedFile": null
-        }
-      ], refreshing: true
+      articles: [], refreshing: true
     };
 
     this.fetchNews = this.fetchNews.bind(this);

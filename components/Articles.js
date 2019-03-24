@@ -2,15 +2,16 @@ import React from 'react';
 import { View, Linking, TouchableNativeFeedback } from 'react-native';
 import { Text, Button, Card, Divider } from 'react-native-elements';
 import moment from 'moment';
+import API from '../constants/API';
 
 export default class Articles extends React.Component {
     render() {
         const {
             title,
-            description,
+            content,
             date,
             source,
-            media,
+            medias,
             location,
         } = this.props.articleInfo;
         const { noteStyle, featuredTitleStyle } = styles;
@@ -24,11 +25,11 @@ export default class Articles extends React.Component {
                     featuredTitle={title}
                     featuredTitleStyle={featuredTitleStyle}
                     image={{
-                        uri: media || defaultImg
+                        uri: API.media+medias || defaultImg
                     }}
                 >
                     <Text style={{ marginBottom: 10 }}>
-                        {description || 'Read More..'}
+                        {content || 'Read More..'}
                     </Text>
                     <Divider style={{ backgroundColor: '#dfe6e9' }} />
                     <View
@@ -52,6 +53,7 @@ const styles = {
     },
     featuredTitleStyle: {
         marginHorizontal: 5,
+        textAlign:'center',
         textShadowColor: '#00000f',
         textShadowOffset: { width: 3, height: 3 },
         textShadowRadius: 3
