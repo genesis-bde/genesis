@@ -3,17 +3,16 @@ import { View, Linking, TouchableNativeFeedback } from 'react-native';
 import { Text, Button, Card, Divider } from 'react-native-elements';
 import moment from 'moment';
 
-export default class Article extends React.Component {
+export default class Articles extends React.Component {
     render() {
         const {
-            
             title,
             description,
             date,
             source,
             media,
             location,
-        } = this.props.article;
+        } = this.props.articleInfo;
         const { noteStyle, featuredTitleStyle } = styles;
         const time = moment(date || moment.now()).fromNow();
         const defaultImg =

@@ -14,7 +14,7 @@ import { StackNavigator } from 'react-navigation';
 
 import { MonoText } from '../components/StyledText';
 import { getNews } from '../data/News';
-import Article from '../components/Articles';
+import Articles from '../components/Articles';
 import axios from 'axios';
 
 const PUSH_ENDPOINT = 'https://www.genesis-bde.fr/api/phone';
@@ -86,7 +86,7 @@ export default class HomeScreen extends React.Component {
     this.setState({
       refreshing: true,
     });
-    axios.get(API.endpoints.sponsors)
+    axios.get(API.endpoints.posts)
       .then(res => {
         const articles = res.data;
 
@@ -128,7 +128,7 @@ export default class HomeScreen extends React.Component {
 
 
   render() {
-
+    let articles = this.state.articles;
     return (
       <View style={styles.container}>
         <ScrollView style={styles.container} contentContainerStyle={styles.contentContainer}>
@@ -141,9 +141,9 @@ export default class HomeScreen extends React.Component {
               refreshing={this.state.refreshing}
               onRefresh={this.handleRefresh.bind(this)}
             /> */}
-            {/* {articles.map((article, index) => {
+            {articles.map((article, index) => {
               return <Articles articleInfo={article} />
-            })} */}
+            })}
           </View>
 
 
