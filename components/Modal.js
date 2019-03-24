@@ -19,7 +19,7 @@ export default class Modal extends React.Component {
                 <TouchableOpacity style={styles.hidden} onPressOut={this.props.onToggle}>
                     <View style={styles.modal}>
                         <TouchableWithoutFeedback style={{flex: 1}}>
-                            <View style={{flex: 1}}>
+                            <View style={{flex: 1, alignItems: 'center',}}>
                                 {this.props.children}
                             </View>
                         </TouchableWithoutFeedback>
@@ -45,6 +45,8 @@ const styles = StyleSheet.create({
         minHeight: 350,
         flexDirection: 'column',
         alignItems: 'center',
-        marginTop: 70
+        marginTop: 70,
+        paddingHorizontal: 10,
+        paddingBottom: 10,
     },
 });

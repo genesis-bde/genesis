@@ -6,12 +6,12 @@ import Colors from '../constants/Colors';
 export default class TabBarIcon extends React.Component {
   render() {
     return (
-      <Icon.FontAwesome
-        name={this.props.name}
-        size={26}
-        style={{ marginBottom: -3 }}
-        color={this.props.focused ? Colors.tabIconSelected : Colors.tabIconDefault}
-      />
+        <Icon.FontAwesome
+            name={this.props.name}
+            size={26}
+            style={ this.props.style || { marginBottom: -3 }}
+            color={Colors.tabIconSelected}
+        />
     );
   }
 }

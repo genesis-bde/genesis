@@ -9,6 +9,7 @@ export default class HeaderBack extends React.Component {
                 <TabBarIcon
                     focused={false}
                     name={Platform.OS === 'ios' ? 'chevron-left' : 'arrow-left'}
+                    style={{marginLeft: 15}}
                 />
             </TouchableHighlight>
         );

@@ -59,17 +59,16 @@ export default class Member extends Component {
 
 const styles = StyleSheet.create({
     imagePreview: {
-        width: (Layout.window.width) / 3,
-        height: (Layout.window.width) / 3
+        width: (Layout.window.width) / 2,
+        height: (Layout.window.width) / 2
     },
     image: {
         marginTop: -85,
-        width: (Layout.window.width) / 2,
-        height: (Layout.window.width) / 2,
+        width: (Layout.window.width*1.5) / 2,
+        height: (Layout.window.width*1.5) / 2,
         borderRadius: (Layout.window.width),
-        borderWidth: 4,
+        borderWidth: 5,
         borderColor: '#fff',
-        overflow: 'hidden'
     },
     name: {
         marginTop: 15,
@@ -86,6 +85,7 @@ const styles = StyleSheet.create({
         fontSize: 18,
     },
     description: {
+        textAlign: 'center',
         marginTop: 50
     }
 });
