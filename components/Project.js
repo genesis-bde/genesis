@@ -1,6 +1,6 @@
-import React, {Component} from 'react';
-import {ScrollView, StyleSheet, Text, View} from 'react-native';
-import {Entypo} from '@expo/vector-icons';
+import React, { Component } from 'react';
+import { ScrollView, StyleSheet, Text, View, Image } from 'react-native';
+import { Entypo } from '@expo/vector-icons';
 import Accordion from 'react-native-collapsible/Accordion';
 
 export default class Project extends Component {
@@ -21,8 +21,8 @@ export default class Project extends Component {
                 <View><Text style={styles.headerText}>{project.title.toUpperCase()}</Text></View>
                 <View>
                     {this.state.activeProjects[0] === index ?
-                        <Entypo name="chevron-thin-up" size={16} color="#c6c6c6"/> :
-                        <Entypo name="chevron-thin-down" size={16} color="#c6c6c6"/>
+                        <Entypo name="chevron-thin-up" size={16} color="#c6c6c6" /> :
+                        <Entypo name="chevron-thin-down" size={16} color="#c6c6c6" />
                     }
                 </View>
             </View>
@@ -30,15 +30,24 @@ export default class Project extends Component {
     };
 
     _renderContent = project => {
+        const { images = {
+            preview: require('../assets/images/members/preview/default.jpg'),
+            complete: require('../assets/images/members/complete/default.jpg')
+        }
+        } = this.props.sectionInfo;
         return (
             <View style={styles.content}>
+                <Image
+                    style={styles.image}
+                    source={images.complete}
+                />
                 <Text>{project.content}</Text>
             </View>
         );
     };
 
     _updateSections = activeProjects => {
-        this.setState({activeProjects});
+        this.setState({ activeProjects });
     };
 
 
@@ -77,7 +86,7 @@ const styles = StyleSheet.create({
         fontWeight: '100',
         fontSize: 16,
     },
-    title : {
+    title: {
         textAlign: 'center',
         fontSize: 19,
         fontWeight: 'bold',

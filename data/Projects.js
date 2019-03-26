@@ -7,6 +7,10 @@ export default [
         projects: [
             {
                 title: "Mois d'intégration",
+                images: {
+                    preview: require('../assets/images/members/preview/default.jpg'),
+                    complete: require('../assets/images/projets/complete/54525003_667700183648671_7231869742640791552_n.jpg')
+                },
                 content: "L’intégration des nouveaux élèves se déroulera sur 1 mois. En effet, les deux premières " +
                     "semaines seront riches en événements de tous genres pour intégrer tous les “types de " +
                     "personnes” présents à l’ISEP. Un WEI viendra clore ces deux semaines. Deux semaines " +
@@ -32,6 +36,10 @@ export default [
             },
             {
                 title: "Intégration pour tous",
+                images: {
+                    preview: require('../assets/images/members/preview/default.jpg'),
+                    complete: require('../assets/images/members/complete/default.jpg')
+                },
                 content: "L’intégration a pour but de plonger les élèves dans un univers qu’ils apprécient et dans lequel " +
                     "ils peuvent se sentir bien, nous sommes donc chargés de ne laisser personne derrière. " +
                     "Pour ce faire, le système de parrainage sera de nouveau instauré: les I1 et P1 auront " +
@@ -66,6 +74,10 @@ export default [
             },
             {
                 title: "Week-end d'intégration",
+                images: {
+                    preview: require('../assets/images/members/preview/default.jpg'),
+                    complete: require('../assets/images/members/complete/default.jpg')
+                },
                 content: "Le week-end d’intégration est un séjour de 2 jours qui nous permettra de compléter " +
                     "l’intégration des nouveaux étudiants. Ces derniers pourront rencontrer des personnes de " +
                     "promotions différentes et de leur année pour pouvoir se sentir pleinement intégrés dans la " +
@@ -92,9 +104,17 @@ export default [
     },
     {
         title: "Cohésion dans la vie associative",
+        images: {
+            preview: require('../assets/images/members/preview/default.jpg'),
+            complete: require('../assets/images/members/complete/default.jpg')
+        },
         projects: [
             {
                 title: "",
+                images: {
+                    preview: require('../assets/images/members/preview/default.jpg'),
+                    complete: require('../assets/images/members/complete/default.jpg')
+                },
                 content: "Le but principal d’un BDE est de coordonner les différentes associations de l’ISEP afin d’avoir " +
                     "la meilleure organisation possible au sein de la vie associative. Il est primordial que les " +
                     "différents associations puissent coopérer, s’entraider, se comprendre et aient une " +
@@ -124,6 +144,10 @@ export default [
     },
     {
         title: "Organisation du BDE",
+        images: {
+            preview: require('../assets/images/members/preview/default.jpg'),
+            complete: require('../assets/images/members/complete/default.jpg')
+        },
         intro: "Le BDE suit une organisation très stricte respectée par chacun de ses membres afin de " +
             "garantir son bon fonctionnement. Le bureau supervise les opérations générales, traite les " +
             "tâches administratives, financières et organisationnelles. Avant la campagne et pendant celle-ci, " +
@@ -132,6 +156,10 @@ export default [
         projects: [
             {
                 title: "Organisation par projet",
+                images: {
+                    preview: require('../assets/images/members/preview/default.jpg'),
+                    complete: require('../assets/images/members/complete/default.jpg')
+                },
                 content: "En cas d’élection, une fois que la liste BDE prendra officiellement ses fonctions, le " +
                     "fonctionnement interne du BDE s’effectuera par projets. De multiples projets seront à réaliser " +
                     "sur une année afin de répondre aux attentes des étudiants et de l’école. Ceux-ci seront " +
@@ -143,6 +171,10 @@ export default [
             },
             {
                 title: "Sécurité pour tous",
+                images: {
+                    preview: require('../assets/images/members/preview/default.jpg'),
+                    complete: require('../assets/images/members/complete/default.jpg')
+                },
                 content: "L’organisation de soirées ou de week-end d’intégration peut souvent entraîner des imprévus " +
                     "qui relèvent de l’ordre sanitaire. Le bde, soucieux de la santé de ces étudiants doit être en " +
                     "mesure de connaître et maîtriser les gestes à adopter afin de réagir au mieux face à un " +
@@ -157,9 +189,17 @@ export default [
     },
     {
         title: "Académie",
+        images: {
+            preview: require('../assets/images/members/preview/default.jpg'),
+            complete: require('../assets/images/members/complete/default.jpg')
+        },
         projects: [
             {
                 title: "Amélioration du CII",
+                images: {
+                    preview: require('../assets/images/members/preview/default.jpg'),
+                    complete: require('../assets/images/members/complete/default.jpg')
+                },
                 content: "Afin d’améliorer la formation du Cycle Intégré International, nous souhaitons augmenter le " +
                     "nombre de cours dispensés en anglais. Nous faisons cela dans la continuité des démarches " +
                     "déjà effectuées par les délégués de la deuxième année du cycle international 2018-2019. " +
@@ -170,6 +210,10 @@ export default [
             },
             {
                 title: "Système d'accompagnement",
+                images: {
+                    preview: require('../assets/images/members/preview/default.jpg'),
+                    complete: require('../assets/images/members/complete/default.jpg')
+                },
                 content: "Nous souhaitons mettre en place un système de partage et d’aide pour toutes les années. " +
                     "C’est à dire un accompagnement scolaire volontaire des personnes de la promotion du " +
                     "dessus pour ceux de la promotion qui suit. Et ce uniquement sur demande des élèves en " +
@@ -179,6 +223,10 @@ export default [
             },
             {
                 title: "Groupes d'intéraction entre P1 et P2",
+                images: {
+                    preview: require('../assets/images/members/preview/default.jpg'),
+                    complete: require('../assets/images/members/complete/default.jpg')
+                },
                 content: "L’idée derrière la création de ces groupes est d’améliorer l’échange au sein des élèves du " +
                     "cycle préparatoire associé. Un groupe serait composé de 3 élèves de P1 s’étant inscrits " +
                     "ensemble ( on peut imaginer prendre les trinômes de khôlles par exemple ) et de 3 P2 s’étant " +
@@ -192,6 +240,10 @@ export default [
             },
             {
                 title: "Développement de la bibliothèque de l'école",
+                images: {
+                    preview: require('../assets/images/members/preview/default.jpg'),
+                    complete: require('../assets/images/members/complete/default.jpg')
+                },
                 content: "La bibliothèque est un lieu privilégié de l’école qui contribue pleinement à la réussite des " +
                     "élèves. Tout d’abord, elle offre une aide le plus souvent nécessaire aux élèves de P1/P2 I1/I2I " +
                     "pour préparer les devoirs-maison, les partiels et mieux maîtriser certaines notions du cours " +
@@ -214,9 +266,17 @@ export default [
     },
     {
         title: "Ecologie",
+        images: {
+            preview: require('../assets/images/members/preview/default.jpg'),
+            complete: require('../assets/images/members/complete/default.jpg')
+        },
         projects: [
             {
                 title: "",
+                images: {
+                    preview: require('../assets/images/members/preview/default.jpg'),
+                    complete: require('../assets/images/members/complete/default.jpg')
+                },
                 content: "Depuis le début de l’année, les étudiants de première année du cycle d’ingénieurs ont pu être " +
                     "sensibilisés à l’importance du développement durable. Des associations comme Latitudes, " +
                     "présente pendant la coupure pédagogique, ont pu par exemple sensibiliser les futurs " +
@@ -248,9 +308,17 @@ export default [
     },
     {
         title: "Pôle artistique",
+        images: {
+            preview: require('../assets/images/members/preview/default.jpg'),
+            complete: require('../assets/images/members/complete/default.jpg')
+        },
         projects: [
             {
                 title: "",
+                images: {
+                    preview: require('../assets/images/members/preview/default.jpg'),
+                    complete: require('../assets/images/members/complete/default.jpg')
+                },
                 content: "Nous voyons l’existence d’un pôle artistique comme un moyen d’enrichir la formation des " +
                     "Isépiens. C’est pour cette raison qu’il nous tient à coeur de garder le système mis en place " +
                     "cette année et de l'améliorer le plus possible afin de promouvoir la diversité des talents des " +
