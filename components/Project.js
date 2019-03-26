@@ -30,16 +30,12 @@ export default class Project extends Component {
     };
 
     _renderContent = project => {
-        const { images = {
-            preview: require('../assets/images/members/preview/default.jpg'),
-            complete: require('../assets/images/members/complete/default.jpg')
-        }
-        } = this.props.sectionInfo;
+     
         return (
             <View style={styles.content}>
                 <Image
                     style={styles.image}
-                    source={images.complete}
+                    source={project.images.complete}
                 />
                 <Text>{project.content}</Text>
             </View>
@@ -92,5 +88,10 @@ const styles = StyleSheet.create({
         fontWeight: 'bold',
         textTransform: 'uppercase',
         color: '#c6c6c6',
-    }
+    },
+    image: {
+        resizeMode:'center',
+        width: window.width,
+        height: 180,
+    },
 });

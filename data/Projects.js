@@ -36,9 +36,10 @@ export default [
             },
             {
                 title: "Intégration pour tous",
+
                 images: {
                     preview: require('../assets/images/members/preview/default.jpg'),
-                    complete: require('../assets/images/members/complete/default.jpg')
+                    complete: require('../assets/images/projets/complete/54525003_667700183648671_7231869742640791552_n.jpg')
                 },
                 content: "L’intégration a pour but de plonger les élèves dans un univers qu’ils apprécient et dans lequel " +
                     "ils peuvent se sentir bien, nous sommes donc chargés de ne laisser personne derrière. " +
