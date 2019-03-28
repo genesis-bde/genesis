@@ -53,7 +53,7 @@ export default class Member extends Component {
                 <TouchableHighlight onPress={this.toggleModal}>
                     <Image
                         style={styles.imagePreview}
-                        source={images.complete}
+                        source={images.preview}
                     />
                 </TouchableHighlight>
             </View>

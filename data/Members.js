@@ -203,8 +203,8 @@ export default [
                 position: 'Pôle Créa - I1',
                 description: "Faites en sorte de ne pas trop vous approcher ou son chant vous envoutera (Alliant douceur et beauté, elle va vous troubler comme  des troubadours ne sachant plus quoi chanter )",
                 images: {
-                    preview: require('../assets/images/members/preview/Mélodierb200.jpg'),
-                    complete: require('../assets/images/members/complete/Mélodierb.jpg')
+                    preview: require('../assets/images/members/preview/Melodierb200.jpg'),
+                    complete: require('../assets/images/members/complete/Melodierb.jpg')
                 }
             },
             {
@@ -326,8 +326,8 @@ export default [
                 position: 'Respo Activité - A1',
                 description: "Derrière sa tête d'ange, se cache un cerveau qui bouillonne d'idées et oui c'est grâce en partie à elle que vous allez kiffer toutes les activités !",
                 images: {
-                    preview: require('../assets/images/members/preview/Gaëllerb200.jpg'),
-                    complete: require('../assets/images/members/complete/Gaëllerb.jpg')
+                    preview: require('../assets/images/members/preview/Gaellerb200.jpg'),
+                    complete: require('../assets/images/members/complete/Gaellerb.jpg')
                 }
             },
             {
@@ -345,8 +345,8 @@ export default [
                 position: 'Pôle Activité - I1',
                 description: "Toujours motivé il saura vous faire kiffer cette semaine comme il se doit en vous créant des activités du futur",
                 images: {
-                    preview: require('../assets/images/members/preview/Thimotéerb200.jpg'),
-                    complete: require('../assets/images/members/complete/Thimotéerb.jpg')
+                    preview: require('../assets/images/members/preview/Thimoteerb200.jpg'),
+                    complete: require('../assets/images/members/complete/Thimoteerb.jpg')
                 }
             },
             {
