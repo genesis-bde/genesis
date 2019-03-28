@@ -38,7 +38,7 @@ export default class Member extends Component {
                 <Modal modalVisible={this.state.modalVisible} onToggle={this.toggleModal} style={{flex:1}}>
                     <Image
                         style={styles.image}
-                        source={images.complete}
+                        source={images.preview}
                     />
                     <Text style={styles.name}>{name}</Text>
                     <Text style={styles.position}>{position.toUpperCase()}</Text>

@@ -8,7 +8,7 @@ export default [
                 description: "Le projet péda, la liste et le gin sont les trois grands amours de sa vie. Otez lui l'un d'entre eux, Adrien rentrera dans une profonde depression. Mais pour le moment c'est plutôt à coup de pressions et de passion qu'il combat la pression pour faire excellente impression auprès d'étudiants bientôt chargés d'émotions. \"On n'est pas tous les jours président.\"",
                 images: {
                     preview: require('../assets/images/members/preview/Adrienrb200.jpg'),
-                    complete: require('../assets/images/members/complete/Adrienrb.jpg')
+                    //complete: require('../assets/images/members/complete/Adrienrb.jpg')
                 }
             }, {
                 name: 'Le Bris Agathe',
@@ -16,7 +16,7 @@ export default [
                 description: "Agathe, elle veut seulement la thune, et seulement ça ça la fait bander. Baignant dans l'argent depuis son plus jeune âge, elle a pu s'ouvrir les portes du métier d'acteur dans lequelle elle excelle particulièrement mais aussi développer sa voix jusqu'à pouvoir chanter du Angèle à toute heure de la journée.",
                 images: {
                     preview: require('../assets/images/members/preview/Agatherb200.jpg'),
-                    complete: require('../assets/images/members/complete/Agatherb.jpg')
+                    //complete: require('../assets/images/members/complete/Agatherb.jpg')
                 }
             },{
                 name: 'Scarpellini Robin',
@@ -24,7 +24,7 @@ export default [
                 description: "Si mauvais acteur qu'il a préféré se retrouver derrière la caméra pour se moquer pleinement de sa team bien aimée. ",
                 images: {
                     preview: require('../assets/images/members/preview/Robinrb200.jpg'),
-                    complete: require('../assets/images/members/complete/Robinrb.jpg')
+                    //complete: require('../assets/images/members/complete/Robinrb.jpg')
                 }
             }, {
                 name: 'Gerardin Marceau',
@@ -32,7 +32,7 @@ export default [
                 description: "Grand homme sous ses airs de petit P2. Il saura vous faire kiffer durant toute la semaine de campagne avec son travail et son sourire.",
                 images: {
                     preview: require('../assets/images/members/preview/Marceaurb200.jpg'),
-                    complete: require('../assets/images/members/complete/Marceaurb.jpg')
+                    //complete: require('../assets/images/members/complete/Marceaurb.jpg')
                 }
             }, {
                 name: 'Brochet Arthur',
@@ -40,7 +40,7 @@ export default [
                 description: "Son niveau d'anglais vous fera tomber des nues. A part ça, il sera ton Bro pour la campagne et le projet péda. Prend garde, le roi Arthur est là !",
                 images: {
                     preview: require('../assets/images/members/preview/Arthurrb200.jpg'),
-                    complete: require('../assets/images/members/complete/Arthurrb.jpg')
+                    //complete: require('../assets/images/members/complete/Arthurrb.jpg')
                 }
             }, {
                 name: 'Gabilly Elise',
@@ -48,7 +48,7 @@ export default [
                 description: "Reine des cookies ou reine de la nuit ? Son esprit rempli d’idées créatives et intelligentes, Pandelise vous défendra coûte que coûte et trouvera des arrangements avec l’admin pour que vous passiez la meilleure année de votre vie étudiante! ",
                 images: {
                     preview: require('../assets/images/members/preview/Eliserb200.jpg'),
-                    complete: require('../assets/images/members/complete/Eliserb.jpg')
+                    //complete: require('../assets/images/members/complete/Eliserb.jpg')
                 }
             },
         ]
@@ -62,7 +62,7 @@ export default [
                 description: "Le tchatcheur de la bande sait aussi bien se déhancher et t'envouter que poster toute la sainte journée !",
                 images: {
                     preview: require('../assets/images/members/preview/default.jpg'),
-                    complete: require('../assets/images/members/complete/default.jpg')
+                    //complete: require('../assets/images/members/complete/default.jpg')
                 }
             },
             {
@@ -71,7 +71,7 @@ export default [
                 description: "Grand connaisseur du domaine skiable des 3 vallées: Val Thorens, courchevel, meribel... dans tout l’ISEP et même la Savoie vous verrez ses talents de communicateur .",
                 images: {
                     preview: require('../assets/images/members/preview/default.jpg'),
-                    complete: require('../assets/images/members/complete/default.jpg')
+                    //complete: require('../assets/images/members/complete/default.jpg')
                 }
             },
             {
@@ -80,7 +80,7 @@ export default [
                 description: "Avec son teint de pain d’épices, elle va vous envoûter, mais cherchez pas Maître Gims l’a déjà convoitisée.",
                 images: {
                     preview: require('../assets/images/members/preview/default.jpg'),
-                    complete: require('../assets/images/members/complete/default.jpg')
+                    //complete: require('../assets/images/members/complete/default.jpg')
                 }
 
             },
@@ -90,7 +90,7 @@ export default [
                 description: "Entre le surf et les jeux vidéos son cœur balance, mais dans le fond ce qu'il aime c'est sa liste ",
                 images: {
                     preview: require('../assets/images/members/preview/default.jpg'),
-                    complete: require('../assets/images/members/complete/default.jpg')
+                    //complete: require('../assets/images/members/complete/default.jpg')
                 }
             }
         ]
@@ -104,7 +104,7 @@ export default [
                 description: "Il a defaye dans le système mais il est gentil. A l'aise dans la forêt comme dans tous les éléments, il saura vous dégoter les plus beaux champignons.",
                 images: {
                     preview: require('../assets/images/members/preview/Olivierrb200.jpg'),
-                    complete: require('../assets/images/members/complete/Olivierrb.jpg')
+                    //complete: require('../assets/images/members/complete/Olivierrb.jpg')
                 }
             },
             {
@@ -113,7 +113,7 @@ export default [
                 description: "Vous en mettre plein la vue pendant la soirée de jeudi, c’est bien le but ulteam de notre ami Cycy!",
                 images: {
                     preview: require('../assets/images/members/preview/default.jpg'),
-                    complete: require('../assets/images/members/complete/default.jpg')
+                    //complete: require('../assets/images/members/complete/default.jpg')
                 }
             },
             {
@@ -122,7 +122,7 @@ export default [
                 description: "On en avait marre de lui alors il est parti en Chine ! Les valises remplies de pastis, il saura montrer aux wuhanais comment enjayer de la part de Genesis! ",
                 images: {
                     preview: require('../assets/images/members/preview/default.jpg'),
-                    complete: require('../assets/images/members/complete/default.jpg')
+                    //complete: require('../assets/images/members/complete/default.jpg')
                 }
             },
         ]
@@ -136,7 +136,7 @@ export default [
                 description: "Femme agréable et gentille, elle a un caractère d'ange, toujours elle vous rendra paisible et (presque) jamais ne s'énervera (tu te sens comme la reine du monde mais c'est qu'une impression)",
                 images: {
                     preview: require('../assets/images/members/preview/Hannarb200.jpg'),
-                    complete: require('../assets/images/members/complete/Hannarb.jpg')
+                    //complete: require('../assets/images/members/complete/Hannarb.jpg')
                 }
             },
             {
@@ -145,7 +145,7 @@ export default [
                 description: "A l'aise en toutes circonstances ( sauf sur un hoverboard ) , il vous fera réver toute la semaine avec ses idées de déco à tire larigot!",
                 images: {
                     preview: require('../assets/images/members/preview/Etiennerb200.jpg'),
-                    complete: require('../assets/images/members/complete/Etiennerb.jpg')
+                    //complete: require('../assets/images/members/complete/Etiennerb.jpg')
                 }
             },
             {
@@ -154,7 +154,7 @@ export default [
                 description: "Malgré ses airs de grand-mère avec 13 heures de sommeil par nuit, dotée de sa crinière de feu, elle saura illuminer vos soirées !",
                 images: {
                     preview: require('../assets/images/members/preview/Laurerb200.jpg'),
-                    complete: require('../assets/images/members/complete/Laurerb.jpg')
+                    //complete: require('../assets/images/members/complete/Laurerb.jpg')
                 }
             },
             {
@@ -163,7 +163,7 @@ export default [
                 description: "Adorable la Joséphine, on a beau la connaître, chaque jour avec elle est une surprise. Sa gentillesse et son sourire quotidien nous confirment qu’elle n’a rien d'une Peste Elle (Pestel LOL). Mais ne vous fiez pas à sa bouille d’ange, elle a un caractère de lionne surtout quand il s’agit de liste.",
                 images: {
                     preview: require('../assets/images/members/preview/default.jpg'),
-                    complete: require('../assets/images/members/complete/default.jpg')
+                    //complete: require('../assets/images/members/complete/default.jpg')
                 }
             },
             {
@@ -172,7 +172,7 @@ export default [
                 description: "Derrière son air timide, elle comprend tout et nous as même mis certains à l'amende au jeu de rapidité pendant le TB. eh ben",
                 images: {
                     preview: require('../assets/images/members/preview/Xinyirb200.jpg'),
-                    complete: require('../assets/images/members/complete/Xinyirb.jpg')
+                    //complete: require('../assets/images/members/complete/Xinyirb.jpg')
                 }
             }
         ]
@@ -186,7 +186,7 @@ export default [
                 description: "Le sourire toujours au bout des lèvres. Sa cam: la pâte à cookie pas cuite (attention il vous y convertit très vite)",
                 images: {
                     preview: require('../assets/images/members/preview/Guillaumerb200.jpg'),
-                    complete: require('../assets/images/members/complete/Guillaumerb.jpg')
+                    //complete: require('../assets/images/members/complete/Guillaumerb.jpg')
                 }
             },
             {
@@ -195,7 +195,7 @@ export default [
                 description: "Fan incontesté de BDSM et petit-fils asiatique de Steven Spielberg. Nageur hors-pair et doué d'un corps à faire palir Florent Manaudou son courage et sa ténacité vous accompagneront tout au long de cette année.",
                 images: {
                     preview: require('../assets/images/members/preview/Alexrb200.jpg'),
-                    complete: require('../assets/images/members/complete/Alexrb.jpg')
+                    //complete: require('../assets/images/members/complete/Alexrb.jpg')
                 }
             },
             {
@@ -204,7 +204,7 @@ export default [
                 description: "Faites en sorte de ne pas trop vous approcher ou son chant vous envoutera (Alliant douceur et beauté, elle va vous troubler comme  des troubadours ne sachant plus quoi chanter )",
                 images: {
                     preview: require('../assets/images/members/preview/Melodierb200.jpg'),
-                    complete: require('../assets/images/members/complete/Melodierb.jpg')
+                    //complete: require('../assets/images/members/complete/Melodierb.jpg')
                 }
             },
             {
@@ -213,7 +213,7 @@ export default [
                 description: "Un vomi avant même que tout le monde le connaisse, belle perf du Cotterot",
                 images: {
                     preview: require('../assets/images/members/preview/Gaspardrb200.jpg'),
-                    complete: require('../assets/images/members/complete/Gaspardrb.jpg')
+                    //complete: require('../assets/images/members/complete/Gaspardrb.jpg')
                 }
             },
             {
@@ -222,7 +222,7 @@ export default [
                 description: "Le vieux loup de la bande est belle et bien encore à l'ISEP et encore mieux, il est la pour nous donner ses conseils de sage pour VOUS faire kiffer !",
                 images: {
                     preview: require('../assets/images/members/preview/Lucasrb200.jpg'),
-                    complete: require('../assets/images/members/complete/Lucasrb.jpg')
+                    //complete: require('../assets/images/members/complete/Lucasrb.jpg')
                 }
             },
         ]
@@ -236,7 +236,7 @@ export default [
                 description: "Sous ses airs sainte nitouche, quand il est bourré il louche! Il saura vous surprendre avec des moves venus de l'espace tout comme les sponsors badass",
                 images: {
                     preview: require('../assets/images/members/preview/Augustinrb200.jpg'),
-                    complete: require('../assets/images/members/complete/Augustinrb.jpg')
+                    //complete: require('../assets/images/members/complete/Augustinrb.jpg')
                 }
             },
             {
@@ -245,7 +245,7 @@ export default [
                 description: "Tout droit venu des contrées lointaines post 2000, cela ne l'empêche pas de tapper dans le mille! ",
                 images: {
                     preview: require('../assets/images/members/preview/Thomasrb200.jpg'),
-                    complete: require('../assets/images/members/complete/Thomasrb.jpg')
+                    //complete: require('../assets/images/members/complete/Thomasrb.jpg')
                 }
             },
             {
@@ -254,7 +254,7 @@ export default [
                 description: "Ses résolutions en 2019 : arrêter de penser à la thune et à la bouffe. Ça été les 20 minutes les plus dures de sa vie",
                 images: {
                     preview: require('../assets/images/members/preview/Pablorb200.jpg'),
-                    complete: require('../assets/images/members/complete/Pablorb.jpg')
+                    //complete: require('../assets/images/members/complete/Pablorb.jpg')
                 }
             },
             {
@@ -263,7 +263,7 @@ export default [
                 description: "Toujours bien sapé il est là pour nous faire bosser. Disponible à toutes heures de la journée il répond même aux appels masqués. Ceux qui le cotoient sont surpris par sa ponctualité, ce bg arrive toujours à point nommé.",
                 images: {
                     preview: require('../assets/images/members/preview/Aminerb200.jpg'),
-                    complete: require('../assets/images/members/complete/Aminerb.jpg')
+                    //complete: require('../assets/images/members/complete/Aminerb.jpg')
                 }
             },
             {
@@ -272,7 +272,7 @@ export default [
                 description: "Un des doyens Genesis, toujours prêt à donner des conseils parce que c’est mec stylé venant de la JE, il a réussi à vous trouver des partenariats et sponsos qui vont vous faire kiffer votre vie!",
                 images: {
                     preview: require('../assets/images/members/preview/Jeremyrb200.jpg'),
-                    complete: require('../assets/images/members/complete/Jeremyrb.jpg')
+                    //complete: require('../assets/images/members/complete/Jeremyrb.jpg')
                 }
             },
             {
@@ -281,7 +281,7 @@ export default [
                 description: "Ses talents d’entrepreneur lui ont permis de lancer Teach'r mais ce sont ses talents de visionnaires qui lui ont inspiré de rejoindre Genesis ",
                 images: {
                     preview: require('../assets/images/members/preview/default.jpg'),
-                    complete: require('../assets/images/members/complete/default.jpg')
+                    //complete: require('../assets/images/members/complete/default.jpg')
                 }
             }
         ]
@@ -295,7 +295,7 @@ export default [
                 description: "Barman de talent à ses heures perdues. Il vous impresionnera de part ses skills avec la bouteille mais aussi avec les mots. Il utilisera la langue de Molière comme personne pour te persuader de parler d'écologie toute la journée. Car son plus gros souhait, c'est de t'embarquer dans un TrashtagChallenge faire péter les déchets!",
                 images: {
                     preview: require('../assets/images/members/preview/default.jpg'),
-                    complete: require('../assets/images/members/complete/default.jpg')
+                    //complete: require('../assets/images/members/complete/default.jpg')
                 }
             },
             {
@@ -304,7 +304,7 @@ export default [
                 description: "Avec ses yeux couleur bleu eau, elle réussit à vous faire voir vert feuille en vous proposant des solutions pour rendre l’ISEP durable et écolo!",
                 images: {
                     preview: require('../assets/images/members/preview/Louiserb200.jpg'),
-                    complete: require('../assets/images/members/complete/Louiserb.jpg')
+                    //complete: require('../assets/images/members/complete/Louiserb.jpg')
                 }
             },
             {
@@ -313,7 +313,7 @@ export default [
                 description: "Fan incontestée de Tuto YouTube « essayage de veste », elle s’est vouée d’une passion pour la perche (en cinéma et non pas en sport). Grâce à elle, vous allez pouvoir kiffer l’ASMR dans notre magnifique film de campagne! ",
                 images: {
                     preview: require('../assets/images/members/preview/Alicerb200.jpg'),
-                    complete: require('../assets/images/members/complete/Alicerb.jpg')
+                    //complete: require('../assets/images/members/complete/Alicerb.jpg')
                 }
             },
         ]
@@ -327,7 +327,7 @@ export default [
                 description: "Derrière sa tête d'ange, se cache un cerveau qui bouillonne d'idées et oui c'est grâce en partie à elle que vous allez kiffer toutes les activités !",
                 images: {
                     preview: require('../assets/images/members/preview/Gaellerb200.jpg'),
-                    complete: require('../assets/images/members/complete/Gaellerb.jpg')
+                    //complete: require('../assets/images/members/complete/Gaellerb.jpg')
                 }
             },
             {
@@ -336,7 +336,7 @@ export default [
                 description: "Son regard intense a fait perdre ses moyens à plus d’un mais ne vous laissez pas impressionner car derrière cette assurance se cache une delicieuse douceur  ",
                 images: {
                     preview: require('../assets/images/members/preview/default.jpg'),
-                    complete: require('../assets/images/members/complete/default.jpg')
+                    //complete: require('../assets/images/members/complete/default.jpg')
                 }
             },
 
@@ -346,7 +346,7 @@ export default [
                 description: "Toujours motivé il saura vous faire kiffer cette semaine comme il se doit en vous créant des activités du futur",
                 images: {
                     preview: require('../assets/images/members/preview/Thimoteerb200.jpg'),
-                    complete: require('../assets/images/members/complete/Thimoteerb.jpg')
+                    //complete: require('../assets/images/members/complete/Thimoteerb.jpg')
                 }
             },
             {
@@ -355,7 +355,7 @@ export default [
                 description: "Ancien footballeur au crâne d'or, ne vous inquiétez pas notre Zidane est bien trop cool pour mettre des coups de boule.",
                 images: {
                     preview: require('../assets/images/members/preview/Tommyrb200.jpg'),
-                    complete: require('../assets/images/members/complete/Tommyrb.jpg')
+                    //complete: require('../assets/images/members/complete/Tommyrb.jpg')
                 }
             },
         ]
@@ -369,7 +369,7 @@ export default [
                 description: "Une tête assez peu sympathique qui a premierement effrayé notre respo bouffe. On pense qu'il a rejoint le pôle en question pour se venger un jour. En vrai il cuisine très bien et va vous donner un bon avant goût de l'année à venir ! Merci Papy et Mamy !",
                 images: {
                     preview: require('../assets/images/members/preview/Nathanrb200.jpg'),
-                    complete: require('../assets/images/members/complete/Nathanrb.jpg')
+                    //complete: require('../assets/images/members/complete/Nathanrb.jpg')
                 }
             },
             {
@@ -378,7 +378,7 @@ export default [
                 description: "La plus belle femme de la liste ! Sportive et pleine d'envie, elle a su à distance vous préparer des menus de foufou. Avec son acolyte Nathan, papy et mamy sauront vous cuisiner de bons petits (et même grands) plats !",
                 images: {
                     preview: require('../assets/images/members/preview/default.jpg'),
-                    complete: require('../assets/images/members/complete/default.jpg')
+                    //complete: require('../assets/images/members/complete/default.jpg')
                 }
             }
         ]
@@ -391,7 +391,7 @@ export default [
                 description: "Avec ses compétences hors-pair et un record de 17 Jager Bombs, notre ingénieur en chef a su travailler dur pour vous scotcher à vos écrans.",
                 images: {
                     preview: require('../assets/images/members/preview/default.jpg'),
-                    complete: require('../assets/images/members/complete/default.jpg')
+                    //complete: require('../assets/images/members/complete/default.jpg')
                 }
             },
             {
@@ -400,7 +400,7 @@ export default [
                 description: "Jeune lyonnais en quète de sensations fortes, toujours là pour prêter mains fortes.😇\nMaschallah, j'aime parler aux gens et parfois un peu trop...\nServez-lui une Caïpirinha pour en découvrir plus !🍹",
                 images: {
                     preview: require('../assets/images/members/preview/Sebrb200.jpg'),
-                    complete: require('../assets/images/members/complete/Sebrb.jpg')
+                    //complete: require('../assets/images/members/complete/Sebrb.jpg')
                 }
             },
         ]
