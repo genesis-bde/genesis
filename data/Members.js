@@ -12,7 +12,7 @@ export default [
                 }
             }, {
                 name: 'Le Bris Agathe',
-                position: 'Trésorière -I1',
+                position: 'Trésorière -A1',
                 description: "Agathe, elle veut seulement la thune, et seulement ça ça la fait bander. Baignant dans l'argent depuis son plus jeune âge, elle a pu s'ouvrir les portes du métier d'acteur dans lequelle elle excelle particulièrement mais aussi développer sa voix jusqu'à pouvoir chanter du Angèle à toute heure de la journée.",
                 images: {
                     preview: require('../assets/images/members/preview/default.jpg'),
@@ -42,11 +42,6 @@ export default [
                     preview: require('../assets/images/members/preview/default.jpg'),
                     complete: require('../assets/images/members/complete/Arthurrb200.jpg')
                 }
-            }, 
-            {
-                name: 'Chevillote Hortense',
-                position: 'Vice-Trésorière - I2',
-                description: "La plus belle femme de la liste ! Sportive et pleine d'envie, elle a su à distance vous préparer des menus de foufou. Avec son acolyte Nathan, papy et mamy sauront vous cuisiner de bons petits (et même grands) plats !"
             }, {
                 name: 'Gabilly Elise',
                 position: 'Respo Académique - A1',
@@ -377,6 +372,15 @@ export default [
                     complete: require('../assets/images/members/complete/Nathanrb200.jpg')
                 }
             },
+            {
+                name: 'Chevillote Hortense',
+                position: 'Vice-Trésorière - I2',
+                description: "La plus belle femme de la liste ! Sportive et pleine d'envie, elle a su à distance vous préparer des menus de foufou. Avec son acolyte Nathan, papy et mamy sauront vous cuisiner de bons petits (et même grands) plats !",
+                images: {
+                    preview: require('../assets/images/members/preview/default.jpg'),
+                    complete: require('../assets/images/members/complete/default.jpg')
+                }
+            }
         ]
     }, {
         name: 'Paul Appli & Chatbot',

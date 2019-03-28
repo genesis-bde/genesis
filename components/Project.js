@@ -34,7 +34,7 @@ export default class Project extends Component {
         return (
             <View style={styles.content}>
                 <Image
-                    style={styles.image}
+                    style={{resizeMode:'center', width: window.width, height: project.images.complete == {} ? 0 : 180}}
                     source={project.images.complete}
                 />
                 <Text>{project.content}</Text>
