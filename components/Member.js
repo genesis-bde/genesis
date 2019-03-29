@@ -35,9 +35,9 @@ export default class Member extends Component {
 
         return (
             <View>
-                <Modal modalVisible={this.state.modalVisible} onToggle={this.toggleModal} style={{flex:1}}>
+                <Modal modalVisible={this.state.modalVisible} onToggle={this.toggleModal} style={styles.modal}>
                     <Image
-                        style={styles.image}
+                        style={Platform.OS === 'ios' ? styles.image.ios: styles.image.android}
                         source={images.preview}
                     />
                     <Text style={styles.name}>{name}</Text>
@@ -63,19 +63,33 @@ export default class Member extends Component {
 
 
 const styles = StyleSheet.create({
+    modal: {
+        paddingTop: 40
+    },
     imagePreview: {
         width: (Layout.window.width) / 2,
         height: (Layout.window.width) / 2
     },
     image: {
-        resizeMode:'center',
-        position: 'absolute',
-        marginTop: -190,
-        width: (Layout.window.width * 1.5) / 2,
-        height: (Layout.window.width * 1.5) / 2,
-        borderRadius: (Layout.window.width),
-        borderWidth: 5,
-        borderColor: '#fff',
+        ios: {
+            resizeMode:'center',
+            position: 'absolute',
+            marginTop: -190,
+            width: (Layout.window.width * 1.5) / 2,
+            height: (Layout.window.width * 1.5) / 2,
+            borderRadius: (Layout.window.width),
+            borderWidth: 5,
+            borderColor: '#fff',
+        },
+        android: {
+            position: 'absolute',
+            marginTop: -160,
+            width: (Layout.window.width) / 2,
+            height: (Layout.window.width) / 2,
+            borderRadius: (Layout.window.width),
+            borderWidth: 5,
+            borderColor: '#fff',
+        }
     },
     name: {
         marginTop: 15,
