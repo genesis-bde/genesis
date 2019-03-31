@@ -147,6 +147,9 @@ const TabNavigator = createMaterialTopTabNavigator({
             },
             headerTintColor: Colors.tintColor,
             headerTitle: names[routeName],
+            headerTitleStyle: {
+                fontFamily: 'leixo',
+            },
             headerLeft: routeName === 'Home' ? null :
                 <HeaderBack navigation={navigation} />,
             headerRight: <Image

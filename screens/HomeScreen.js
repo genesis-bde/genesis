@@ -1,19 +1,13 @@
 import React from 'react';
 import {
-  Image,
   Platform,
   ScrollView,
   StyleSheet,
-  FlatList,
-  Text,
-  TouchableOpacity,
   View,
 } from 'react-native';
-import { WebBrowser, Permissions, Notifications } from 'expo';
+import { Permissions, Notifications } from 'expo';
 import { StackNavigator } from 'react-navigation';
 
-import { MonoText } from '../components/StyledText';
-import { getNews } from '../data/News';
 import Articles from '../components/Articles';
 import axios from 'axios';
 
