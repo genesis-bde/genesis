@@ -29,7 +29,6 @@ export default class Member extends Component {
         const {
             name, position, description, images = {
                 preview: require('../assets/images/members/preview/default.jpg'),
-                complete: require('../assets/images/members/complete/default.jpg')
             }
         } = this.props.memberInfo;
 
@@ -37,7 +36,7 @@ export default class Member extends Component {
             <View>
                 <Modal modalVisible={this.state.modalVisible} onToggle={this.toggleModal} style={styles.modal}>
                     <Image
-                        style={Platform.OS === 'ios' ? styles.image.ios: styles.image.android}
+                        style={Platform.OS === 'ios' ? styles.imageios: styles.imageandroid}
                         source={images.preview}
                     />
                     <Text style={styles.name}>{name}</Text>
@@ -70,26 +69,24 @@ const styles = StyleSheet.create({
         width: (Layout.window.width) / 2,
         height: (Layout.window.width) / 2
     },
-    image: {
-        ios: {
+    imageios: {
             resizeMode:'center',
             position: 'absolute',
-            marginTop: -190,
+            marginTop: Platform.OS === 'ios' ? 200 : 100,
             width: (Layout.window.width * 1.5) / 2,
             height: (Layout.window.width * 1.5) / 2,
             borderRadius: (Layout.window.width),
             borderWidth: 5,
             borderColor: '#fff',
-        },
-        android: {
-            position: 'absolute',
-            marginTop: -160,
-            width: (Layout.window.width) / 2,
-            height: (Layout.window.width) / 2,
-            borderRadius: (Layout.window.width),
-            borderWidth: 5,
-            borderColor: '#fff',
-        }
+    },
+    imageandroid: {
+        position: 'absolute',
+        marginTop: -160,
+        width: (Layout.window.width) / 2,
+        height: (Layout.window.width) / 2,
+        borderRadius: (Layout.window.width),
+        borderWidth: 5,
+        borderColor: '#fff',
     },
     name: {
         marginTop: 15,
