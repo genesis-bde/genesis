@@ -8,7 +8,6 @@ export default [
             {
                 title: "Mois d'intégration",
                 images: {
-                    preview: require('../assets/images/members/preview/default.jpg'),
                     complete: require('../assets/images/projets/complete/54525003_667700183648671_7231869742640791552_n.jpg')
                 },
                 content: "L’intégration des nouveaux élèves se déroulera sur 1 mois. En effet, les deux premières " +
@@ -36,7 +35,6 @@ export default [
             },
             {
                 title: "Intégration pour tous",
-
                 images: {},
                 content: "L’intégration a pour but de plonger les élèves dans un univers qu’ils apprécient et dans lequel " +
                     "ils peuvent se sentir bien, nous sommes donc chargés de ne laisser personne derrière. " +
@@ -100,7 +98,6 @@ export default [
     {
         title: "Cohésion dans la vie associative",
         images: {
-            preview: require('../assets/images/members/preview/default.jpg'),
             complete: require('../assets/images/projets/complete/55589309_379388875983730_3499348351290179584_n.jpg')
         },
         projects: [
@@ -137,7 +134,6 @@ export default [
     {
         title: "Organisation du BDE",
         images: {
-            preview: require('../assets/images/members/preview/default.jpg'),
             complete: require('../assets/images/projets/complete/55835435_1902150436562022_2737790485807497216_n.jpg')
         },
         intro: "Le BDE suit une organisation très stricte respectée par chacun de ses membres afin de " +
@@ -176,7 +172,6 @@ export default [
     {
         title: "Académie",
         images: {
-            preview: require('../assets/images/members/preview/default.jpg'),
             complete: require('../assets/images/projets/complete/53652943_404992723633979_5339245317931925504_n.jpg')
         },
         projects: [
@@ -241,7 +236,6 @@ export default [
     {
         title: "Ecologie",
         images: {
-            preview: require('../assets/images/members/preview/default.jpg'),
             complete: require('../assets/images/projets/complete/ecologie.jpg')
         },
         projects: [
@@ -280,7 +274,6 @@ export default [
     {
         title: "Pôle artistique",
         images: {
-            preview: require('../assets/images/members/preview/default.jpg'),
             complete: require('../assets/images/projets/complete/53652943_404992723633979_5339245317931925504_n.jpg')
         },
         projects: [
