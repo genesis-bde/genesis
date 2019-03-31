@@ -397,7 +397,7 @@ export default [
             {
                 name: 'Mascha Seb',
                 position: 'Respo Technique - A1',
-                description: "Jeune lyonnais en quète de sensations fortes, toujours là pour prêter mains fortes.😇\nMaschallah, j'aime parler aux gens et parfois un peu trop...\nServez-lui une Caïpirinha pour en découvrir plus !🍹",
+                description: "Jeune lyonnais en quète de sensations fortes, toujours là pour prêter mains fortes.😇\nMaschallah, il aime parler aux gens et parfois un peu trop ...\nServez-lui une Caïpirinha pour en découvrir davantage !🍹",
                 images: {
                     preview: require('../assets/images/members/preview/Sebrb200.jpg'),
                     //complete: require('../assets/images/members/complete/Sebrb.jpg')
