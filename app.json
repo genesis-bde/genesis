@@ -2,7 +2,7 @@
   "expo": {
     "name": "Genesis",
     "slug": "genesis",
-    "privacy": "public",
+    "privacy": "unlisted",
     "sdkVersion": "32.0.0",
     "platforms": [
       "ios",
@@ -11,6 +11,8 @@
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
+    "githubUrl": "https://github.com/Warthy/Genesis",
+    "primaryColor": "#cc0066",
     "splash": {
       "image": "./assets/images/splash.png",
       "resizeMode": "contain",
@@ -23,8 +25,12 @@
       "**/*"
     ],
     "ios": {
+      "bundleIdentifier": "com.genesistech.genesis",
       "supportsTablet": true
     },
-    "description": ""
+    "android": {
+      "package": "com.genesistech.genesis"
+    },
+    "description": "Application de la liste BDE Genesis"
   }
 }
