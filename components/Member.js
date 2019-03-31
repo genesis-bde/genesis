@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import {
     Image, StyleSheet,
     View, Text,
@@ -109,7 +109,7 @@ const styles = StyleSheet.create({
     close: {
         marginTop: 10,
         textAlign: 'center',
-        color:'#cc0066',
+        color: '#cc0066',
         textTransform: 'uppercase',
         fontWeight: '300',
         fontFamily: Platform.OS === 'android' ? 'sans-serif-light' : undefined,
