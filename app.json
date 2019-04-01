@@ -31,6 +31,10 @@
     "android": {
       "package": "com.genesistech.genesis"
     },
-    "description": "Application de la liste BDE Genesis"
+    "description": "Application de la liste BDE Genesis",
+    "notification": {
+      "icon": "./assets/images/notification.png",
+      "color": "#cc0066"
+    }
   }
 }
