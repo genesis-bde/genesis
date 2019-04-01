@@ -9,13 +9,13 @@ export default class Articles extends React.Component {
         const {
             title,
             content,
-            date,
+            publicationDate,
             source,
             medias,
             location,
         } = this.props.articleInfo;
         const { noteStyle, featuredTitleStyle } = styles;
-        const time = moment(date || moment.now()).fromNow();
+        const time = moment(publicationDate || moment.now()).fromNow();
         const defaultImg =
             'https://wallpaper.wiki/wp-content/uploads/2017/04/wallpaper.wiki-Images-HD-Diamond-Pattern-PIC-WPB009691.jpg';
 
