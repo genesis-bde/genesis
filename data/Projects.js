@@ -1,9 +1,9 @@
 export default [
     {
         title: "L'intégration",
-        intro: `L’ISEP est avant tout une école d’ingénieur où l’on souhaite se former et acquérir des
-            compétences. Mais pour cela il faut être intégré et se sentir en confiance au sein de l’école. Il
-            est alors très important d’avoir une intégration complète.`,
+        intro: "L’ISEP est avant tout une école d’ingénieur où l’on souhaite se former et acquérir des " +
+            "compétences. Mais pour cela il faut être intégré et se sentir en confiance au sein de l’école. Il " +
+            "est alors très important d’avoir une intégration complète.",
         projects: [
             {
                 title: "Mois d'intégration",
@@ -11,17 +11,17 @@ export default [
                     complete: require('../assets/images/projets/complete/54525003_667700183648671_7231869742640791552_n.jpg')
                 },
                 content: "L’intégration des nouveaux élèves se déroulera sur 1 mois. En effet, les deux premières " +
-                    "semaines seront riches en événements de tous genres pour intégrer tous les “types de " +
-                    "personnes” présents à l’ISEP. Un WEI viendra clore ces deux semaines. Deux semaines " +
-                    "défileront avant la journée et la soirée d’intégration. Les évènements durant ce temps-là " +
-                    "seront moins fréquents mais ils seront toujours présents pour accompagner les étudiants " +
-                    "dans leur intégration à notre école et continuer à leur faire rencontrer de nouvelles " +
+                    "semaines seront riches en événements de tous genres pour intégrer toutes les personnes " +
+                    "présentes à l’ISEP, y compris les étrangés. Un WEI viendra clore ces deux semaines. Deux " +
+                    "semaines défileront avant la journée et la soirée d’intégration. Les évènements durant ce " +
+                    "temps-là seront moins fréquents mais ils seront toujours présents pour accompagner les " +
+                    "étudiants dans leur intégration à notre école et continuer à leur faire rencontrer de nouvelles " +
                     "personnes.\n" +
                     "Durant ce mois, le but sera d’intégrer au mieux les étudiants et de leur faire découvrir les " +
                     "différentes associations créées à l’ISEP. Nous allons donc réunir l’ensemble de ces dernières " +
-                    "afin de leur demander de créer un petit projet d’intégration: chaque association aura une " +
-                    "journée dédiée et organisera un petit ou grand événement (ex: tournoi inter-sportif de l’AS, " +
-                    "afterwork etc.).\n" +
+                    "afin de leur demander de créer un petit projet d’intégration: il y aura une journée dédiée pour " +
+                    "chaque ou plusieurs associations, pour qu’elles puissent organiser un petit ou grand " +
+                    "événement (ex: tournoi inter-sportif de l’AS, afterwork etc.).\n" +
                     "Après que toutes les associations ont pu se montrer au grand jour et expliquer en quoi elles " +
                     "consistaient, une journée des associations aura lieu. Pour ce faire, toutes les associations " +
                     "seront présentes sur le campus de NDL un midi et après-midi entier. Chaque élève pourra " +
@@ -37,7 +37,7 @@ export default [
                 title: "Intégration pour tous",
                 images: {},
                 content: "L’intégration a pour but de plonger les élèves dans un univers qu’ils apprécient et dans lequel " +
-                    "ils peuvent se sentir bien, nous sommes donc chargés de ne laisser personne derrière. " +
+                    "ils peuvent se sentir bien, nous sommes donc chargés de ne laisser personne derrière.\n" +
                     "Pour ce faire, le système de parrainage sera de nouveau instauré: les I1 et P1 auront " +
                     "respectivement un/e parrain/marraine du même cycle d’un an au dessus (I2/P2), les A1 venus " +
                     "de CPGE/IUT auront un/e parrain/marraine de la même promotion, scolarisé(e) à l’ISEP " +
@@ -66,7 +66,8 @@ export default [
                     "comme des réunions avec des élèves de toutes origines ainsi que des afterworks. Nous " +
                     "veillerons à ce que ISEPA, l’association des élèves étrangers à l’ISEP soit bien visible et connue " +
                     "pour que les élèves soient en parfaite connaissance des personnes auxquelles ils doivent se " +
-                    "référer s’ils ont des questions ou autres."
+                    "référer s’ils ont des questions ou autres. Nous leur conseillerons d’avoir un(e) président(e) " +
+                    "français car nous trouvons cela plus judicieux."
             },
             {
                 title: "Week-end d'intégration",
@@ -109,19 +110,22 @@ export default [
                     "différents associations puissent coopérer, s’entraider, se comprendre et aient une " +
                     "communication parfaite. C’est alors au BDE de s’occuper de cette entraide et de cette facilité " +
                     "de communication.\n" +
-                    "Ainsi, notre équipe se verra composée d’un responsable associatif qui aura pour mission de "  +
+                    "Ainsi, notre équipe se verra composée d’un responsable associatif qui aura pour mission de " +
                     "faire la relation entre les différentes associations et veillera au bon fonctionnement de la vie " +
                     "associative. En effet, il s’occupera de gérer les évènements des différentes associations pour " +
-                    "qu’ils ne se chevauchent pas et ne perdre pas de visibilité. Il est important que chaque" +
+                    "qu’ils ne se chevauchent pas et ne perdre pas de visibilité. Il est important que chaque " +
                     "association se retrouve sur le même pied d’égalité. Ce sera aussi lui qui aidera à la création " +
-                    "des associations, si besoin est; ainsi qu’à l’organisation et la mise en place de gros " +
-                    "évènements.\n" +
+                    "des associations si il y avait auparavant un club, si besoin est; ainsi qu’à l’organisation et la " +
+                    "mise en place de gros évènements. Pour compléter le rôle de responsable associatif, il y aura " +
+                    "un responsable des clubs parce que une bonne partie des associations à l’ISEP sont en réalité " +
+                    "des clubs. Son rôle sera alors de veiller au bon fonctionnement des clubs, ainsi qu’à la " +
+                    "création de nouveaux si les étudiants souhaitent élargir le patrimoine associatif isépien.\n" +
                     "Pour que chaque association donne le meilleur d’elle-même, nous demanderons aux " +
                     "présidents un document structuré décrivant l’ensemble du projet de l’association pour " +
                     "l’année à venir. Cela permettra que nous puissions gérer les différents évènements de l’année " +
                     "mais également cela poussera les membres à s’investir au maximum dans leur projet. Bien " +
                     "évidemment, des idées, des événements et des activités pourront être ajouté au cours de " +
-                    "l’année.\n" +
+                    "l’année (Si le budget ainsi que le planning le permet).\n" +
                     "De plus, pour que chaque membre d’association puisse comprendre son poste et faire de son " +
                     "mieux, nous mettrons en place des fiches explicatives relatant tous les postes constituant une " +
                     "association. Cela permettra plus de clarté pour quiconque voulant intégré une association ou " +
@@ -138,9 +142,9 @@ export default [
         },
         intro: "Le BDE suit une organisation très stricte respectée par chacun de ses membres afin de " +
             "garantir son bon fonctionnement. Le bureau supervise les opérations générales, traite les " +
-            "tâches administratives, financières et organisationnelles. Avant la campagne et pendant celle-ci, " +
+            "tâches administratives, financières et organisationnelles. Avant la campagne et pendant celleci, " +
             "la liste fonctionne par pôles avec un responsable par pôle qui informe et rend compte " +
-            "directement des avancées du travail effectué dans le pôle et ce, auprès du bureau.",
+            "directement des avancées du travail effectué dans le pôle et ce, auprès du bureau",
         projects: [
             {
                 title: "Organisation par projet",
@@ -158,14 +162,14 @@ export default [
                 title: "Sécurité pour tous",
                 images: {},
                 content: "L’organisation de soirées ou de week-end d’intégration peut souvent entraîner des imprévus " +
-                    "qui relèvent de l’ordre sanitaire. Le bde, soucieux de la santé de ces étudiants doit être en " +
+                    "qui relèvent de l’ordre sanitaire. Le BDE, soucieux de la santé de ces étudiants doit être en " +
                     "mesure de connaître et maîtriser les gestes à adopter afin de réagir au mieux face à un " +
                     "accident qui pourrait mettre en péril l’intégrité physique ou moral d’un étudiant. C’est " +
                     "pourquoi, une formation aux premiers secours sera dispensée à certains membres du BDE. " +
                     "L’objectif est d’avoir un certain pourcentage de membres du BDE ayant le PSC1 par rapport " +
                     "aux participants des soirées. Ce quota de membres devra être apte à répondre à des " +
                     "problèmes liés à la santé qui pourraient survenir et atteindre des étudiants lors des soirées, " +
-                    "wei ou autre."
+                    "WEI ou autre."
             }
         ]
     },
@@ -180,7 +184,7 @@ export default [
                 images: {},
                 content: "Afin d’améliorer la formation du Cycle Intégré International, nous souhaitons augmenter le " +
                     "nombre de cours dispensés en anglais. Nous faisons cela dans la continuité des démarches " +
-                    "déjà effectuées par les délégués de la deuxième année du cycle international 2018-2019. " +
+                    "déjà effectuées par les délégués de la deuxième année du cycle international 2018-2019.\n" +
                     "Nous considérons que l’ISEP, une école fondamentalement tournée vers le monde, ne dispose " +
                     "pas de suffisamment de cours d’anglais et notamment dans le cursus international. Ainsi, " +
                     "nous proposons à l’administration de l’ISEP de dispenser les cours de physique, " +
@@ -223,6 +227,10 @@ export default [
                     "recherche d’un stage. Ces 2 objectifs sont déjà traités en partie à l’ISEP mais il s’agirait de les " +
                     "développer plus en profondeur pour vraiment proposer une documentation adaptée et facile " +
                     "d’accès.\n" +
+                    "Avoir des abonnements à des magazines scientifiques, ainsi que dans d’autres secteurs " +
+                    "permettra un suivi de l’actualité plus professionnel. Ces revues spécialisées qui ont des " +
+                    "moyens de vérification importants sur les sujets qu’ils traitent; instruirons de manière non " +
+                    "biaisé les isépiens comparé aux médias classiques\n" +
                     "On pourrait aussi imaginer un système d’emprunt limité dans le temps afin de favoriser le " +
                     "partage des ressources.\n" +
                     "D’autre part, la bibliothèque est aussi un lieu de détente et d’évasion. On pourrait proposer " +
@@ -250,10 +258,10 @@ export default [
                     "C’est la raison pour laquelle, cette année, la liste BDE a décidé de s’engager et d’investir une " +
                     "partie de son projet et de son temps dans un objectif visant à réduire l’empreinte écologique " +
                     "des étudiants au sein de l’école. Nous souhaitons sensibiliser la communauté de l'ISEP à la " +
-                    "nécessité d'agir contre le réchauffement climatique, que cela se traduise par des actions" +
+                    "nécessité d'agir contre le réchauffement climatique, que cela se traduise par des actions " +
                     "quotidiennes ou par des éventuels choix de parcours professionnels en lien avec la " +
                     "préservation de la planète.\n" +
-                    "Pour cultiver l’engagement citoyen des étudiants, nous organiserons au cours de l’année " +
+                    "Pour cultiver l’engagement citoyen des étudiants, nous organiserons au cours de l’année"  +
                     "plusieurs activités ludiques de sensibilisation. Nous souhaitons que les Isépiens s'amènent à " +
                     "se poser leurs propres questions et pouvoir les seconder dans leurs réponses.\n" +
                     "Il est important de montrer qu’un projet éco-responsable est un projet durable, enrichissant " +
@@ -261,7 +269,7 @@ export default [
                     "tables rondes avec différents acteurs de success story inspirantes. En effet, notre aspiration " +
                     "principale est de montrer qu’il existe beaucoup de modèles d’entreprises écologiques, que " +
                     "celles-ci ne sont pas des utopies mais bien véritables.\n" +
-                    "D’autre part, nous souhaitons que les Isépiens contribuent à rendre notre école plus verte." +
+                    "D’autre part, nous souhaitons que les Isépiens contribuent à rendre notre école plus verte. " +
                     "Cette contribution passera par une meilleure gestion des déchets. Plusieurs propositions " +
                     "seront faites auprès de l’administration au cours de l’année pour permettre à la communauté " +
                     "estudiantine de mieux trier ses déchets.\n" +
