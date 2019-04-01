@@ -191,7 +191,7 @@ export default [
             },
             {
                 name: 'Eang Alex Pida',
-                position: 'Pôle Créa - I1',
+                position: 'Pôle Créa - P1',
                 description: "Fan incontesté de BDSM et petit-fils asiatique de Steven Spielberg. Nageur hors-pair et doué d'un corps à faire palir Florent Manaudou son courage et sa ténacité vous accompagneront tout au long de cette année.",
                 images: {
                     preview: require('../assets/images/members/preview/Alexrb200.jpg'),
