@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import { ScrollView, StyleSheet, Text, View, Image } from 'react-native';
+import {ScrollView, StyleSheet, Text, View, Image, ImageBackground} from 'react-native';
 import { Entypo } from '@expo/vector-icons';
 import Accordion from 'react-native-collapsible/Accordion';
+import API from "../constants/API";
 
 export default class Project extends Component {
     constructor(props) {
@@ -33,10 +34,6 @@ export default class Project extends Component {
      
         return (
             <View style={styles.content}>
-                <Image
-                    style={{resizeMode:'center', width: window.width, height: project.images.complete == {} ? 0 : 180}}
-                    source={project.images.complete}
-                />
                 <Text>{project.content}</Text>
             </View>
         );
@@ -51,7 +48,9 @@ export default class Project extends Component {
         const section = this.props.sectionInfo;
         return (
             <View styles={styles.section}>
-                <Text style={styles.title}>{section.title.toUpperCase()}</Text>
+                <ImageBackground source={section.image} style={styles.sectionHeader}>
+                    <Text style={styles.title}>{section.title.toUpperCase()}</Text>
+                </ImageBackground>
                 <Accordion
                     sections={section.projects}
                     activeSections={this.state.activeProjects}
@@ -87,7 +86,11 @@ const styles = StyleSheet.create({
         fontSize: 19,
         fontWeight: 'bold',
         textTransform: 'uppercase',
-        color: '#c6c6c6',
+        color: '#fff',
+    },
+    sectionHeader: {
+        width: '100%',
+        height: 50,
     },
     image: {
         resizeMode:'center',
