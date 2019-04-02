@@ -4,12 +4,11 @@ export default [
         intro: "L’ISEP est avant tout une école d’ingénieur où l’on souhaite se former et acquérir des " +
             "compétences. Mais pour cela il faut être intégré et se sentir en confiance au sein de l’école. Il " +
             "est alors très important d’avoir une intégration complète.",
+        image: require('../assets/images/projets/integration.jpg'),
         projects: [
             {
                 title: "Mois d'intégration",
-                images: {
-                    complete: require('../assets/images/projets/complete/54525003_667700183648671_7231869742640791552_n.jpg')
-                },
+                images: {},
                 content: "L’intégration des nouveaux élèves se déroulera sur 1 mois. En effet, les deux premières " +
                     "semaines seront riches en événements de tous genres pour intégrer toutes les personnes " +
                     "présentes à l’ISEP, y compris les étrangés. Un WEI viendra clore ces deux semaines. Deux " +
@@ -98,9 +97,7 @@ export default [
     },
     {
         title: "Cohésion dans la vie associative",
-        images: {
-            complete: require('../assets/images/projets/complete/55589309_379388875983730_3499348351290179584_n.jpg')
-        },
+        image: require('../assets/images/projets/cohesion.jpg'),
         projects: [
             {
                 title: "",
@@ -137,9 +134,7 @@ export default [
     },
     {
         title: "Organisation du BDE",
-        images: {
-            complete: require('../assets/images/projets/complete/55835435_1902150436562022_2737790485807497216_n.jpg')
-        },
+        image : require('../assets/images/projets/organisation.jpg.jpg'),
         intro: "Le BDE suit une organisation très stricte respectée par chacun de ses membres afin de " +
             "garantir son bon fonctionnement. Le bureau supervise les opérations générales, traite les " +
             "tâches administratives, financières et organisationnelles. Avant la campagne et pendant celleci, " +
@@ -175,9 +170,7 @@ export default [
     },
     {
         title: "Académie",
-        images: {
-            complete: require('../assets/images/projets/complete/53652943_404992723633979_5339245317931925504_n.jpg')
-        },
+        image: require('../assets/images/projets/academique.jpg'),
         projects: [
             {
                 title: "Amélioration du CII",
@@ -243,9 +236,7 @@ export default [
     },
     {
         title: "Ecologie",
-        images: {
-            complete: require('../assets/images/projets/complete/ecologie.jpg')
-        },
+        image: require('../assets/images/projets/ecologie.jpg'),
         projects: [
             {
                 title: "",
@@ -281,9 +272,7 @@ export default [
     },
     {
         title: "Pôle artistique",
-        images: {
-            complete: require('../assets/images/projets/complete/53652943_404992723633979_5339245317931925504_n.jpg')
-        },
+        image: require('../assets/images/projets/artistique.jpg'),
         projects: [
             {
                 title: "",
