@@ -41,7 +41,6 @@ const styles = StyleSheet.create({
         width: '100%',
         elevation: 4,
         borderColor: '#c6c6c6',
-        backgroundColor: 'red'
     },
     title: {
         textAlign: 'center',
