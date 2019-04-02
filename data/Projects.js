@@ -134,7 +134,7 @@ export default [
     },
     {
         title: "Organisation du BDE",
-        image : require('../assets/images/projets/organisation.jpg.jpg'),
+        image : require('../assets/images/projets/organisation.jpg'),
         intro: "Le BDE suit une organisation très stricte respectée par chacun de ses membres afin de " +
             "garantir son bon fonctionnement. Le bureau supervise les opérations générales, traite les " +
             "tâches administratives, financières et organisationnelles. Avant la campagne et pendant celleci, " +
