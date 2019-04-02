@@ -96,6 +96,42 @@ export default [
         ]
     },
     {
+        title: "Ecologie",
+        image: require('../assets/images/projets/ecologie.jpg'),
+        projects: [
+            {
+                title: "",
+                images: {},
+                content: "Depuis le début de l’année, les étudiants de première année du cycle d’ingénieurs ont pu être " +
+                    "sensibilisés à l’importance du développement durable. Des associations comme Latitudes, " +
+                    "présente pendant la coupure pédagogique, ont pu par exemple sensibiliser les futurs " +
+                    "ingénieurs à l’utilisation des technologies au service de l'intérêt général : la Tech for Good. La " +
+                    "plupart de nos membres se sont reconnus dans ce mouvement.\n" +
+                    "C’est la raison pour laquelle, cette année, la liste BDE a décidé de s’engager et d’investir une " +
+                    "partie de son projet et de son temps dans un objectif visant à réduire l’empreinte écologique " +
+                    "des étudiants au sein de l’école. Nous souhaitons sensibiliser la communauté de l'ISEP à la " +
+                    "nécessité d'agir contre le réchauffement climatique, que cela se traduise par des actions " +
+                    "quotidiennes ou par des éventuels choix de parcours professionnels en lien avec la " +
+                    "préservation de la planète.\n" +
+                    "Pour cultiver l’engagement citoyen des étudiants, nous organiserons au cours de l’année"  +
+                    "plusieurs activités ludiques de sensibilisation. Nous souhaitons que les Isépiens s'amènent à " +
+                    "se poser leurs propres questions et pouvoir les seconder dans leurs réponses.\n" +
+                    "Il est important de montrer qu’un projet éco-responsable est un projet durable, enrichissant " +
+                    "et rémunérateur. Si beaucoup d’Isépiens sont encore en doute, nous prévoyons plusieurs " +
+                    "tables rondes avec différents acteurs de success story inspirantes. En effet, notre aspiration " +
+                    "principale est de montrer qu’il existe beaucoup de modèles d’entreprises écologiques, que " +
+                    "celles-ci ne sont pas des utopies mais bien véritables.\n" +
+                    "D’autre part, nous souhaitons que les Isépiens contribuent à rendre notre école plus verte. " +
+                    "Cette contribution passera par une meilleure gestion des déchets. Plusieurs propositions " +
+                    "seront faites auprès de l’administration au cours de l’année pour permettre à la communauté " +
+                    "estudiantine de mieux trier ses déchets.\n" +
+                    "En cas d’élection, notre BDE prendra à coeur son engagement écologique et le projet élevé " +
+                    "par trois de nos membres sera mené à bien. Nous l’espérons, à l'issue de notre mandat, " +
+                    "pouvoir faire des ingénieurs Isépiens les Tech for Good Enthousiaste de demain.",
+            }
+        ]
+    },
+    {
         title: "Cohésion dans la vie associative",
         image: require('../assets/images/projets/cohesion.jpg'),
         projects: [
@@ -134,7 +170,7 @@ export default [
     },
     {
         title: "Organisation du BDE",
-        image : require('../assets/images/projets/organisation.jpg.jpg'),
+        image : require('../assets/images/projets/organisation.jpg'),
         intro: "Le BDE suit une organisation très stricte respectée par chacun de ses membres afin de " +
             "garantir son bon fonctionnement. Le bureau supervise les opérations générales, traite les " +
             "tâches administratives, financières et organisationnelles. Avant la campagne et pendant celleci, " +
@@ -231,42 +267,6 @@ export default [
                     "littéraires ou bien historiques et simplement se détendre dans la journée ou pendant leurs " +
                     "trajets quotidiens (souvent long). Cette ouverture vers la lecture va de paire avec la définition " +
                     "de l’ingénieur ISEP qui doit, en plus de ses compétences techniques, développer sa culture"
-            }
-        ]
-    },
-    {
-        title: "Ecologie",
-        image: require('../assets/images/projets/ecologie.jpg'),
-        projects: [
-            {
-                title: "",
-                images: {},
-                content: "Depuis le début de l’année, les étudiants de première année du cycle d’ingénieurs ont pu être " +
-                    "sensibilisés à l’importance du développement durable. Des associations comme Latitudes, " +
-                    "présente pendant la coupure pédagogique, ont pu par exemple sensibiliser les futurs " +
-                    "ingénieurs à l’utilisation des technologies au service de l'intérêt général : la Tech for Good. La " +
-                    "plupart de nos membres se sont reconnus dans ce mouvement.\n" +
-                    "C’est la raison pour laquelle, cette année, la liste BDE a décidé de s’engager et d’investir une " +
-                    "partie de son projet et de son temps dans un objectif visant à réduire l’empreinte écologique " +
-                    "des étudiants au sein de l’école. Nous souhaitons sensibiliser la communauté de l'ISEP à la " +
-                    "nécessité d'agir contre le réchauffement climatique, que cela se traduise par des actions " +
-                    "quotidiennes ou par des éventuels choix de parcours professionnels en lien avec la " +
-                    "préservation de la planète.\n" +
-                    "Pour cultiver l’engagement citoyen des étudiants, nous organiserons au cours de l’année"  +
-                    "plusieurs activités ludiques de sensibilisation. Nous souhaitons que les Isépiens s'amènent à " +
-                    "se poser leurs propres questions et pouvoir les seconder dans leurs réponses.\n" +
-                    "Il est important de montrer qu’un projet éco-responsable est un projet durable, enrichissant " +
-                    "et rémunérateur. Si beaucoup d’Isépiens sont encore en doute, nous prévoyons plusieurs " +
-                    "tables rondes avec différents acteurs de success story inspirantes. En effet, notre aspiration " +
-                    "principale est de montrer qu’il existe beaucoup de modèles d’entreprises écologiques, que " +
-                    "celles-ci ne sont pas des utopies mais bien véritables.\n" +
-                    "D’autre part, nous souhaitons que les Isépiens contribuent à rendre notre école plus verte. " +
-                    "Cette contribution passera par une meilleure gestion des déchets. Plusieurs propositions " +
-                    "seront faites auprès de l’administration au cours de l’année pour permettre à la communauté " +
-                    "estudiantine de mieux trier ses déchets.\n" +
-                    "En cas d’élection, notre BDE prendra à coeur son engagement écologique et le projet élevé " +
-                    "par trois de nos membres sera mené à bien. Nous l’espérons, à l'issue de notre mandat, " +
-                    "pouvoir faire des ingénieurs Isépiens les Tech for Good Enthousiaste de demain.",
             }
         ]
     },

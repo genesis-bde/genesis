@@ -69,6 +69,7 @@ export default class Project extends Component {
 const styles = StyleSheet.create({
     accordion: {
         paddingBottom: 30,
+        paddingHorizontal: 10,
     },
     header: {
         flexDirection: 'row',

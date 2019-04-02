@@ -18,8 +18,6 @@ export default class ProjectsScreen extends React.Component {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        paddingTop: 15,
-        paddingHorizontal: 10,
         backgroundColor: '#fff',
     }
 });

@@ -70,7 +70,7 @@ export default [
                 position: 'Pôle Com\' - P1',
                 description: "Grand connaisseur du domaine skiable des 3 vallées: Val Thorens, courchevel, meribel... dans tout l’ISEP et même la Savoie vous verrez ses talents de communicateur .",
                 images: {
-                    preview: require('../assets/images/members/preview/default.jpg'),
+                    preview: require('../assets/images/members/preview/Ambroiserb200.jpg'),
                     //complete: require('../assets/images/members/complete/default.jpg')
                 }
             },
@@ -79,7 +79,7 @@ export default [
                 position: 'Pôle Com\' - I1',
                 description: "Avec son teint de pain d’épices, elle va vous envoûter, mais cherchez pas Maître Gims l’a déjà convoitisée.",
                 images: {
-                    preview: require('../assets/images/members/preview/default.jpg'),
+                    preview: require('../assets/images/members/preview/Leonierb200.jpg'),
                     //complete: require('../assets/images/members/complete/default.jpg')
                 }
 
@@ -280,7 +280,7 @@ export default [
                 position: 'Pôle Sponsor - A2',
                 description: "Ses talents d’entrepreneur lui ont permis de lancer Teach'r mais ce sont ses talents de visionnaires qui lui ont inspiré de rejoindre Genesis ",
                 images: {
-                    preview: require('../assets/images/members/preview/default.jpg'),
+                    preview: require('../assets/images/members/preview/Eytanrb200.jpg'),
                     //complete: require('../assets/images/members/complete/default.jpg')
                 }
             }
@@ -294,7 +294,7 @@ export default [
                 position: 'Respo Ecologie - A1',
                 description: "Barman de talent à ses heures perdues. Il vous impresionnera de part ses skills avec la bouteille mais aussi avec les mots. Il utilisera la langue de Molière comme personne pour te persuader de parler d'écologie toute la journée. Car son plus gros souhait, c'est de t'embarquer dans un TrashtagChallenge faire péter les déchets!",
                 images: {
-                    preview: require('../assets/images/members/preview/default.jpg'),
+                    preview: require('../assets/images/members/preview/Raphbr.jpg'),
                     //complete: require('../assets/images/members/complete/default.jpg')
                 }
             },
@@ -335,7 +335,7 @@ export default [
                 position: 'Pôle Activité - I1',
                 description: "Son regard intense a fait perdre ses moyens à plus d’un mais ne vous laissez pas impressionner car derrière cette assurance se cache une delicieuse douceur  ",
                 images: {
-                    preview: require('../assets/images/members/preview/default.jpg'),
+                    preview: require('../assets/images/members/preview/Lindarb200.jpg'),
                     //complete: require('../assets/images/members/complete/default.jpg')
                 }
             },
