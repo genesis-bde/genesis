@@ -34,7 +34,7 @@ export default class Project extends Component {
      
         return (
             <View style={styles.content}>
-                <Text>{project.content}</Text>
+                <Text style={{textAlign: 'justify'}}>{project.content}</Text>
             </View>
         );
     };
