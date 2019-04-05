@@ -53,7 +53,8 @@ export default class HomeScreen extends React.Component {
     super(props);
 
     this.state = {
-      articles: [], refreshing: true
+      articles: [], 
+      refreshing: true,
     };
 
     this.fetchNews = this.fetchNews.bind(this);
@@ -80,10 +81,10 @@ export default class HomeScreen extends React.Component {
       });
   }
 
-  handleRefresh() {
+  handleRefresh = () => {
     this.setState(
       {
-        refreshing: true
+        refreshing: true,
       },
       () => this.fetchNews()
     );
@@ -120,13 +121,6 @@ export default class HomeScreen extends React.Component {
         >
 
           <View style={styles.container}>
-            {/* <FlatList
-              data={this.state.articles}
-              renderItem={({ item }) => <Article article={item} />}
-              keyExtractor={item => item.url}
-              refreshing={this.state.refreshing}
-              onRefresh={this.handleRefresh.bind(this)}
-            /> */}
             {articles.map((article, index) => {
               return <Articles articleInfo={article} />
             })}
