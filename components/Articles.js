@@ -1,8 +1,9 @@
 import React from 'react';
-import { View, Linking, TouchableNativeFeedback } from 'react-native';
+import { View, Linking, TouchableOpacity } from 'react-native';
 import { Text, Button, Card, Divider } from 'react-native-elements';
 import moment from 'moment';
 import API from '../constants/API';
+import { WebBrowser } from 'expo';
 
 export default class Articles extends React.Component {
     render() {
@@ -20,14 +21,17 @@ export default class Articles extends React.Component {
             'https://wallpaper.wiki/wp-content/uploads/2017/04/wallpaper.wiki-Images-HD-Diamond-Pattern-PIC-WPB009691.jpg';
 
         return (
-            
+            <TouchableOpacity
+                onPress={this._handleOpenWithWebBrowser}
+            >
                 <Card
                     featuredTitle={title}
                     featuredTitleStyle={featuredTitleStyle}
                     image={{
-                        uri: API.media+medias || defaultImg
+                        uri: API.media + medias || defaultImg
                     }}
                 >
+
                     <Text style={{ marginBottom: 10 }}>
                         {content || 'Read More..'}
                     </Text>
@@ -38,10 +42,17 @@ export default class Articles extends React.Component {
                         <Text style={noteStyle}>{location}</Text>
                         <Text style={noteStyle}>{time}</Text>
                     </View>
+
                 </Card>
-            
+            </TouchableOpacity>
+
         );
     }
+
+    _handleOpenWithWebBrowser = () => {
+        WebBrowser.openBrowserAsync('https://expo.io');
+    }
+
 }
 
 const styles = {
@@ -53,7 +64,7 @@ const styles = {
     },
     featuredTitleStyle: {
         marginHorizontal: 5,
-        textAlign:'center',
+        textAlign: 'center',
         textShadowColor: '#00000f',
         textShadowOffset: { width: 3, height: 3 },
         textShadowRadius: 3

@@ -331,7 +331,7 @@ export default [
                 }
             },
             {
-                name: 'Carrière Linda',
+                name: 'Carrere Linda',
                 position: 'Pôle Activité - I1',
                 description: "Son regard intense a fait perdre ses moyens à plus d’un mais ne vous laissez pas impressionner car derrière cette assurance se cache une delicieuse douceur  ",
                 images: {

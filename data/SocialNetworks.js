@@ -1,15 +1,15 @@
 export default [
     {
         iconName: 'facebook-square',
-        url: 'https://www.facebook.com'
+        url: 'https://www.facebook.com/pg/genesislistebde2019'
     },
     {
         iconName: 'snapchat-square',
-        url: 'snapchat://add/'
+        url: 'https://www.snapchat.com/add/genesislistebde2019'
     }
     ,
     {
         iconName: 'instagram',
-        url: 'instagram://user?username=battistelli_architectes'
+        url: 'https://www.instagram.com/genesislistebde2019'
     }
 ]

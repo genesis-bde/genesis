@@ -18,9 +18,9 @@ import { StackNavigator } from 'react-navigation';
 const names = {
     Home: 'GENESIS',
     Team: 'Notre liste',
-    Events: 'Evènements',
+    Events: 'Evenements',
     Sponsors: 'Sponsor',
-    SocialNetworks: 'Réseaux Sociaux'
+    SocialNetworks: 'Reseaux Sociaux'
 };
 
 
