@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import {ScrollView, StyleSheet, Text, View, Image, ImageBackground} from 'react-native';
+import { StyleSheet, Text, View, Image, ImageBackground} from 'react-native';
 import { Entypo } from '@expo/vector-icons';
 import Accordion from 'react-native-collapsible/Accordion';
-import API from "../constants/API";
+import { WebView } from 'react-native-webview';
 
 export default class Project extends Component {
     constructor(props) {
@@ -31,10 +31,10 @@ export default class Project extends Component {
     };
 
     _renderContent = project => {
-     
+        const htmlRender = "<p style='text-align: justify;'>"+project.content+"</p>";
         return (
-            <View style={styles.content}>
-                <Text style={{textAlign: 'justify'}}>{project.content}</Text>
+            <View>
+                <WebView source={{ html: htmlRender }} />
             </View>
         );
     };
