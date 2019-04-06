@@ -2,9 +2,8 @@ import React, {Component} from 'react';
 import {
     Image, StyleSheet,
     View, Text,
-    TouchableHighlight,
+    TouchableOpacity,
     Platform,
-    ScrollView
 } from 'react-native';
 import Layout from '../constants/Layout';
 import Modal from "./Modal";
@@ -43,18 +42,18 @@ export default class Member extends Component {
                     <Text style={styles.position}>{position.toUpperCase()}</Text>
 
                     <Text style={styles.description}>{description}</Text>
-                    <TouchableHighlight onPress={this.toggleModal}>
+                    <TouchableOpacity onPress={this.toggleModal}>
                         <Text style={styles.close}>Retour</Text>
-                    </TouchableHighlight>
+                    </TouchableOpacity>
 
                 </Modal>
 
-                <TouchableHighlight onPress={this.toggleModal}>
+                <TouchableOpacity onPress={this.toggleModal}>
                     <Image
                         style={styles.imagePreview}
                         source={images.preview}
                     />
-                </TouchableHighlight>
+                </TouchableOpacity>
             </View>
         );
     }

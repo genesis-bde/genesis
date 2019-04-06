@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import {
     Image, StyleSheet,
     View, Text,
-    TouchableHighlight,
+    TouchableOpacity,
 } from 'react-native';
 import Layout from '../constants/Layout';
 import Modal from "./Modal";
@@ -33,7 +33,6 @@ export default class Sponsor extends Component {
                     <Image
                         style={styles.image}
                         source={{uri: API.media+media}}
-                        resizeMode="contain"
                     />
                     <Text style={styles.name}>{name}</Text>
 
@@ -48,12 +47,12 @@ export default class Sponsor extends Component {
 
                 </Modal>
 
-                <TouchableHighlight onPress={this.toggleModal}>
+                <TouchableOpacity onPress={this.toggleModal}>
                     <Image
                         style={styles.imagePreview}
                         source={{uri: API.media+media}}
                     />
-                </TouchableHighlight>
+                </TouchableOpacity>
             </View>
         );
     }
