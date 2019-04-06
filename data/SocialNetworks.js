@@ -5,11 +5,11 @@ export default [
     },
     {
         iconName: 'snapchat-square',
-        url: 'https://www.snapchat.com/add/genesislistebde2019'
+        url: 'snapchat://add/genesislistebde2019'
     }
     ,
     {
         iconName: 'instagram',
-        url: 'https://www.instagram.com/genesislistebde2019'
+        url: 'instagram://user?username=genesislistebde2019'
     }
 ]
