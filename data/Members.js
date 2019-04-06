@@ -300,7 +300,7 @@ export default [
             },
             {
                 name: 'Royer Louise',
-                position: 'Pôle Ecologie - I1',
+                position: 'Pôle Ecologie - P1',
                 description: "Avec ses yeux couleur bleu eau, elle réussit à vous faire voir vert feuille en vous proposant des solutions pour rendre l’ISEP durable et écolo!",
                 images: {
                     preview: require('../assets/images/members/preview/Louiserb200.jpg'),
