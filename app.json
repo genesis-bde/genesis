@@ -8,7 +8,7 @@
       "ios",
       "android"
     ],
-    "version": "2.0.0",
+    "version": "3.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
     "githubUrl": "https://github.com/Warthy/Genesis",
@@ -26,10 +26,13 @@
     ],
     "ios": {
       "bundleIdentifier": "com.genesistech.genesis",
-      "supportsTablet": true
+      "supportsTablet": true,
+      "icon": "./assets/images/icon.png"
     },
     "android": {
-      "package": "com.genesistech.genesis"
+      "package": "com.genesistech.genesis",
+      "versionCode": 3,
+      "icon": "./assets/images/icon.png"
     },
     "description": "Application de la liste BDE Genesis",
     "notification": {

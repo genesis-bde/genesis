@@ -61,7 +61,7 @@ export default [
                 position: 'Respo Com\' - I2',
                 description: "Le tchatcheur de la bande sait aussi bien se déhancher et t'envouter que poster toute la sainte journée !",
                 images: {
-                    preview: require('../assets/images/members/preview/default.jpg'),
+                    preview: require('../assets/images/members/preview/Thibaultrb200.jpg'),
                     //complete: require('../assets/images/members/complete/default.jpg')
                 }
             },
@@ -89,7 +89,7 @@ export default [
                 position: 'Pôle Com\' - I2',
                 description: "Entre le surf et les jeux vidéos son cœur balance, mais dans le fond ce qu'il aime c'est sa liste ",
                 images: {
-                    preview: require('../assets/images/members/preview/default.jpg'),
+                    preview: require('../assets/images/members/preview/Tristanrb200.jpg'),
                     //complete: require('../assets/images/members/complete/default.jpg')
                 }
             }
@@ -112,7 +112,7 @@ export default [
                 position: 'Pôle Soirée - P1',
                 description: "Vous en mettre plein la vue pendant la soirée de jeudi, c’est bien le but ulteam de notre ami Cycy!",
                 images: {
-                    preview: require('../assets/images/members/preview/default.jpg'),
+                    preview: require('../assets/images/members/preview/cyrilrb.jpg'),
                     //complete: require('../assets/images/members/complete/default.jpg')
                 }
             },
@@ -121,7 +121,7 @@ export default [
                 position: 'Pôle Soirée - I2',
                 description: "On en avait marre de lui alors il est parti en Chine ! Les valises remplies de pastis, il saura montrer aux wuhanais comment enjayer de la part de Genesis! ",
                 images: {
-                    preview: require('../assets/images/members/preview/default.jpg'),
+                    preview: require('../assets/images/members/preview/Alexisrb200.jpg'),
                     //complete: require('../assets/images/members/complete/default.jpg')
                 }
             },
@@ -162,7 +162,7 @@ export default [
                 position: 'Pôle Déco - I2',
                 description: "Adorable la Joséphine, on a beau la connaître, chaque jour avec elle est une surprise. Sa gentillesse et son sourire quotidien nous confirment qu’elle n’a rien d'une Peste Elle (Pestel LOL). Mais ne vous fiez pas à sa bouille d’ange, elle a un caractère de lionne surtout quand il s’agit de liste.",
                 images: {
-                    preview: require('../assets/images/members/preview/default.jpg'),
+                    preview: require('../assets/images/members/preview/Josephinerb200.jpg'),
                     //complete: require('../assets/images/members/complete/default.jpg')
                 }
             },
@@ -377,7 +377,7 @@ export default [
                 position: 'Vice-Trésorière - I2',
                 description: "La plus belle femme de la liste ! Sportive et pleine d'envie, elle a su à distance vous préparer des menus de foufou. Avec son acolyte Nathan, papy et mamy sauront vous cuisiner de bons petits (et même grands) plats !",
                 images: {
-                    preview: require('../assets/images/members/preview/default.jpg'),
+                    preview: require('../assets/images/members/preview/Hortenserb200.jpg'),
                     //complete: require('../assets/images/members/complete/default.jpg')
                 }
             }
@@ -390,7 +390,7 @@ export default [
                 position: 'Respo Appli - I2',
                 description: "Avec ses compétences hors-pair et un record de 17 Jager Bombs, notre ingénieur en chef a su travailler dur pour vous scotcher à vos écrans.",
                 images: {
-                    preview: require('../assets/images/members/preview/default.jpg'),
+                    preview: require('../assets/images/members/preview/Paulrb200.jpg'),
                     //complete: require('../assets/images/members/complete/default.jpg')
                 }
             },
