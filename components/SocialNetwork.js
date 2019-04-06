@@ -1,19 +1,26 @@
 import React from 'react';
-import {TouchableOpacity, Linking,  Alert} from 'react-native';
+import {TouchableOpacity, Linking, Alert} from 'react-native';
 import {Icon} from 'expo';
 
 export default class SocialNetwork extends React.Component {
 
     startApp = (url) => () => {
-        Linking.canOpenURL(url)
+        Linking.canOpenURL(url.app)
             .then(supported => {
                 if (!supported) {
-                    Alert.alert(
-                        'RIP frère',
-                        'J\'arrive pas ouvrir l\'application'
-                    )
+                    Linking.canOpenURL(url.http)
+                        .then(supported => {
+                                if (!supported) {
+                                    Alert.alert(
+                                        'RIP frère',
+                                        'J\'arrive pas ouvrir l\'application');
+                                } else {
+                                    return Linking.openURL(url.http);
+                                }
+                            }
+                        )
                 } else {
-                    return Linking.openURL(url);
+                    return Linking.openURL(url.app);
                 }
             })
             .catch(err =>
