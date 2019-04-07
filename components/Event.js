@@ -47,6 +47,9 @@ const styles = StyleSheet.create({
         fontWeight: 'bold',
         color:'white',
         fontSize: 18,
+        textShadowColor: '#00000f',
+        textShadowOffset: { width: 3, height: 3 },
+        textShadowRadius: 3
     },
     lowerPart: {
         paddingHorizontal: 3,
