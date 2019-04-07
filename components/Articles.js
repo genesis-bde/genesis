@@ -22,7 +22,7 @@ export default class Articles extends React.Component {
 
         return (
             <TouchableOpacity
-                onPress={this._handleOpenWithWebBrowser(link)}
+                onPress={() => this._handleOpenWithWebBrowser(link)}
             >
                 <Card
                     featuredTitle={title}
