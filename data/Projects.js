@@ -100,34 +100,90 @@ export default [
         image: require('../assets/images/projets/ecologie.jpg'),
         projects: [
             {
-                title: "",
+                title: "Nos objectifs",
                 images: {},
-                content: "Depuis le début de l’année, les étudiants de première année du cycle d’ingénieurs ont pu être " +
-                    "sensibilisés à l’importance du développement durable. Des associations comme Latitudes, " +
-                    "présente pendant la coupure pédagogique, ont pu par exemple sensibiliser les futurs " +
-                    "ingénieurs à l’utilisation des technologies au service de l'intérêt général : la Tech for Good. La " +
-                    "plupart de nos membres se sont reconnus dans ce mouvement.\n" +
-                    "C’est la raison pour laquelle, cette année, la liste BDE a décidé de s’engager et d’investir une " +
-                    "partie de son projet et de son temps dans un objectif visant à réduire l’empreinte écologique " +
-                    "des étudiants au sein de l’école. Nous souhaitons sensibiliser la communauté de l'ISEP à la " +
-                    "nécessité d'agir contre le réchauffement climatique, que cela se traduise par des actions " +
-                    "quotidiennes ou par des éventuels choix de parcours professionnels en lien avec la " +
-                    "préservation de la planète.\n" +
-                    "Pour cultiver l’engagement citoyen des étudiants, nous organiserons au cours de l’année"  +
-                    "plusieurs activités ludiques de sensibilisation. Nous souhaitons que les Isépiens s'amènent à " +
-                    "se poser leurs propres questions et pouvoir les seconder dans leurs réponses.\n" +
-                    "Il est important de montrer qu’un projet éco-responsable est un projet durable, enrichissant " +
-                    "et rémunérateur. Si beaucoup d’Isépiens sont encore en doute, nous prévoyons plusieurs " +
-                    "tables rondes avec différents acteurs de success story inspirantes. En effet, notre aspiration " +
-                    "principale est de montrer qu’il existe beaucoup de modèles d’entreprises écologiques, que " +
-                    "celles-ci ne sont pas des utopies mais bien véritables.\n" +
-                    "D’autre part, nous souhaitons que les Isépiens contribuent à rendre notre école plus verte. " +
-                    "Cette contribution passera par une meilleure gestion des déchets. Plusieurs propositions " +
-                    "seront faites auprès de l’administration au cours de l’année pour permettre à la communauté " +
-                    "estudiantine de mieux trier ses déchets.\n" +
-                    "En cas d’élection, notre BDE prendra à coeur son engagement écologique et le projet élevé " +
-                    "par trois de nos membres sera mené à bien. Nous l’espérons, à l'issue de notre mandat, " +
-                    "pouvoir faire des ingénieurs Isépiens les Tech for Good Enthousiaste de demain.",
+                content: "Notre premier objectif est de sensibiliser les ingénieurs du numérique de " +
+                    "demain à l’importance de prendre en compte les impératifs " +
+                    "environnementaux dans le cadre de leur projet professionnel. Pour cela, " +
+                    "nous souhaitons encourager au sein de notre école des initiatives de " +
+                    "groupe afin d’aider les mouvements et associations qui oeuvrent pour " +
+                    "l’écologie.\n" +
+                    "La sensibilisation auprès des étudiants s’effectuera à travers plusieurs " +
+                    "biais lors de la semaine de campagne, et en cas d’élection, suite à celle-ci. " +
+                    "L’objectif est ainsi de montrer en quoi l’impact des actions individuelles et " +
+                    "les prises de conscience du danger de chacun peuvent contribuer à " +
+                    "limiter les dégâts sur la planète.\n" +
+                    "Rendre l’ISEP davantage concernée par cet aspect, l'inscrire dans une " +
+                    "réelle dynamique écologique à travers un tri des déchets plus approfondi " +
+                    "et plus à portée des étudiants. Encourager davantage les professeurs à " +
+                    "partager leurs cours aux étudiants à travers les plateformes numériques " +
+                    "mises à disposition pour les étudiants et limiter la consommation de " +
+                    "papier.\n" +
+                    "Les déchets organiques, d'origine agricole, forestière, municipale ou " +
+                    "domestique, peuvent constituer un amendement organique (compost) de " +
+                    "qualité pour les sols, plutôt que d'être stockés en décharge où leur " +
+                    "décomposition émet des gaz à effet de serre. Le compost est obtenu " +
+                    "après dégradation de déchets de bois non recyclable, de déchets verts et " +
+                    "de déchets organiques (boues d'épuration, bio-déchets) : proposer à la " +
+                    "direction de l’ISEP d’instaurer un compostage organique."
+            },
+            {
+                title: "Nos actions - Pendant la campagne",
+                images: {},
+                content: "Pendant la semaine campagne BDE, du 12 au 19 avril, nous avons décidé " +
+                    "de mettre en place plusieurs actions afin de faire acte de notre " +
+                    "engagement pour l’écologie.\n" +
+                    "• Récapitulatif sur le tri sélectif, chiffres relatifs au réchauffement " +
+                    "de la planète et aux énergies renouvelables.\n" +
+                    "• Vidéos du projet mettant en scène les étudiants de la liste BDE " +
+                    "en pleine action de citoyen éco-responsable.\n" +
+                    "• La distribution du café, des boissons et de la nourriture aux " +
+                    "étudiants en limitant l’utilisation du plastique au maximum. " +
+                    "(Objectif : utilisation nulle ou plastique recyclable.)\n" +
+                    "• Suite aux soirées de liste, et pendant la campagne à l’Isep, " +
+                    "montrer de la part de la liste BDE une réelle prise de conscience " +
+                    "de ces enjeux environnementaux et agir en tant que citoyen " +
+                    "éco-responsable. En jetant les bouteilles en verre dans les box " +
+                    "adéquate plutôt que de tout rassembler dans une même " +
+                    "poubelle et mettre un point d’honneur à trier convenablement " +
+                    "les déchets utilisées dans des poubelles achetées spécialement " +
+                    "pour cela au préalable.\n" +
+                    "• Proposer à une association alimentaire de récupérer nos " +
+                    "déchets\n" +
+                    "• Acheter du café provenant du commerce équitable\n" +
+                    "• Deux CleanSortingWalk effectuées par la liste BDE et les " +
+                    "étudiants volontaires pendant la semaine : l’ensemble de la liste " +
+                    "se mobilise pour nettoyer et trier les déchets occasionnés par la " +
+                    "semaine de campagne."
+            },
+            {
+                title: "Nos actions - En cas d'élection",
+                images: {},
+                content: "Conférences par GreenPeace et autres associations “Green” " +
+                    "pouvant intervenir pour faire part des actions dans lesquels " +
+                    "peuvent s’engager les étudiants pour contribuer à rendre la " +
+                    "planète plus propre.\n" +
+                    "• Mettre en place un tri sélectif dans chaque salle de cours et " +
+                    "chaque salle à manger avec plusieurs poubelles des différents " +
+                    "types pour tous les déchets.\n" +
+                    "• Sensibilisation accrue pour les étudiants par la diffusion d’une " +
+                    "revue mensuelle numérique relatant les dernières nouvelles et " +
+                    "chiffres à propos de l’écologie et des consommations " +
+                    "mondiales.\n" +
+                    "• Partage d'évènements extérieurs en lien avec l’écologie " +
+                    "proposés aux étudiants.\n" +
+                    "• Création d’un projet “écologie” étalé sur une année dans lequel " +
+                    "des membres du BDE s’investissent pour répondre à tous les " +
+                    "objectifs, innovent et proposent de nouvelles idées pour rendre " +
+                    "l’ISEP plus verte.\n" +
+                    "• Organisation de GreenWeek\n" +
+                    "Les membres de la liste BDE sont conscients de l’urgence et des mesures " +
+                    "à prendre face à au réchauffement de la planète qui se fait chaque jour " +
+                    "plus inquiétant. Ils souhaitent transmettre lors de la campagne et en cas " +
+                    "d’élection l’engagement qu’ils ont pris vis à vis du climat et informer des " +
+                    "étudiants qui se sentent souvent peu concernés par la situation, des " +
+                    "dispositions que chacun à son niveau peut prendre afin de contribuer à la " +
+                    "sauvegarde de la planète."
             }
         ]
     },
