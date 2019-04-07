@@ -16,7 +16,6 @@ async function registerForPushNotificationsAsync() {
   const { status: existingStatus } = await Permissions.getAsync(
     Permissions.NOTIFICATIONS
   );
-  console.log(finalStatus)
   let finalStatus = existingStatus;
   // only ask if permissions have not already been determined, because
   // iOS won't necessarily prompt the user a second time.
@@ -25,9 +24,6 @@ async function registerForPushNotificationsAsync() {
     // install, so this will only ask on iOS
     const { status } = await Permissions.askAsync(Permissions.NOTIFICATIONS);
     finalStatus = status;
-    console.log('OK-------------------------------')
-    console.log(finalStatus)
-    console.log('OK-------------------------------')
   }
 
   // Stop here if the user did not grant permissions
@@ -37,9 +33,6 @@ async function registerForPushNotificationsAsync() {
 
   // Get the token that uniquely identifies this device
   let token = await Notifications.getExpoPushTokenAsync();
-  console.log('TOKEN-------------------------------')
-  console.log(token)
-  console.log('TOKEN-------------------------------')
   // POST the token to your backend server from where you can retrieve it to send push notifications.
   return fetch(PUSH_ENDPOINT, {
     method: 'POST',
@@ -97,9 +90,7 @@ export default class HomeScreen extends React.Component {
   }
 
   componentDidMount() {
-    console.log('console-----------------------')
     registerForPushNotificationsAsync();
-    console.log('console-----------------------')
     this.listener = Notifications.addListener(this.listen);
     this.fetchNews();
   }

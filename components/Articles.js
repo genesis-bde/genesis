@@ -1,6 +1,6 @@
 import React from 'react';
-import { View, Linking, TouchableOpacity } from 'react-native';
-import { Text, Button, Card, Divider } from 'react-native-elements';
+import { View, TouchableOpacity } from 'react-native';
+import { Text, Card, Divider } from 'react-native-elements';
 import moment from 'moment';
 import API from '../constants/API';
 import { WebBrowser } from 'expo';
@@ -11,10 +11,9 @@ export default class Articles extends React.Component {
             title,
             content,
             publicationDate,
-            source,
             medias,
             location,
-            url,
+            link,
         } = this.props.articleInfo;
         const { noteStyle, featuredTitleStyle } = styles;
         const time = moment(publicationDate || moment.now()).fromNow();
@@ -23,7 +22,7 @@ export default class Articles extends React.Component {
 
         return (
             <TouchableOpacity
-                onPress={this._handleOpenWithWebBrowser}
+                onPress={this._handleOpenWithWebBrowser(link)}
             >
                 <Card
                     featuredTitle={title}
@@ -50,7 +49,7 @@ export default class Articles extends React.Component {
         );
     }
 
-    _handleOpenWithWebBrowser = () => {
+    _handleOpenWithWebBrowser = (url) => {
         try{
             WebBrowser.openBrowserAsync(url);
         }
