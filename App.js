@@ -34,9 +34,7 @@ export default class App extends React.Component {
                 require('./assets/images/logo.png'),
             ]),
             Font.loadAsync({
-                // This is the font that we are using for our tab bar
                 ...Icon.Ionicons.font,
-                'space-mono': require('./assets/fonts/SpaceMono-Regular.ttf'),
                 'leixo': require('./assets/fonts/leixo.ttf')
             }),
         ]);

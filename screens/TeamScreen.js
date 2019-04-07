@@ -28,9 +28,9 @@ export default class TeamScreen extends React.Component {
 const styles = StyleSheet.create({
     pole: {
         textAlign: 'center',
+        fontFamily: 'leixo',
         fontSize: 20,
         textTransform: 'uppercase',
-        fontWeight: 'bold',
         letterSpacing: 1
     },
     memberViewer: {

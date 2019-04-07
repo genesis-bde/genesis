@@ -149,6 +149,7 @@ const TabNavigator = createMaterialTopTabNavigator({
             headerTitle: names[routeName],
             headerTitleStyle: {
                 fontFamily: 'leixo',
+                fontWeight: undefined,
             },
             headerLeft: routeName === 'Home' ? null :
                 <HeaderBack navigation={navigation} />,
