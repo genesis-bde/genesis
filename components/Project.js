@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { StyleSheet, Text, View, ImageBackground } from 'react-native';
+import { StyleSheet, Text, View, ImageBackground, TouchableOpacity } from 'react-native';
 import { Entypo } from '@expo/vector-icons';
 import Accordion from 'react-native-collapsible/Accordion';
 
@@ -57,6 +57,7 @@ export default class Project extends Component {
                     renderContent={this._renderContent}
                     onChange={this._updateSections}
                     containerStyle={styles.accordion}
+                    touchableComponent={TouchableOpacity}
                 />
             </View>
         );
