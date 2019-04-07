@@ -54,7 +54,7 @@ export default [
         ]
     },
     {
-        name: 'Pôle Com\'',
+        name: 'Pole Com\'',
         members: [
             {
                 name: 'Lefebvre Thibault',
@@ -96,7 +96,7 @@ export default [
         ]
     },
     {
-        name: 'Pôle Soirée',
+        name: 'Pole Soiree',
         members: [
             {
                 name: 'Defaye Olivier',
@@ -128,7 +128,7 @@ export default [
         ]
     },
     {
-        name: 'Pôle Déco',
+        name: 'Pole Deco',
         members: [
             {
                 name: 'Taravel Hanna',
@@ -178,7 +178,7 @@ export default [
         ]
     },
     {
-        name: 'Pôle Créa',
+        name: 'Pole Crea',
         members: [
             {
                 name: 'Jeannnin Guillaume',
@@ -228,7 +228,7 @@ export default [
         ]
     },
     {
-        name: 'Pôle Sponsors',
+        name: 'Pole Sponsors',
         members: [
             {
                 name: 'Lefeuvre Augustin',
@@ -287,7 +287,7 @@ export default [
         ]
     },
     {
-        name: 'Pôle Ecologie',
+        name: 'Pole Ecologie',
         members: [
             {
                 name: 'Olivier Raphael',
@@ -319,7 +319,7 @@ export default [
         ]
     },
     {
-        name: 'Pôle Activité',
+        name: 'Pole Activite',
         members: [
             {
                 name: 'Rojat Gaëlle',
@@ -361,24 +361,24 @@ export default [
         ]
     },
     {
-        name: 'Pôle Food',
+        name: 'Pole Food',
         members: [
             {
-                name: 'Rolland Nathan',
-                position: 'Respo Food - P2',
-                description: "Une tête assez peu sympathique qui a premierement effrayé notre respo bouffe. On pense qu'il a rejoint le pôle en question pour se venger un jour. En vrai il cuisine très bien et va vous donner un bon avant goût de l'année à venir ! Merci Papy et Mamy !",
-                images: {
-                    preview: require('../assets/images/members/preview/Nathanrb200.jpg'),
-                    //complete: require('../assets/images/members/complete/Nathanrb.jpg')
-                }
-            },
-            {
                 name: 'Chevillote Hortense',
-                position: 'Vice-Trésorière - I2',
+                position: 'Respo Food - I2',
                 description: "La plus belle femme de la liste ! Sportive et pleine d'envie, elle a su à distance vous préparer des menus de foufou. Avec son acolyte Nathan, papy et mamy sauront vous cuisiner de bons petits (et même grands) plats !",
                 images: {
                     preview: require('../assets/images/members/preview/Hortenserb200.jpg'),
                     //complete: require('../assets/images/members/complete/default.jpg')
+                }
+            },
+            {
+                name: 'Rolland Nathan',
+                position: 'Pôle Food - P2',
+                description: "Une tête assez peu sympathique qui a premierement effrayé notre respo bouffe. On pense qu'il a rejoint le pôle en question pour se venger un jour. En vrai il cuisine très bien et va vous donner un bon avant goût de l'année à venir ! Merci Papy et Mamy !",
+                images: {
+                    preview: require('../assets/images/members/preview/Nathanrb200.jpg'),
+                    //complete: require('../assets/images/members/complete/Nathanrb.jpg')
                 }
             }
         ]
