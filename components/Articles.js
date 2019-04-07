@@ -14,6 +14,7 @@ export default class Articles extends React.Component {
             source,
             medias,
             location,
+            url,
         } = this.props.articleInfo;
         const { noteStyle, featuredTitleStyle } = styles;
         const time = moment(publicationDate || moment.now()).fromNow();
@@ -50,7 +51,12 @@ export default class Articles extends React.Component {
     }
 
     _handleOpenWithWebBrowser = () => {
-        WebBrowser.openBrowserAsync('https://expo.io');
+        try{
+            WebBrowser.openBrowserAsync(url);
+        }
+        catch(e){
+
+        }
     }
 
 }
