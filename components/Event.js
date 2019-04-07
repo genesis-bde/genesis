@@ -1,29 +1,70 @@
 import React from 'react';
-import { View, Text, StyleSheet, ImageBackground } from 'react-native';
-import { MaterialIcons } from '@expo/vector-icons';
+import {View, Text, StyleSheet, ImageBackground, TouchableOpacity, Platform} from 'react-native';
+import {MaterialIcons} from '@expo/vector-icons';
 import API from '../constants/API';
+import Modal from "./Modal";
+import moment from 'moment';
 
 
 export default class Event extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            modalVisible: false
+        };
+    }
+
+    _toggleModal = () => {
+        this.setState({
+            modalVisible: !this.state.modalVisible
+        })
+    };
 
     render() {
-        const {startsAt,endsAt,location, title, media} = this.props.eventInfo;
-
+        const {startsAt, endsAt, location, title, media, description, date} = this.props.eventInfo;
+        const dateFormat = moment(Date.parse(date)).format("DD/MM/YYYY");
         return (
             <View style={styles.member}>
-                <ImageBackground source={{uri: API.media+media}} style={styles.upperPart}>
-                    <Text style={styles.title}>{ title.toUpperCase() }</Text>
-                </ImageBackground>
-                <View style={styles.lowerPart}>
-                    <Text style={styles.location}>
-                        <MaterialIcons name="location-on" size={12} color="#c6c6c6" />
-                        { location }
-                    </Text>
-                    <Text style={styles.time}>
-                        <MaterialIcons name="access-time" size={12} color="#c6c6c6"/>
-                        { endsAt ? startsAt+' - '+endsAt: startsAt }
-                    </Text>
-                </View>
+                <Modal modalVisible={this.state.modalVisible} onToggle={this._toggleModal} style={styles.modal}>
+                    <Text style={styles.modalTitle}>{title.toUpperCase()}</Text>
+                    <Text style={styles.modalLocation}>{location}</Text>
+
+
+                    <View style={{marginTop: 40, alignSelf: 'stretch'}}>
+                        <Text style={styles.modalSection}> Description : </Text>
+                        <Text style={{textAlign: 'center'}}>{description}</Text>
+                    </View>
+
+                    <View style={{marginTop: 20, alignSelf: 'stretch'}}>
+                        <Text style={styles.modalSection}> Date : </Text>
+                        <Text style={styles.modalDate}>
+                            {dateFormat} - {endsAt ? startsAt + ' - ' + endsAt : startsAt}
+                        </Text>
+                    </View>
+
+                    <TouchableOpacity
+                        onPress={this._toggleModal}
+                        style={styles.closeButton}
+                    >
+                        <Text style={styles.close}>Retour</Text>
+                    </TouchableOpacity>
+                </Modal>
+
+                <TouchableOpacity onPress={this._toggleModal}>
+                    <ImageBackground source={{uri: API.media + media}} style={styles.upperPart}>
+                        <Text style={styles.title}>{title.toUpperCase()}</Text>
+                    </ImageBackground>
+                    <View style={styles.lowerPart}>
+                        <Text style={styles.location}>
+                            <MaterialIcons name="location-on" size={12} color="#c6c6c6"/>
+                            {location}
+                        </Text>
+                        <Text style={styles.time}>
+                            <MaterialIcons name="access-time" size={12} color="#c6c6c6"/>
+                            {endsAt ? startsAt + ' - ' + endsAt : startsAt}
+                        </Text>
+                    </View>
+                </TouchableOpacity>
             </View>
         )
     }
@@ -45,17 +86,17 @@ const styles = StyleSheet.create({
     title: {
         textAlign: 'center',
         fontWeight: 'bold',
-        color:'white',
+        color: 'white',
         fontSize: 18,
         textShadowColor: '#00000f',
-        textShadowOffset: { width: 3, height: 3 },
+        textShadowOffset: {width: 3, height: 3},
         textShadowRadius: 3
     },
     lowerPart: {
         paddingHorizontal: 3,
         flexDirection: 'row',
         alignItems: 'center',
-        justifyContent:'space-between',
+        justifyContent: 'space-between',
         height: 25,
         width: '100%',
         elevation: 4,
@@ -72,4 +113,42 @@ const styles = StyleSheet.create({
         color: "#c6c6c6",
         textAlign: 'right',
     },
-})
+    closeButton: {
+        flex: 1,
+        justifyContent: 'flex-end',
+        marginBottom: 20
+    },
+    close: {
+        textAlign: 'center',
+        color: '#cc0066',
+        textTransform: 'uppercase',
+        fontWeight: '300',
+        fontFamily: Platform.OS === 'android' ? 'sans-serif-light' : undefined,
+        fontSize: 18,
+    },
+    modalTitle: {
+        marginVertical: 10,
+        color: "#444",
+        textAlign: 'center',
+        fontFamily: 'leixo',
+        fontSize: 20,
+    },
+    modalSection: {
+        textAlign: 'left',
+        fontSize: 15,
+        color: "#444",
+        fontWeight: 'bold',
+    },
+    modalDate: {
+        textAlign: 'center',
+        fontSize: 15,
+        color: "#444",
+    },
+    modalLocation: {
+        marginTop: -13,
+        color: "#444",
+        textAlign: 'center',
+        fontSize: 15,
+        fontWeight: 'bold',
+    }
+});

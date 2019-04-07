@@ -35,7 +35,7 @@ export default class Member extends Component {
             <View>
                 <Modal modalVisible={this.state.modalVisible} onToggle={this.toggleModal} style={styles.modal}>
                     <Image
-                        style={Platform.OS === 'ios' ? styles.imageios: styles.imageandroid}
+                        style={Platform.OS === 'ios' ? styles.imageios : styles.imageandroid}
                         source={images.preview}
                     />
                     <Text style={styles.name}>{name}</Text>
@@ -69,20 +69,20 @@ const styles = StyleSheet.create({
         height: (Layout.window.width) / 2
     },
     imageios: {
-            position: 'absolute',
-            marginTop: -(Layout.window.width / 2),
-            width: Layout.window.width / 2,
-            height: Layout.window.width / 2,
-            borderRadius: (Layout.window.width / 4),
-            borderWidth: 5,
-            borderColor: '#fff',
+        position: 'absolute',
+        marginTop: -(Layout.window.width / 2),
+        width: Layout.window.width / 2,
+        height: Layout.window.width / 2,
+        borderRadius: (Layout.window.width / 4),
+        borderWidth: 5,
+        borderColor: '#fff',
     },
     imageandroid: {
         position: 'absolute',
         marginTop: -160,
         width: (Layout.window.width) / 2,
         height: (Layout.window.width) / 2,
-        borderRadius: (Layout.window.width), 
+        borderRadius: (Layout.window.width),
         borderWidth: 5,
         borderColor: '#fff',
     },
