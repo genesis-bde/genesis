@@ -51,8 +51,9 @@ const styles = StyleSheet.create({
     },
     children: {
         flex: 1,
+        alignSelf: 'stretch',
         alignItems: 'center',
         display: 'flex',
-        flexDirection: 'column',
+        flexDirection: 'column'
     }
 });

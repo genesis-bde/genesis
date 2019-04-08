@@ -18,7 +18,7 @@ export default class Sponsor extends Component {
         }
     }
 
-    toggleModal = () => {
+    _toggleModal = () => {
         this.setState({
             modalVisible: !this.state.modalVisible
         })
@@ -29,10 +29,12 @@ export default class Sponsor extends Component {
 
         return (
             <View style={this.props.style}>
-                <Modal modalVisible={this.state.modalVisible} onToggle={this.toggleModal}>
+                <Modal modalVisible={this.state.modalVisible} onToggle={this._toggleModal}>
+
                     <Image
                         style={styles.image}
                         source={{uri: API.media+media}}
+                        resizeMode={'contain'}
                     />
                     <Text style={styles.name}>{name}</Text>
 
@@ -47,7 +49,7 @@ export default class Sponsor extends Component {
 
                 </Modal>
 
-                <TouchableOpacity onPress={this.toggleModal}>
+                <TouchableOpacity onPress={this._toggleModal}>
                     <Image
                         style={styles.imagePreview}
                         source={{uri: API.media+media}}
@@ -66,13 +68,11 @@ const styles = StyleSheet.create({
         height: 150
     },
     image: {
-        marginTop: 10,
-        flex: 0.5,
-        height: undefined,
-        width: undefined
+        height: '30%',
+        alignSelf: 'stretch',
+        arginTop: 10
     },
     name: {
-        marginTop: -20,
         textAlign: 'center',
         fontWeight: 'bold'
     },
