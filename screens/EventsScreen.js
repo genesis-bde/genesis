@@ -61,12 +61,24 @@ export default class EventsScreen extends React.Component {
             });
     }
 
+    onLayout = (e) => {
+        this.setState({
+            width: e.nativeEvent.layout.width,
+            height: e.nativeEvent.layout.height,
+        })
+    }
+
     render() {
         const events = this.state.events;
         return (
-            <ScrollView style={styles.container}>
+            <ScrollView style={styles.container} onLayout={this.onLayout}>
                 { events.map((dayEvents,index) => (
-                    <View style={styles.dateEvents}>
+                    <View style={
+                        { ...styles.dateEvents,
+                            ...{height: index+1 === events.length ?this.state.height:undefined}
+                        }
+                    }>
+
                         <View style={styles.dateHeader}>
                             <Text style={styles.dayName}>{dayNames[dayEvents.date.getDay()]}</Text>
                             <Text style={styles.dayNumber}>{dayEvents.date.getDate()}</Text>
