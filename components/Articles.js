@@ -51,10 +51,10 @@ export default class Articles extends React.Component {
 
     _handleOpenWithWebBrowser = (url) => {
         try{
-            WebBrowser.openBrowserAsync(url);
+            return url && WebBrowser.openBrowserAsync(url);
         }
         catch(e){
-
+            console.log('error');
         }
     }
 
