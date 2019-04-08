@@ -30,7 +30,7 @@ export default class Member extends Component {
                 preview: require('../assets/images/members/preview/default.jpg'),
             }
         } = this.props.memberInfo;
-
+//
         return (
             <View>
                 <Modal modalVisible={this.state.modalVisible} onToggle={this.toggleModal} style={styles.modal}>
@@ -38,17 +38,15 @@ export default class Member extends Component {
                         style={Platform.OS === 'ios' ? styles.imageios : styles.imageandroid}
                         source={images.preview}
                     />
+
                     <Text style={styles.name}>{name}</Text>
                     <Text style={styles.position}>{position.toUpperCase()}</Text>
 
-                    <Text style={styles.description}>{description}</Text>
-                    <TouchableOpacity onPress={this.toggleModal}>
-                        <Text style={styles.close}>Retour</Text>
-                    </TouchableOpacity>
 
+                    <Text style={styles.description}>{description}</Text>
                 </Modal>
 
-                <TouchableOpacity onPress={this.toggleModal}>
+                <TouchableOpacity onPress={this.toggleModal} >
                     <Image
                         style={styles.imagePreview}
                         source={images.preview}
@@ -61,15 +59,11 @@ export default class Member extends Component {
 
 
 const styles = StyleSheet.create({
-    modal: {
-        paddingTop: 40
-    },
     imagePreview: {
         width: (Layout.window.width) / 2,
         height: (Layout.window.width) / 2
     },
     imageios: {
-        position: 'absolute',
         marginTop: -(Layout.window.width / 2),
         width: Layout.window.width / 2,
         height: Layout.window.width / 2,
@@ -78,8 +72,7 @@ const styles = StyleSheet.create({
         borderColor: '#fff',
     },
     imageandroid: {
-        position: 'absolute',
-        marginTop: -160,
+        marginTop: -120,
         width: (Layout.window.width) / 2,
         height: (Layout.window.width) / 2,
         borderRadius: (Layout.window.width),
@@ -87,7 +80,6 @@ const styles = StyleSheet.create({
         borderColor: '#fff',
     },
     name: {
-        marginTop: 15,
         textAlign: 'center',
         fontWeight: 'bold',
         fontSize: 20,
@@ -103,14 +95,5 @@ const styles = StyleSheet.create({
     description: {
         textAlign: 'center',
         marginTop: 50
-    },
-    close: {
-        marginTop: 10,
-        textAlign: 'center',
-        color: '#cc0066',
-        textTransform: 'uppercase',
-        fontWeight: '300',
-        fontFamily: Platform.OS === 'android' ? 'sans-serif-light' : undefined,
-        fontSize: 18,
-    },
+    }
 });

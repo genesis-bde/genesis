@@ -3,7 +3,7 @@ import {
     Modal as ReactModal,
     StyleSheet,
     TouchableOpacity,
-    View,
+    View, Text, Platform,
     TouchableWithoutFeedback,
 } from 'react-native';
 
@@ -21,6 +21,9 @@ export default class Modal extends React.Component {
                         <TouchableWithoutFeedback style={{flex: 1}}>
                             <View style={styles.children}>
                                 {this.props.children}
+                                <TouchableOpacity onPress={this.props.onToggle} style={styles.closeButton}>
+                                    <Text style={styles.close}>Retour</Text>
+                                </TouchableOpacity>
                             </View>
                         </TouchableWithoutFeedback>
                     </View>
@@ -39,7 +42,6 @@ const styles = StyleSheet.create({
     },
     modal: {
         flex: 0,
-        backgroundColor: '#fff',
         borderRadius: 10,
         width: '80%',
         minHeight: 360,
@@ -48,12 +50,27 @@ const styles = StyleSheet.create({
         marginTop: 70,
         paddingHorizontal: 10,
         paddingBottom: 10,
+        backgroundColor: '#fff'
     },
     children: {
-        flex: 1,
+        minHeight: 360,
         alignSelf: 'stretch',
         alignItems: 'center',
         display: 'flex',
-        flexDirection: 'column'
-    }
+        flexDirection: 'column',
+        marginBottom: 20
+    },
+    closeButton: {
+        flex: 1,
+        minHeight: 30,
+        justifyContent: 'flex-end',
+    },
+    close: {
+        textAlign: 'center',
+        color: '#cc0066',
+        textTransform: 'uppercase',
+        fontWeight: '300',
+        fontFamily: Platform.OS === 'android' ? 'sans-serif-light' : undefined,
+        fontSize: 18,
+    },
 });

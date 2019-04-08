@@ -41,13 +41,6 @@ export default class Event extends React.Component {
                             {dateFormat} - {endsAt ? startsAt + ' - ' + endsAt : startsAt}
                         </Text>
                     </View>
-
-                    <TouchableOpacity
-                        onPress={this._toggleModal}
-                        style={styles.closeButton}
-                    >
-                        <Text style={styles.close}>Retour</Text>
-                    </TouchableOpacity>
                 </Modal>
 
                 <TouchableOpacity onPress={this._toggleModal}>
@@ -112,19 +105,6 @@ const styles = StyleSheet.create({
         fontSize: 12,
         color: "#c6c6c6",
         textAlign: 'right',
-    },
-    closeButton: {
-        flex: 1,
-        justifyContent: 'flex-end',
-        marginBottom: 20
-    },
-    close: {
-        textAlign: 'center',
-        color: '#cc0066',
-        textTransform: 'uppercase',
-        fontWeight: '300',
-        fontFamily: Platform.OS === 'android' ? 'sans-serif-light' : undefined,
-        fontSize: 18,
     },
     modalTitle: {
         marginVertical: 10,
