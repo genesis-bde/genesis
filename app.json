@@ -8,7 +8,7 @@
       "ios",
       "android"
     ],
-    "version": "8.0.0",
+    "version": "9.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
     "githubUrl": "https://github.com/Warthy/Genesis",
@@ -31,7 +31,7 @@
     },
     "android": {
       "package": "com.genesistech.genesis",
-      "versionCode": 8,
+      "versionCode": 9,
       "icon": "./assets/images/icon.png"
     },
     "description": "Application de la liste BDE Genesis",
