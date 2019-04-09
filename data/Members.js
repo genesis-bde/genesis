@@ -12,7 +12,7 @@ export default [
                 }
             }, {
                 name: 'Le Bris Agathe',
-                position: 'Trésorière -A1',
+                position: 'Trésorière - A1',
                 description: "Agathe, elle veut seulement la thune, et seulement ça ça la fait bander. Baignant dans l'argent depuis son plus jeune âge, elle a pu s'ouvrir les portes du métier d'acteur dans lequelle elle excelle particulièrement mais aussi développer sa voix jusqu'à pouvoir chanter du Angèle à toute heure de la journée.",
                 images: {
                     preview: require('../assets/images/members/preview/Agatherb200.jpg'),
@@ -364,7 +364,7 @@ export default [
         name: 'Pole Food',
         members: [
             {
-                name: 'Chevillote Hortense',
+                name: 'Chevillotte Hortense',
                 position: 'Respo Food - I2',
                 description: "La plus belle femme de la liste ! Sportive et pleine d'envie, elle a su à distance vous préparer des menus de foufou. Avec son acolyte Nathan, papy et mamy sauront vous cuisiner de bons petits (et même grands) plats !",
                 images: {
