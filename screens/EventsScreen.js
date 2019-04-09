@@ -3,15 +3,17 @@ import {ScrollView, StyleSheet, Text, View} from 'react-native';
 import axios from 'axios';
 import Event from '../components/Event';
 import API from '../constants/API';
-
+import moment from 'moment';
 
 export default class EventsScreen extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            error :'n',
+            error: 'n',
+            todayIndex: undefined,
             events: [],
-            isLoading: false
+            isLoading: false,
+            start: 0,
         }
     }
 
@@ -26,9 +28,9 @@ export default class EventsScreen extends React.Component {
         axios.get(API.endpoints.events)
             .then(res => {
                 const events = res.data.reduce((events, event) => {
-                    event.startsAt = ('0'+new Date(event.startsAt).getHours()).slice(-2)+":"+('0'+new Date(event.startsAt).getMinutes()).slice(-2);
+                    event.startsAt = ('0' + new Date(event.startsAt).getHours()).slice(-2) + ":" + ('0' + new Date(event.startsAt).getMinutes()).slice(-2);
                     event.endsAt = event.endsAt ?
-                        ('0'+new Date(event.endsAt).getHours()).slice(-2)+":"+('0'+new Date(event.endsAt).getMinutes()).slice(-2):
+                        ('0' + new Date(event.endsAt).getHours()).slice(-2) + ":" + ('0' + new Date(event.endsAt).getMinutes()).slice(-2) :
                         null;
 
                     const date = new Date(event.date).getTime();
@@ -40,22 +42,37 @@ export default class EventsScreen extends React.Component {
                 }, {});
 
                 // Edit: to add it in the array format instead
-                const eventArrays = Object.keys(events).map((date) => {
+                let todayIndex, start = 0;
+                const eventArrays = Object.keys(events).map((date, index) => {
+
+                    if(typeof todayIndex === 'undefined'){
+                        if(moment().diff(new Date(+date),'days') <= 0){
+                            todayIndex = index;
+                        }else {
+                            start += 30+135*events[date].length;
+                        }
+
+                    }
                     return {
                         date: new Date(+date),
                         events: events[date]
                     };
                 });
-
+                todayIndex = typeof todayIndex === 'undefined' ? eventArrays.length-1: todayIndex;
                 this.setState({
+                    start,
+                    todayIndex,
                     events: eventArrays,
                     isLoading: false,
                 });
+
+                //this.scroller.scrollTo({x: 0, y: start});
+
             })
             .catch(e => {
                 console.log(e);
                 this.setState({
-                    error:e.message,
+                    error: e.message,
                     isLoading: false,
                 })
             });
@@ -71,14 +88,15 @@ export default class EventsScreen extends React.Component {
     render() {
         const events = this.state.events;
         return (
-            <ScrollView style={styles.container} onLayout={this.onLayout}>
-                { events.map((dayEvents,index) => (
+
+            <ScrollView style={styles.container} onLayout={this.onLayout} contentOffset={{x:0, y:this.state.start}}>
+                {events.map((dayEvents, index) => (
                     <View style={
-                        { ...styles.dateEvents,
-                            ...{height: index+1 === events.length ?this.state.height:undefined}
+                        {
+                            ...styles.dateEvents,
+                            ...{height: index + 1 === events.length ? this.state.height : undefined}
                         }
                     }>
-
                         <View style={styles.dateHeader}>
                             <Text style={styles.dayName}>{dayNames[dayEvents.date.getDay()]}</Text>
                             <Text style={styles.dayNumber}>{dayEvents.date.getDate()}</Text>
