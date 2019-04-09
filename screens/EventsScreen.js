@@ -14,11 +14,23 @@ export default class EventsScreen extends React.Component {
             events: [],
             isLoading: false,
             start: 0,
-        }
+        };
+    }
+
+    componentWillMount() {
+        this.setState({
+            isLoading: true,
+        });
+        this.getEvents()
     }
 
     componentDidMount() {
-        this.getEvents();
+        this.clock = setInterval(() => {
+            if (!this.state.isLoading) {
+                this.scroller.scrollTo({x: 0, y: this.state.start});
+                clearInterval(this.clock);
+            }
+        }, 1000);
     }
 
     getEvents() {
@@ -28,10 +40,8 @@ export default class EventsScreen extends React.Component {
         axios.get(API.endpoints.events)
             .then(res => {
                 const events = res.data.reduce((events, event) => {
-                    event.startsAt = ('0' + new Date(event.startsAt).getHours()).slice(-2) + ":" + ('0' + new Date(event.startsAt).getMinutes()).slice(-2);
-                    event.endsAt = event.endsAt ?
-                        ('0' + new Date(event.endsAt).getHours()).slice(-2) + ":" + ('0' + new Date(event.endsAt).getMinutes()).slice(-2) :
-                        null;
+                    event.startsAt = moment(event.startsAt).format("HH/mm");
+                    event.endsAt = event.endsAt ? moment(event.endsAt).format("HH/mm") : null;
 
                     const date = new Date(event.date).getTime();
                     if (!events[date]) {
@@ -45,11 +55,11 @@ export default class EventsScreen extends React.Component {
                 let todayIndex, start = 0;
                 const eventArrays = Object.keys(events).map((date, index) => {
 
-                    if(typeof todayIndex === 'undefined'){
-                        if(moment().diff(new Date(+date),'days') <= 0){
+                    if (typeof todayIndex === 'undefined') {
+                        if (moment().diff(new Date(+date), 'days') <= 0) {
                             todayIndex = index;
-                        }else {
-                            start += 30+135*events[date].length;
+                        } else {
+                            start += 30 + 135 * events[date].length;
                         }
 
                     }
@@ -58,15 +68,13 @@ export default class EventsScreen extends React.Component {
                         events: events[date]
                     };
                 });
-                todayIndex = typeof todayIndex === 'undefined' ? eventArrays.length-1: todayIndex;
+                todayIndex = typeof todayIndex === 'undefined' ? eventArrays.length - 1 : todayIndex;
                 this.setState({
                     start,
                     todayIndex,
                     events: eventArrays,
                     isLoading: false,
                 });
-
-                //this.scroller.scrollTo({x: 0, y: start});
 
             })
             .catch(e => {
@@ -78,37 +86,46 @@ export default class EventsScreen extends React.Component {
             });
     }
 
-    onLayout = (e) => {
+    _onLayout = (e) => {
         this.setState({
             width: e.nativeEvent.layout.width,
             height: e.nativeEvent.layout.height,
         })
-    }
+    };
+
+    _events = () => this.state.events.map((dayEvents, index, events) => {
+        const viewStyle = {
+            ...styles.dateEvents,
+            ...{height: index + 1 === events.length ? this.state.height : undefined}
+        };
+
+        return (
+            <View style={viewStyle}>
+                <View style={styles.dateHeader}>
+                    <Text style={styles.dayName}>{dayNames[dayEvents.date.getDay()]}</Text>
+                    <Text style={styles.dayNumber}>{dayEvents.date.getDate()}</Text>
+                    <Text style={styles.dayMonth}>{monthNames[dayEvents.date.getMonth()]}</Text>
+                </View>
+                <View style={styles.event}>
+                    {dayEvents.events.map(event => (
+                        <Event eventInfo={event}/>
+                    ))}
+                </View>
+            </View>
+        )
+    })
 
     render() {
-        const events = this.state.events;
         return (
-
-            <ScrollView style={styles.container} onLayout={this.onLayout} contentOffset={{x:0, y:this.state.start}}>
-                {events.map((dayEvents, index) => (
-                    <View style={
-                        {
-                            ...styles.dateEvents,
-                            ...{height: index + 1 === events.length ? this.state.height : undefined}
-                        }
-                    }>
-                        <View style={styles.dateHeader}>
-                            <Text style={styles.dayName}>{dayNames[dayEvents.date.getDay()]}</Text>
-                            <Text style={styles.dayNumber}>{dayEvents.date.getDate()}</Text>
-                            <Text style={styles.dayMonth}>{monthNames[dayEvents.date.getMonth()]}</Text>
-                        </View>
-                        <View style={styles.event}>
-                            {dayEvents.events.map(event => (
-                                <Event eventInfo={event}/>
-                            ))}
-                        </View>
-                    </View>
-                ))}
+            <ScrollView
+                style={styles.container}
+                onLayout={this._onLayout}
+                contentOffset={{x: 0, y: this.state.start}}
+                ref={(scroller) => {
+                    this.scroller = scroller
+                }}
+            >
+                {this._events()}
             </ScrollView>
         );
     }
