@@ -22,9 +22,9 @@ export default class Event extends React.Component {
 
     render() {
         const {startsAt, endsAt, location, title, media, description, date} = this.props.eventInfo;
-        const dateFormat = moment(Date.parse(date)).format("DD/MM/YYYY");
+        const dateFormat = moment(date).format("DD/MM/YYYY");
         return (
-            <View style={{...styles.member, ...{opacity: new Date(date) < new Date() ? (endsAt || startsAt) < moment().format('HH:mm') ? 0.6: 1: 1 }}}>
+            <View style={{...styles.member, ...{opacity: new Date(date) < new Date() ? 0.6: 1}}}>
                 <Modal modalVisible={this.state.modalVisible} onToggle={this._toggleModal} style={styles.modal}>
                     <Text style={styles.modalTitle}>{title.toUpperCase()}</Text>
                     <Text style={styles.modalLocation}>{location}</Text>

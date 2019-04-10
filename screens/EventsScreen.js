@@ -43,8 +43,7 @@ export default class EventsScreen extends React.Component {
                     event.startsAt = moment(event.startsAt).format("HH:mm");
                     event.endsAt = event.endsAt ? moment(event.endsAt).format("HH:mm") : null;
 
-                    const [hours, minutes] = event.startsAt.split(':');
-                    const date = moment(event.date).hours(+hours).minutes(+minutes).valueOf();
+                    const date = moment(event.date).valueOf();
                     if (!events[date]) {
                         events[date] = [];
                     }
