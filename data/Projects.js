@@ -300,7 +300,7 @@ export default [
                     "de groupes, etc..)."
             },
             {
-                title: "Développement de la bibliothèque de l'école",
+                title: "Développement de la bibliothèque ",
                 images: {},
                 content: "La bibliothèque est un lieu privilégié de l’école qui contribue pleinement à la réussite des " +
                     "élèves. Tout d’abord, elle offre une aide le plus souvent nécessaire aux élèves de P1/P2 I1/I2I " +
