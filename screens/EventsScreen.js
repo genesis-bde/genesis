@@ -7,6 +7,7 @@ import moment from 'moment';
 
 export default class EventsScreen extends React.Component {
     constructor(props) {
+        moment.locale("fr");
         super(props);
         this.state = {
             error: 'n',
@@ -43,7 +44,7 @@ export default class EventsScreen extends React.Component {
                     event.startsAt = moment(event.startsAt).format("HH:mm");
                     event.endsAt = event.endsAt ? moment(event.endsAt).format("HH:mm") : null;
 
-                    const date = moment(event.date).valueOf();
+                    const date = moment(event.date).format("YYYYMMDD");
                     if (!events[date]) {
                         events[date] = [];
                     }
@@ -51,20 +52,25 @@ export default class EventsScreen extends React.Component {
                     return events;
                 }, {});
 
-                // Edit: to add it in the array format instead
                 let todayIndex, start = 0;
                 const eventArrays = Object.keys(events).map((date, index) => {
 
                     if (typeof todayIndex === 'undefined') {
-                        if (moment().diff(new Date(+date), 'days') <= 0) {
+                        if (moment(date, "YYYYMMDD").isAfter(moment(), 'days')) {
                             todayIndex = index;
+                            events[date].some((event) => {
+                                const [hours, minutes] = (event.endsAt || event.startsAt).split(':');
+                                return moment(event.date).hours(hours).minute(minutes).isAfter(moment(), minutes) ?
+                                    true :
+                                    !(start += 135);
+                            })
                         } else {
                             start += 30 + 135 * events[date].length;
                         }
 
                     }
                     return {
-                        date: new Date(+date),
+                        date: moment(date, "YYYYMMDD"),
                         events: events[date]
                     };
                 });
@@ -102,9 +108,9 @@ export default class EventsScreen extends React.Component {
         return (
             <View style={viewStyle}>
                 <View style={styles.dateHeader}>
-                    <Text style={styles.dayName}>{dayNames[dayEvents.date.getDay()]}</Text>
-                    <Text style={styles.dayNumber}>{dayEvents.date.getDate()}</Text>
-                    <Text style={styles.dayMonth}>{monthNames[dayEvents.date.getMonth()]}</Text>
+                    <Text style={styles.dayName}>{ dayEvents.date.locale("fr").format('dddd')}</Text>
+                    <Text style={styles.dayNumber}>{dayEvents.date.format('DD')}</Text>
+                    <Text style={styles.dayMonth}>{dayEvents.date.locale('fr').format('MMMM')}</Text>
                 </View>
                 <View style={styles.event}>
                     {dayEvents.events.map(event => (
