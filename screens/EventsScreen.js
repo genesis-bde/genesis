@@ -6,8 +6,7 @@ import API from '../constants/API';
 import moment from 'moment';
 
 export default class EventsScreen extends React.Component {
-    constructor(props) {
-        moment.locale("fr");
+    constructor(props){
         super(props);
         this.state = {
             error: 'n',
@@ -108,9 +107,9 @@ export default class EventsScreen extends React.Component {
         return (
             <View style={viewStyle}>
                 <View style={styles.dateHeader}>
-                    <Text style={styles.dayName}>{ dayEvents.date.locale("fr").format('dddd')}</Text>
+                    <Text style={styles.dayName}>{dayNames[dayEvents.date.format('d')]}</Text>
                     <Text style={styles.dayNumber}>{dayEvents.date.format('DD')}</Text>
-                    <Text style={styles.dayMonth}>{dayEvents.date.locale('fr').format('MMMM')}</Text>
+                    <Text style={styles.dayMonth}>{monthNames[dayEvents.date.format('M')-1]}</Text>
                 </View>
                 <View style={styles.event}>
                     {dayEvents.events.map(event => (
