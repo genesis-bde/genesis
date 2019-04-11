@@ -70,7 +70,7 @@ const styles = StyleSheet.create({
     image: {
         height: '30%',
         alignSelf: 'stretch',
-        arginTop: 10
+        marginTop: 10
     },
     name: {
         textAlign: 'center',
