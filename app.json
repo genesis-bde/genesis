@@ -31,7 +31,7 @@
     },
     "android": {
       "package": "com.genesistech.genesis",
-      "versionCode": 10,
+      "versionCode": 12,
       "icon": "./assets/images/icon.png"
     },
     "description": "Application de la liste BDE Genesis",
