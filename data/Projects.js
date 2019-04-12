@@ -11,7 +11,7 @@ export default [
                 images: {},
                 content: "L’intégration des nouveaux élèves se déroulera sur 1 mois. En effet, les deux premières " +
                     "semaines seront riches en événements de tous genres pour intégrer toutes les personnes " +
-                    "présentes à l’ISEP, y compris les étrangés. Un WEI viendra clore ces deux semaines. Deux " +
+                    "présentes à l’ISEP, y compris les etrangers. Un WEI viendra clore ces deux semaines. Deux " +
                     "semaines défileront avant la journée et la soirée d’intégration. Les évènements durant ce " +
                     "temps-là seront moins fréquents mais ils seront toujours présents pour accompagner les " +
                     "étudiants dans leur intégration à notre école et continuer à leur faire rencontrer de nouvelles " +

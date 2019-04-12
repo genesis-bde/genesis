@@ -2,24 +2,24 @@ export default [
     {
         iconName: 'facebook-square',
         url: {
-                app: 'https://www.facebook.com/pg/genesislistebde2019',
-                http: 'https://www.facebook.com/pg/genesislistebde2019',
+                app: 'https://www.facebook.com/genesisbde',
+                http: 'https://www.facebook.com/genesisbde',
             }
 
     },
     {
         iconName: 'snapchat-square',
         url: {
-            app: 'snapchat://add/genesislistebde2019',
-            http: 'https://www.snapchat.com/add/genesislistebde2019'
+            app: 'snapchat://add/genesisbde',
+            http: 'https://www.snapchat.com/add/genesisbde'
         }
     }
     ,
     {
         iconName: 'instagram',
         url: {
-            app: 'instagram://user?username=genesislistebde2019',
-            http: 'https://www.instagram.com/genesislistebde2019'
+            app: 'instagram://user?username=genesisbde',
+            http: 'https://www.instagram.com/genesisbde'
         }
     }
 ]
