@@ -30,7 +30,7 @@ export default class SocialNetwork extends React.Component {
 
     render() {
         return (
-            <TouchableOpacity onLongPress={this.startApp(this.props.url)}>
+            <TouchableOpacity onPress={this.startApp(this.props.url)}>
                 <Icon.FontAwesome
                     style={this.props.style}
                     size={this.props.size}
